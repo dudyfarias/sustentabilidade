@@ -1,6 +1,6 @@
 # Portal de Sustentabilidade
 
-Protótipo funcional da Plataforma Estadual de Sustentabilidade em Contratações Públicas, com composição visual idêntica à referência de 1024 × 1536 px e uma camada semântica interativa sobre os controles visíveis.
+Protótipo funcional da Plataforma Estadual de Sustentabilidade em Contratações Públicas, reconstruído em HTML semântico, CSS responsivo e JavaScript.
 
 ## Executar localmente
 
@@ -18,11 +18,12 @@ Importe este repositório na Vercel. O projeto é estático e a configuração e
 
 ## Escopo
 
-- Reprodução visual pixel a pixel no viewport de referência (1024 px)
+- Componentes reais para header, hero, busca, filtros, cards, ODS, destaques, CTA e footer
 - Busca, filtros, navegação, ODS, critérios, documentos e FAQ interativos
 - Diálogos, feedbacks e foco por teclado
+- Layout responsivo para desktop e dispositivos móveis
 - Sem autenticação, banco de dados ou APIs nesta fase
 
 ## Nota para produção
 
-A composição integral da referência é proposital nesta fase para garantir fidelidade visual absoluta. Na implementação definitiva, a equipe deve reconstruir a camada visual em componentes responsivos usando os arquivos-fonte do design e conectar as APIs reais.
+Na implementação definitiva, a equipe deve substituir os dados locais pelas APIs reais e trocar os recortes editoriais pelos arquivos-fonte do design quando estiverem disponíveis.

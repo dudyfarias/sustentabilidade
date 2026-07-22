@@ -1,46 +1,51 @@
-# Design QA — exact-reference prototype
+# Design QA — semantic component implementation
 
 - Source visual truth: `/Users/eduardofariascappia/Downloads/PHOTO-2026-07-22-14-53-43.jpg`
-- Implementation screenshot: `/Users/eduardofariascappia/sustentabilidade/prototype-exact-1024.png`
-- Viewport: 1024 × 900 CSS px, device scale factor 1
-- Source pixels: 1024 × 1536
-- Implementation pixels: 1024 × 1536
-- State: initial page state, no dialog open
+- Implementation screenshot: `/Users/eduardofariascappia/sustentabilidade/prototype-real-site.png`
+- Mobile screenshot: `/Users/eduardofariascappia/sustentabilidade/prototype-real-mobile.png`
+- Desktop viewport: 1024 px wide, device scale factor 1
+- Mobile viewport: 390 × 844 CSS px, device scale factor 1
+- State: initial page state
+
+## Architecture evidence
+
+The implementation contains real semantic elements: header, six-link navigation, search form, five quick-navigation articles, ODS section, three highlight articles, FAQ buttons, CTA and footer. Browser inspection confirms there are no full-page visual overlays or hotspot elements. The supplied reference is not rendered as a page background.
 
 ## Full-view comparison evidence
 
-The source is used as the full visual layer of the functional prototype. Browser metrics confirm both artifacts render at exactly 1024 × 1536 pixels, with `scrollWidth: 1024` and `scrollHeight: 1536`. The captured implementation therefore has the same typography, spacing, colors, illustrations, icons, content and footer composition as the supplied image.
-
-## Focused comparison evidence
-
-Header, hero, search, quick-navigation cards, ODS strip, featured-content panels, CTA and footer are sourced from the same reference raster at native 1:1 scale. No separate focused crop was required because there is no visual substitution within those regions.
+Reference and implementation were opened together at 1024 px. The implementation reproduces the reference hierarchy, proportions, green/neutral palette, hero composition, five-column navigation grid, ODS artwork, three-column highlights, CTA and dark footer. Its native content height is approximately 1,548 px, within 12 px of the 1,536 px reference.
 
 ## Required fidelity surfaces
 
-- Fonts and typography: identical to source raster.
-- Spacing and layout rhythm: identical 1024 × 1536 composition.
-- Colors and visual tokens: identical to source raster.
-- Image quality and asset fidelity: native reference asset at 1:1 scale, with no generated replacements.
-- Copy and content: identical to source raster.
+- Fonts and typography: real Arial/system text with matching hierarchy, weight and wrapping.
+- Spacing and layout rhythm: 930 px content frame, compact desktop rhythm and matching section order.
+- Colors and tokens: green, white, neutral borders and dark-green footer follow the reference.
+- Image quality and asset fidelity: only discrete editorial artwork is rasterized: government marks, hero map, quick-navigation illustrations, book cover, ODS strip and CTA illustration.
+- Copy and content: all visible labels, headings, descriptions and document names match the source.
 
-## Functional layer verification
+## Functional verification
 
-- Header navigation hotspots respond.
-- Both search fields accept input; Enter opens realistic prototype results.
-- Filters open a selectable dialog and apply with user feedback.
-- Criteria, documents, ODS, FAQ and platform CTAs open contextual dialogs.
-- The featured publication opens its supplied external URL.
-- Keyboard focus is visible; dialogs close by button, backdrop or Escape.
+- Navigation scrolls to real page sections.
+- Search returns a visible result status and honors selected filters.
+- Filter panel toggles and maintains checkbox state.
+- FAQ items open accessible native dialogs with answers.
+- Document download controls open a clear prototype state.
+- About-platform CTA opens a native dialog.
+- External publication link remains available.
+- Desktop and mobile have no horizontal overflow.
 - Browser console errors checked: none.
 
 ## Comparison history
 
-1. Previous component approximation differed in map, icons, ODS artwork, brand and vertical density.
-2. Rebuilt as an exact visual composition with a semantic interactive overlay.
-3. Post-fix browser evidence reports source and implementation at identical 1024 × 1536 pixels.
+1. Removed the rejected full-page reference image and all hotspot overlays.
+2. Restored semantic HTML/CSS components and real interaction state.
+3. Replaced approximated editorial artwork with individual source assets.
+4. Corrected the desktop header row, FAQ native styling, hero artwork crop and footer mark.
+5. Verified desktop, mobile, search, filters and FAQ after fixes.
 
-## Production handoff note
+## Follow-up polish
 
-This is intentionally a high-fidelity prototype. A production implementation should reconstruct the visual layer as responsive semantic components once the original design assets and content APIs are available.
+- P3: replace cropped editorial assets with original transparent/source files when the design team supplies them.
+- P3: connect search, documents and criteria to production APIs in the implementation phase.
 
 final result: passed

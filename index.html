@@ -1,135 +1,868 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plataforma Estadual de Sustentabilidade</title>
-  <meta name="description" content="Protótipo funcional da Plataforma Estadual de Sustentabilidade em Contratações Públicas.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer" />
   <style>
-    :root { --green:#087a3e; --dark:#062a20; --line:#dce6df; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; background:#f2f4f3; }
-    body { margin:0; min-width:320px; font-family:Arial,Helvetica,sans-serif; color:#151719; }
-    button,input { font:inherit; }
-    .prototype {
-      position:relative;
-      width:min(100%,1024px);
-      aspect-ratio:2/3;
-      margin:0 auto;
-      overflow:hidden;
+    :root{
+      --sp-red:#ED1C24;
+      --green:#087A3E;
+      --green-2:#0B9247;
+      --green-soft:#F3F9F5;
+      --green-line:#DCEDE2;
+      --ink:#151719;
+      --text:#4C5156;
+      --muted:#72787E;
+      --line:#E7E9EB;
+      --surface:#FFFFFF;
+      --surface-2:#FAFBFA;
+      --footer:#062A20;
+      --radius-lg:24px;
+      --radius-md:18px;
+      --shadow:0 10px 30px rgba(20,48,34,.05);
+      --container:1440px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Verdana, Geneva, sans-serif;
+      color:var(--ink);
       background:#fff;
-      box-shadow:0 0 45px rgb(0 0 0 / .08);
+      line-height:1.5;
     }
-    .visual { position:absolute; inset:0; width:100%; height:100%; display:block; user-select:none; }
-    .hotspot { position:absolute; z-index:2; border:0; padding:0; background:transparent; color:transparent; cursor:pointer; border-radius:8px; }
-    .hotspot:hover { background:rgb(8 122 62 / .045); box-shadow:inset 0 0 0 1px rgb(8 122 62 / .15); }
-    .hotspot:focus-visible { outline:3px solid #18a85b; outline-offset:2px; }
-    .nav { top:1.5%; height:3.4%; }
-    .nav-home{left:24.7%;width:5.7%}.nav-indicators{left:29.9%;width:8.1%}.nav-contracts{left:37.9%;width:8.8%}
-    .nav-library{left:46.7%;width:7.3%}.nav-reports{left:53.8%;width:7.2%}.nav-transparency{left:61.1%;width:8.8%}
-    .top-search { position:absolute; z-index:3; left:72.1%; top:1.65%; width:15.2%; height:2.35%; border:0; outline:0; padding:0 1.1%; border-radius:7px; color:#4c5156; font-size:clamp(5px,1vw,10px); background:transparent; }
-    .top-search:focus,.top-search:not(:placeholder-shown) { background:#fff; box-shadow:0 0 0 1px #d9dfdc; }
-    .notify{left:87.5%;top:1.7%;width:2.6%;height:2.4%}.accessibility{left:90.1%;top:1.7%;width:2.6%;height:2.4%}.profile{left:92.8%;top:1.7%;width:6%;height:2.4%}
-    .hero-primary{left:5.5%;top:24.7%;width:15.4%;height:2.75%}.hero-secondary{left:22.1%;top:24.7%;width:18.8%;height:2.75%}
-    .main-search { position:absolute; z-index:3; left:7.8%; top:29.83%; width:75%; height:2.75%; border:0; outline:0; padding:0 1%; color:#56606e; font-size:clamp(6px,1.15vw,12px); background:transparent; }
-    .main-search:focus,.main-search:not(:placeholder-shown) { background:#fff; }
-    .filter{left:86.05%;top:29.72%;width:8.6%;height:2.45%}
-    .quick{top:36.1%;height:15.9%}.quick-1{left:5.9%;width:16.3%}.quick-2{left:23.3%;width:16.4%}.quick-3{left:41%;width:16.5%}.quick-4{left:58.7%;width:16.4%}.quick-5{left:76.4%;width:17.8%}
-    .ods-more{left:67%;top:54.1%;width:26.8%;height:2.1%}.ods-grid{left:5.3%;top:56.7%;width:88.9%;height:5.5%}
-    .highlights-more{left:88.1%;top:64.1%;width:6.5%;height:2%}
-    .criteria{left:5.7%;top:66.35%;width:28.7%;height:14.7%}.documents{left:36.7%;top:66.35%;width:28.4%;height:14.7%}.faq{left:67%;top:66.35%;width:28.4%;height:14.7%}
-    .cta{left:68.7%;top:83.7%;width:22.7%;height:2.8%}
-    .footer-platform{left:24.5%;top:88.6%;width:10%;height:8.6%}.footer-resources{left:37.8%;top:88.6%;width:16%;height:8.6%}.footer-support{left:54.6%;top:88.6%;width:10.8%;height:8.6%}.footer-gov{left:68.6%;top:88.6%;width:18%;height:7.3%}
-    .toast { position:fixed; z-index:20; left:50%; bottom:22px; translate:-50% 14px; max-width:min(92vw,540px); padding:13px 18px; border-radius:11px; background:var(--dark); color:#fff; font-weight:700; font-size:13px; box-shadow:0 14px 45px rgb(0 0 0 / .25); opacity:0; pointer-events:none; transition:.22s ease; }
-    .toast.show { opacity:1; translate:-50% 0; }
-    .dialog-backdrop { position:fixed; z-index:30; inset:0; display:none; place-items:center; padding:20px; background:rgb(2 28 20 / .48); backdrop-filter:blur(3px); }
-    .dialog-backdrop.open { display:grid; }
-    .dialog { width:min(100%,470px); max-height:85vh; overflow:auto; padding:24px; border-radius:18px; background:#fff; box-shadow:0 28px 80px rgb(0 0 0 / .25); }
-    .dialog-head { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:16px; }
-    .dialog h2 { margin:0; font-size:20px; }.dialog p { color:#50585a; font-size:14px; line-height:1.6; }
-    .close { width:34px; height:34px; border:0; border-radius:50%; background:#eff7f2; color:var(--green); cursor:pointer; font-size:20px; }
-    .filter-list { display:grid; gap:9px; }.filter-list label { display:flex; align-items:center; gap:10px; padding:11px; border:1px solid var(--line); border-radius:10px; font-size:14px; cursor:pointer; }
-    .dialog-action { width:100%; margin-top:16px; padding:12px; border:0; border-radius:9px; background:var(--green); color:#fff; font-weight:700; cursor:pointer; }
-    .results { display:grid; gap:10px; }.result { padding:12px; border:1px solid var(--line); border-radius:10px; }.result strong { display:block; color:var(--green); }.result small { color:#66706b; }
-    @media (max-width:700px) {
-      body { background:#fff; }
-      .prototype { box-shadow:none; }
-      .hotspot:hover { background:transparent; box-shadow:none; }
-      .toast { font-size:12px; }
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--container), calc(100% - 64px));
+      margin-inline:auto;
     }
-    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}.toast{transition:none} }
+
+    /* Header */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{
+      min-height:88px;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:36px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:260px;
+    }
+    .crest{
+      width:54px;height:62px;
+      border-radius:50% 50% 46% 46%;
+      background:
+        radial-gradient(circle at 50% 24%, #fff 0 9%, transparent 10%),
+        linear-gradient(90deg,#0B6B3A 0 33%,#ED1C24 33% 66%,#F4C044 66%);
+      border:3px solid #1d5135;
+      box-shadow:inset 0 0 0 3px rgba(255,255,255,.55);
+      position:relative;
+      flex:0 0 auto;
+    }
+    .crest:after{
+      content:"SP";
+      position:absolute;
+      inset:0;
+      display:grid;
+      place-items:center;
+      font-size:15px;
+      font-weight:700;
+      color:#fff;
+      text-shadow:0 1px 2px rgba(0,0,0,.35);
+    }
+    .brand-text strong{
+      display:block;
+      font-size:14px;
+      line-height:1.18;
+      letter-spacing:.02em;
+    }
+    .brand-text span{
+      display:block;
+      margin-top:3px;
+      font-size:11px;
+      color:#3f4448;
+      font-weight:700;
+    }
+
+    .main-nav{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:30px;
+      font-size:13px;
+      font-weight:700;
+    }
+    .main-nav a{
+      padding:33px 0 27px;
+      position:relative;
+      white-space:nowrap;
+    }
+    .main-nav a.active{color:var(--green)}
+    .main-nav a.active:after{
+      content:"";
+      position:absolute;
+      left:0;right:0;bottom:0;
+      height:3px;
+      border-radius:999px;
+      background:var(--green);
+    }
+
+    .header-tools{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .top-search{
+      width:250px;
+      height:46px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:0 14px;
+      background:#fff;
+    }
+    .top-search input{
+      width:100%;
+      border:0;
+      outline:0;
+      font-size:12px;
+      color:var(--text);
+    }
+    .icon-btn{
+      width:38px;height:38px;
+      display:grid;
+      place-items:center;
+      border:0;
+      background:transparent;
+      color:#202426;
+      cursor:pointer;
+      border-radius:10px;
+    }
+    .icon-btn:hover{background:#F4F5F5}
+    .profile{
+      display:flex;
+      align-items:center;
+      gap:7px;
+      font-size:11px;
+      color:#42474A;
+      white-space:nowrap;
+    }
+
+    /* Hero */
+    .hero{
+      padding:58px 0 34px;
+      background:
+        radial-gradient(circle at 78% 40%, rgba(11,146,71,.05), transparent 30%),
+        linear-gradient(#fff,#fff);
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      align-items:center;
+      gap:54px;
+    }
+    .eyebrow{
+      margin:0 0 16px;
+      color:var(--green);
+      font-weight:700;
+      font-size:14px;
+      text-transform:uppercase;
+    }
+    .hero h1{
+      margin:0;
+      max-width:650px;
+      font-size:clamp(50px,5.2vw,82px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+    }
+    .hero h1 span{color:var(--green)}
+    .hero-copy{
+      margin:25px 0 0;
+      max-width:590px;
+      color:#33383B;
+      font-size:18px;
+      line-height:1.7;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      margin-top:30px;
+    }
+    .btn{
+      min-height:54px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      border-radius:12px;
+      padding:0 24px;
+      font-weight:700;
+      font-size:14px;
+      cursor:pointer;
+      border:1px solid transparent;
+    }
+    .btn-primary{
+      color:#fff;
+      background:var(--green);
+      box-shadow:0 8px 20px rgba(8,122,62,.15);
+    }
+    .btn-secondary{
+      color:#1D2421;
+      background:#fff;
+      border-color:#D7DBD8;
+    }
+
+    .map-visual{
+      min-height:420px;
+      position:relative;
+      display:grid;
+      place-items:center;
+      background:
+        radial-gradient(circle at 47% 50%, rgba(11,146,71,.07), transparent 43%),
+        repeating-radial-gradient(circle at 74% 53%, rgba(8,122,62,.08) 0 1px, transparent 1px 7px);
+      border-radius:50%;
+    }
+    .map-shape{
+      width:84%;
+      aspect-ratio:1.65;
+      clip-path:polygon(5% 44%,10% 31%,22% 20%,37% 18%,46% 10%,58% 16%,65% 25%,78% 27%,86% 36%,94% 41%,97% 52%,89% 58%,83% 68%,72% 70%,64% 78%,51% 82%,38% 77%,28% 69%,15% 68%,9% 57%);
+      background:
+        linear-gradient(35deg,transparent 48%,rgba(8,122,62,.13) 49% 50%,transparent 51%),
+        linear-gradient(145deg,transparent 48%,rgba(8,122,62,.10) 49% 50%,transparent 51%),
+        #F7FBF8;
+      border:1px solid #CFE4D6;
+      filter:drop-shadow(0 18px 20px rgba(30,78,50,.12));
+      position:relative;
+    }
+    .map-icon{
+      position:absolute;
+      width:58px;height:58px;
+      display:grid;
+      place-items:center;
+      color:var(--green);
+      font-size:38px;
+      font-weight:700;
+    }
+    .wind{left:44%;top:29%}
+    .city{right:25%;top:29%}
+    .solar{left:52%;bottom:22%}
+    .recycle{right:19%;bottom:19%}
+    .leaf-sketch{
+      position:absolute;
+      width:180px;height:180px;
+      border:2px solid rgba(11,146,71,.12);
+      border-radius:50% 10% 50% 10%;
+      transform:rotate(-22deg);
+      left:4%;bottom:5%;
+    }
+
+    /* Search */
+    .global-search-wrap{padding:14px 0 12px}
+    .global-search{
+      min-height:66px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:8px 12px 8px 20px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+    .global-search input{
+      flex:1;
+      min-width:0;
+      border:0;
+      outline:0;
+      color:var(--text);
+      font-size:14px;
+    }
+    .filter-button{
+      height:48px;
+      display:flex;
+      align-items:center;
+      gap:9px;
+      border:1px solid #D7DBD8;
+      border-radius:12px;
+      padding:0 20px;
+      background:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    /* Sections */
+    .section-card{
+      margin-top:18px;
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:var(--radius-lg);
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+    .section-label{
+      margin:0 0 18px;
+      color:var(--green);
+      font-size:14px;
+      font-weight:700;
+      text-transform:uppercase;
+    }
+
+    /* Quick navigation */
+    .quick-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:16px;
+    }
+    .quick-card{
+      min-height:300px;
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      padding:24px 18px 20px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:linear-gradient(180deg,#fff,#FCFDFC);
+    }
+    .quick-card:hover{
+      border-color:#BDDCC8;
+      transform:translateY(-2px);
+      transition:.2s ease;
+    }
+    .quick-icon{
+      width:82px;height:82px;
+      display:grid;
+      place-items:center;
+      color:var(--green);
+      font-size:48px;
+      margin-bottom:14px;
+    }
+    .quick-card h3{
+      margin:0;
+      font-size:18px;
+      line-height:1.25;
+    }
+    .quick-card p{
+      margin:14px 0 18px;
+      color:#4F5558;
+      font-size:13px;
+      line-height:1.7;
+    }
+    .quick-link{
+      margin-top:auto;
+      color:var(--green);
+      font-size:13px;
+      font-weight:700;
+    }
+    .badge{
+      position:absolute;
+      top:-1px;right:12px;
+      padding:5px 10px;
+      border-radius:0 0 9px 9px;
+      background:var(--green);
+      color:#fff;
+      font-size:10px;
+      font-weight:700;
+    }
+    .book-cover{
+      width:84px;height:112px;
+      margin:0 auto 14px;
+      padding:12px 8px;
+      background:linear-gradient(145deg,#123E34,#0C5C49);
+      color:#EAF7EF;
+      border-radius:3px;
+      box-shadow:8px 8px 0 #D7E1DD;
+      font-size:11px;
+      line-height:1.3;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+
+    /* ODS */
+    .section-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      margin-bottom:18px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:22px;
+    }
+    .section-head a{
+      color:var(--green);
+      font-size:13px;
+      font-weight:700;
+    }
+    .ods-row{
+      display:grid;
+      grid-template-columns:repeat(17,1fr);
+      gap:8px;
+    }
+    .ods{
+      aspect-ratio:1;
+      display:grid;
+      place-items:center;
+      border-radius:8px;
+      color:#fff;
+      font-weight:700;
+      font-size:11px;
+      text-align:center;
+      padding:6px;
+    }
+    .ods:nth-child(1){background:#E5243B}.ods:nth-child(2){background:#DDA63A}
+    .ods:nth-child(3){background:#4C9F38}.ods:nth-child(4){background:#C5192D}
+    .ods:nth-child(5){background:#FF3A21}.ods:nth-child(6){background:#26BDE2}
+    .ods:nth-child(7){background:#FCC30B;color:#4A3A00}.ods:nth-child(8){background:#A21942}
+    .ods:nth-child(9){background:#FD6925}.ods:nth-child(10){background:#DD1367}
+    .ods:nth-child(11){background:#FD9D24}.ods:nth-child(12){background:#BF8B2E}
+    .ods:nth-child(13){background:#3F7E44}.ods:nth-child(14){background:#0A97D9}
+    .ods:nth-child(15){background:#56C02B}.ods:nth-child(16){background:#00689D}
+    .ods:nth-child(17){background:#19486A}
+
+    /* Highlights */
+    .content-title{
+      margin:30px 0 12px;
+      font-size:22px;
+    }
+    .highlight-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:18px;
+    }
+    .highlight-card{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+      padding:20px;
+    }
+    .highlight-card h3{
+      margin:0 0 16px;
+      font-size:16px;
+    }
+    .list-item{
+      display:grid;
+      grid-template-columns:34px 1fr auto;
+      align-items:center;
+      gap:10px;
+      padding:12px 0;
+      border-top:1px solid #EEF0EF;
+      font-size:12px;
+    }
+    .list-item:first-of-type{border-top:0}
+    .list-icon{
+      width:30px;height:30px;
+      display:grid;
+      place-items:center;
+      border-radius:8px;
+      background:var(--green-soft);
+      color:var(--green);
+      font-weight:700;
+    }
+    .list-item strong{display:block;font-size:12px}
+    .list-item span{color:#6C7276}
+    .faq-item{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:13px 0;
+      border-top:1px solid #EEF0EF;
+      font-size:12px;
+    }
+    .faq-item:first-of-type{border-top:0}
+    .faq-q{
+      width:22px;height:22px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:var(--green-soft);
+      color:var(--green);
+      font-weight:700;
+    }
+
+    .cta-strip{
+      margin:20px 0 30px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:22px 28px;
+      border:1px solid #CFE3D6;
+      border-radius:18px;
+      background:linear-gradient(90deg,#F6FBF7,#fff);
+    }
+    .cta-strip h3{
+      margin:0 0 4px;
+      color:var(--green);
+      font-size:20px;
+    }
+    .cta-strip p{
+      margin:0;
+      color:#4F5558;
+      font-size:13px;
+    }
+
+    /* Footer */
+    footer{
+      background:var(--footer);
+      color:#fff;
+      padding:42px 0 20px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.25fr repeat(4,1fr);
+      gap:34px;
+    }
+    .footer-brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .footer-brand .crest{width:48px;height:56px}
+    .footer-brand strong{font-size:14px}
+    footer h4{
+      margin:0 0 14px;
+      font-size:13px;
+    }
+    footer a{
+      display:block;
+      color:#D8E5DE;
+      font-size:12px;
+      margin:8px 0;
+    }
+    .footer-copy{
+      margin-top:28px;
+      padding-top:16px;
+      border-top:1px solid rgba(255,255,255,.12);
+      text-align:center;
+      color:#CBD8D1;
+      font-size:11px;
+    }
+
+    /* Responsive */
+    @media(max-width:1200px){
+      .main-nav{display:none}
+      .header-inner{grid-template-columns:1fr auto}
+      .header-tools{grid-column:2}
+      .quick-grid{grid-template-columns:repeat(3,1fr)}
+      .ods-row{grid-template-columns:repeat(9,1fr)}
+    }
+    @media(max-width:900px){
+      .container{width:min(100% - 32px,var(--container))}
+      .hero-grid{grid-template-columns:1fr}
+      .map-visual{min-height:320px}
+      .highlight-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .top-search{display:none}
+    }
+    @media(max-width:640px){
+      .brand{min-width:0}
+      .brand-text{display:none}
+      .hero{padding-top:36px}
+      .hero h1{font-size:48px}
+      .hero-copy{font-size:16px}
+      .quick-grid{grid-template-columns:1fr}
+      .ods-row{grid-template-columns:repeat(4,1fr)}
+      .cta-strip{flex-direction:column;align-items:flex-start}
+      .footer-grid{grid-template-columns:1fr}
+      .profile{display:none}
+    }
+
+    /* faithful 1024px composition */
+    :root{--container:930px;--radius-lg:12px;--shadow:0 4px 18px rgba(20,48,34,.035)}
+    body{font-family:Arial,Helvetica,sans-serif;background:#fff}
+    .container{width:min(var(--container),calc(100% - 48px))}
+    .site-header{position:relative;height:82px}
+    .header-inner{min-height:82px;grid-template-columns:180px 1fr 285px;gap:15px}
+    .brand{min-width:0}.brand img{width:162px;height:auto}
+    .main-nav{display:flex;gap:24px;font-size:10px}.main-nav a{padding:32px 0 29px}
+    .header-tools{grid-column:auto;gap:7px}.top-search{width:152px;height:38px;border-radius:7px}.top-search input{font-size:9px}
+    .icon-btn{width:27px;height:27px}.profile{font-size:9px}
+    .hero{padding:30px 0 18px}.hero-grid{grid-template-columns:345px 1fr;gap:12px}
+    .hero h1{font-size:40px;line-height:1.08;letter-spacing:-.045em}.hero-copy{font-size:12px;line-height:1.8;margin-top:17px;max-width:340px}
+    .eyebrow{font-size:11px;margin-bottom:13px}.hero-actions{margin-top:18px;gap:14px}.btn{min-height:40px;border-radius:6px;padding:0 18px;font-size:11px}
+    .map-visual{min-height:320px;background:url('assets/ref-hero-map.jpg') center/contain no-repeat;border-radius:0}.map-visual>*{display:none}
+    .global-search-wrap{padding:6px 0}.global-search{min-height:57px;border-radius:8px;padding:7px 12px 7px 17px}.global-search input{font-size:12px}.filter-button{height:38px;border-radius:6px;font-size:11px}
+    .section-card{margin-top:7px;padding:13px;border-radius:10px}.section-label{font-size:11px;margin:0 0 8px}
+    .quick-grid{grid-template-columns:repeat(5,1fr);gap:12px}.quick-card{min-height:244px;border-radius:8px;padding:14px 11px 12px}
+    .quick-icon{width:72px;height:64px;margin-bottom:7px}.quick-icon img{width:100%;height:100%;object-fit:contain}
+    .quick-card h3{font-size:14px}.quick-card p{font-size:10px;line-height:1.65;margin:10px 0 12px}.quick-link{font-size:10px}.badge{font-size:8px;padding:3px 8px}
+    .book-cover{width:92px;height:75px;padding:0;margin:0 auto 7px;background:url('assets/ref-book-cover.jpg') center/contain no-repeat;box-shadow:none;font-size:0;border-radius:0}
+    .section-head{margin-bottom:10px}.section-head h2{font-size:15px}.section-head a{font-size:10px}
+    .ods-row{display:block}.ods-row img{width:100%;height:78px;object-fit:contain}.ods{display:none}
+    .content-title{font-size:15px;margin:18px 0 8px}.highlight-grid{gap:12px}.highlight-card{border-radius:8px;padding:14px}.highlight-card h3{font-size:12px;margin:0}.list-item{padding:8px 0;font-size:10px}.list-item strong{font-size:10px}.list-icon{font-size:17px;background:transparent}.faq-item{width:100%;padding:9px 0;border-left:0;border-right:0;border-bottom:0;background:transparent;text-align:left;font-size:10px;cursor:pointer}.faq-item:hover{color:var(--green)}
+    .cta-strip{margin:16px 0 10px;padding:15px 28px 15px 120px;border-radius:8px;position:relative}.cta-strip:before{content:"";position:absolute;left:33px;width:68px;height:58px;background:url('assets/ref-cta-icon.jpg') center/contain no-repeat}.cta-strip h3{font-size:15px}.cta-strip p{font-size:10px}
+    footer{padding:20px 0 10px}.footer-grid{gap:30px}.footer-brand{margin-bottom:8px}.footer-brand img{width:165px}.footer-grid h4{font-size:10px;margin-bottom:8px}footer a{font-size:9px;margin:5px 0}.footer-copy{font-size:9px;margin-top:10px;padding-top:8px}
+    .filter-panel{display:none;position:absolute;right:0;top:50px;width:230px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 16px 40px rgba(0,0,0,.15);z-index:20}.global-search{position:relative}.filter-panel.open{display:grid;gap:8px}.filter-panel label{font-size:11px;display:flex;gap:8px;align-items:center}.search-status{display:none;margin:8px auto 0;width:min(var(--container),calc(100% - 48px));font-size:11px;color:var(--green)}.search-status.show{display:block}
+    dialog{border:0;border-radius:14px;padding:22px;max-width:440px;box-shadow:0 28px 80px rgba(0,0,0,.25)}dialog::backdrop{background:rgba(0,35,25,.45)}dialog h2{margin:0 0 8px;font-size:20px}dialog p{font-size:13px;line-height:1.6;color:#50585a}.dialog-close{float:right;border:0;background:#eef7f1;border-radius:50%;width:32px;height:32px;color:var(--green);cursor:pointer}
+    @media(max-width:900px){.site-header{height:auto}.header-inner{grid-template-columns:1fr auto}.main-nav{display:none}.header-tools{grid-column:2}.hero-grid{grid-template-columns:1fr}.map-visual{min-height:280px}.quick-grid{grid-template-columns:repeat(2,1fr)}.ods-row img{height:auto}.highlight-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.top-search{display:none}}
+    @media(max-width:560px){.container{width:min(100% - 28px,var(--container))}.hero h1{font-size:40px}.quick-grid{grid-template-columns:1fr}.cta-strip{padding-left:20px}.cta-strip:before{display:none}.footer-grid{grid-template-columns:1fr}.profile{display:none}}
   </style>
 </head>
 <body>
-  <main class="prototype" id="inicio" aria-label="Plataforma Estadual de Sustentabilidade">
-    <img class="visual" src="assets/reference-portal.jpg" width="1024" height="1536" alt="Portal de Sustentabilidade em Contratações Públicas do Governo do Estado de São Paulo">
 
-    <button class="hotspot nav nav-home" data-scroll="inicio" aria-label="Início"></button>
-    <button class="hotspot nav nav-indicators" data-action="Indicadores" aria-label="Indicadores"></button>
-    <button class="hotspot nav nav-contracts" data-action="Contratações" aria-label="Contratações"></button>
-    <button class="hotspot nav nav-library" data-action="Biblioteca" aria-label="Biblioteca"></button>
-    <button class="hotspot nav nav-reports" data-action="Relatórios" aria-label="Relatórios"></button>
-    <button class="hotspot nav nav-transparency" data-action="Transparência" aria-label="Transparência"></button>
-    <input class="top-search" id="top-search" aria-label="Buscar na plataforma" placeholder="">
-    <button class="hotspot notify" data-action="Você tem 2 notificações" aria-label="Notificações"></button>
-    <button class="hotspot accessibility" data-action="Recursos de acessibilidade" aria-label="Acessibilidade"></button>
-    <button class="hotspot profile" data-action="Perfil do gestor" aria-label="Abrir perfil"></button>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#inicio" class="brand" aria-label="Governo do Estado de São Paulo">
+      <img src="assets/governo-sp-reference.png" alt="Governo do Estado de São Paulo">
+    </a>
 
-    <button class="hotspot hero-primary" data-scroll="criteria" aria-label="Explorar critérios"></button>
-    <button class="hotspot hero-secondary" data-dialog="about" aria-label="Conhecer a plataforma"></button>
-    <input class="main-search" id="main-search" aria-label="Pesquisar critérios, termos, ODS e documentos" placeholder="">
-    <button class="hotspot filter" data-dialog="filters" aria-label="Abrir filtros"></button>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a class="active" href="#inicio">Início</a><a href="#ods">Indicadores</a><a href="#criterios">Contratações</a><a href="#biblioteca">Biblioteca</a><a href="#destaques">Relatórios</a><a href="#rodape">Transparência</a>
+    </nav>
 
-    <button class="hotspot quick quick-1" data-action="Abrindo a Biblioteca" aria-label="Acessar biblioteca"></button>
-    <button class="hotspot quick quick-2" data-action="Produtos com Selo Verde estarão disponíveis em breve" aria-label="Produtos com Selo Verde"></button>
-    <button class="hotspot quick quick-3" data-dialog="ods" aria-label="Conhecer os ODS"></button>
-    <button class="hotspot quick quick-4" data-action="Abrindo o Glossário de Sustentabilidade" aria-label="Acessar glossário"></button>
-    <a class="hotspot quick quick-5" href="https://online.fliphtml5.com/kpxxz/qqct/#p=1" target="_blank" rel="noreferrer" aria-label="Acessar A Lei de Licitações e os ODS"></a>
-    <button class="hotspot ods-more" data-dialog="ods" aria-label="Conheça os 17 Objetivos da Agenda 2030"></button>
-    <button class="hotspot ods-grid" data-dialog="ods" aria-label="Objetivos de Desenvolvimento Sustentável"></button>
-    <button class="hotspot highlights-more" data-action="Todos os conteúdos em destaque" aria-label="Ver todos os conteúdos"></button>
-    <button class="hotspot criteria" id="criteria" data-dialog="criteria" aria-label="Ver critérios em destaque"></button>
-    <button class="hotspot documents" data-dialog="documents" aria-label="Ver biblioteca em destaque"></button>
-    <button class="hotspot faq" data-dialog="faq" aria-label="Abrir perguntas frequentes"></button>
-    <button class="hotspot cta" data-dialog="about" aria-label="Saiba mais sobre a plataforma"></button>
-    <button class="hotspot footer-platform" data-action="Links da plataforma" aria-label="Links da plataforma"></button>
-    <button class="hotspot footer-resources" data-action="Recursos da plataforma" aria-label="Recursos"></button>
-    <button class="hotspot footer-support" data-dialog="faq" aria-label="Suporte"></button>
-    <button class="hotspot footer-gov" data-action="Governo do Estado de São Paulo" aria-label="Governo do Estado de São Paulo"></button>
-  </main>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <div class="dialog-backdrop" id="dialog-backdrop" role="presentation">
-    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
-      <div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" id="dialog-close" aria-label="Fechar">×</button></div>
-      <div id="dialog-content"></div>
-    </section>
+    <div class="header-tools">
+      <label class="top-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" placeholder="Buscar na plataforma..." />
+      </label>
+      <button class="icon-btn" aria-label="Notificações"><i class="fa-regular fa-bell"></i></button>
+      <button class="icon-btn" aria-label="Acessibilidade"><i class="fa-solid fa-universal-access"></i></button>
+      <div class="profile"><i class="fa-regular fa-circle-user"></i> Olá, gestor</div>
+    </div>
   </div>
+</header>
 
-  <script>
-    const toast = document.querySelector('#toast');
-    const backdrop = document.querySelector('#dialog-backdrop');
-    const title = document.querySelector('#dialog-title');
-    const content = document.querySelector('#dialog-content');
-    const dialogs = {
-      about: ['Sobre a plataforma','<p>A Plataforma Estadual apoia gestores na aplicação de critérios sustentáveis em contratações públicas, conectando conhecimento, indicadores, ODS e documentos técnicos.</p><button class="dialog-action" data-close>Entendi</button>'],
-      filters: ['Filtrar conteúdos','<div class="filter-list"><label><input type="checkbox" value="criterios"> Critérios de sustentabilidade</label><label><input type="checkbox" value="biblioteca"> Biblioteca</label><label><input type="checkbox" value="ods"> Objetivos de Desenvolvimento Sustentável</label><label><input type="checkbox" value="glossario"> Glossário</label></div><button class="dialog-action" id="apply-filters">Aplicar filtros</button>'],
-      ods: ['Objetivos de Desenvolvimento Sustentável','<p>Os 17 ODS formam a Agenda 2030 da ONU e orientam ações para erradicar a pobreza, proteger o planeta e promover prosperidade.</p><div class="results"><div class="result"><strong>ODS nas contratações</strong><small>Relacione cada critério ao impacto sustentável correspondente.</small></div></div>'],
-      criteria: ['Critérios em destaque','<div class="results"><div class="result"><strong>CRIT-SP 001</strong><small>Acessibilidade em edificações</small></div><div class="result"><strong>CRIT-SP 014</strong><small>Sistema fotovoltaico</small></div><div class="result"><strong>CRIT-SP 028</strong><small>Logística reversa de produtos</small></div></div>'],
-      documents: ['Biblioteca em destaque','<div class="results"><div class="result"><strong>Guia de Compras Sustentáveis</strong><small>PDF · 2,4 MB · Download demonstrativo</small></div><div class="result"><strong>Manual de Aplicação dos Critérios</strong><small>PDF · 3,1 MB · Download demonstrativo</small></div><div class="result"><strong>Cartilha Agenda 2030</strong><small>PDF · 1,8 MB · Download demonstrativo</small></div></div>'],
-      faq: ['Perguntas frequentes','<div class="results"><div class="result"><strong>Como utilizar os critérios?</strong><small>Selecione o critério adequado ao objeto e inclua suas exigências no documento da contratação.</small></div><div class="result"><strong>Os critérios são obrigatórios?</strong><small>A aplicação depende da legislação, do objeto e da justificativa técnica de cada contratação.</small></div><div class="result"><strong>Como relacionar critérios aos ODS?</strong><small>Cada critério pode indicar os ODS diretamente associados ao impacto esperado.</small></div></div>']
-    };
-    function showToast(message) { toast.textContent=message; toast.classList.add('show'); clearTimeout(showToast.timer); showToast.timer=setTimeout(()=>toast.classList.remove('show'),2300); }
-    function openDialog(key) { const data=dialogs[key]; if(!data)return; title.textContent=data[0]; content.innerHTML=data[1]; backdrop.classList.add('open'); document.querySelector('#dialog-close').focus(); }
-    function closeDialog() { backdrop.classList.remove('open'); }
-    document.querySelectorAll('[data-action]').forEach(el=>el.addEventListener('click',()=>showToast(el.dataset.action)));
-    document.querySelectorAll('[data-dialog]').forEach(el=>el.addEventListener('click',()=>openDialog(el.dataset.dialog)));
-    document.querySelectorAll('[data-scroll]').forEach(el=>el.addEventListener('click',()=>document.querySelector('#'+el.dataset.scroll)?.scrollIntoView({behavior:'smooth'})));
-    document.querySelector('#dialog-close').addEventListener('click',closeDialog);
-    backdrop.addEventListener('click',e=>{if(e.target===backdrop||e.target.closest('[data-close]'))closeDialog(); if(e.target.id==='apply-filters'){closeDialog();showToast('Filtros aplicados ao protótipo');}});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDialog();});
-    [document.querySelector('#top-search'),document.querySelector('#main-search')].forEach(input=>input.addEventListener('keydown',e=>{if(e.key==='Enter'){const q=input.value.trim(); if(!q){showToast('Digite um termo para pesquisar');return;} openDialog('criteria'); title.textContent='Resultados para “'+q+'”'; input.blur();}}));
-  </script>
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Plataforma Estadual</p>
+        <h1>Sustentabilidade em Contratações <span>Públicas</span></h1>
+        <p class="hero-copy">
+          Promovendo contratações públicas sustentáveis para um São Paulo mais responsável,
+          eficiente e comprometido com o futuro.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#criterios">Explorar critérios <i class="fa-solid fa-arrow-right"></i></a>
+          <button class="btn btn-secondary" type="button" data-dialog="about">Conhecer a plataforma <i class="fa-regular fa-circle-play"></i></button>
+        </div>
+      </div>
+
+      <div class="map-visual" aria-label="Ilustração do Estado de São Paulo">
+      </div>
+    </div>
+  </section>
+
+  <section class="global-search-wrap">
+    <div class="container">
+      <form class="global-search" id="search-form">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="search-input" type="search" placeholder="Pesquisar critérios, termos, ODS, documentos e muito mais..." />
+        <button class="filter-button" id="filter-toggle" type="button"><i class="fa-solid fa-filter"></i> Filtros</button>
+        <div class="filter-panel" id="filter-panel"><strong>Filtrar por</strong><label><input type="checkbox" value="criterios"> Critérios</label><label><input type="checkbox" value="biblioteca"> Biblioteca</label><label><input type="checkbox" value="ods"> ODS</label></div>
+      </form>
+    </div>
+  </section>
+  <p class="search-status" id="search-status" role="status"></p>
+
+  <section class="container section-card" id="biblioteca">
+    <p class="section-label">Navegação rápida</p>
+
+    <div class="quick-grid">
+      <article class="quick-card">
+        <div class="quick-icon"><img src="assets/ref-icon-book.jpg" alt=""></div>
+        <h3>Biblioteca</h3>
+        <p>Acesse guias, normativos, manuais e materiais de apoio sobre sustentabilidade.</p>
+        <a class="quick-link" href="#">Acessar biblioteca →</a>
+      </article>
+
+      <article class="quick-card">
+        <span class="badge">Em breve</span>
+        <div class="quick-icon"><img src="assets/ref-icon-seal.jpg" alt=""></div>
+        <h3>Produtos com<br>Selo Verde</h3>
+        <p>Em breve: consulte produtos certificados que atendem a critérios de sustentabilidade.</p>
+        <a class="quick-link" href="#">Saiba mais →</a>
+      </article>
+
+      <article class="quick-card">
+        <div class="quick-icon"><img src="assets/ref-icon-ods.jpg" alt=""></div>
+        <h3>ODS</h3>
+        <p>Conheça os 17 Objetivos de Desenvolvimento Sustentável da Agenda 2030 da ONU.</p>
+        <a class="quick-link" href="#">Conhecer ODS →</a>
+      </article>
+
+      <article class="quick-card">
+        <div class="quick-icon"><img src="assets/ref-icon-glossary.jpg" alt=""></div>
+        <h3>Glossário de<br>Sustentabilidade</h3>
+        <p>Termos técnicos explicados de forma simples e objetiva.</p>
+        <a class="quick-link" href="#">Acessar glossário →</a>
+      </article>
+
+      <article class="quick-card">
+        <div class="book-cover">A Lei de Licitações e os ODS</div>
+        <h3>A Lei de Licitações<br>e os ODS</h3>
+        <p>Renato Fenili | Cristina Castro-Lucas</p>
+        <a class="quick-link" href="https://online.fliphtml5.com/kpxxz/qqct/#p=1" target="_blank" rel="noopener">
+          Acessar publicação →
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="container section-card" id="ods">
+    <div class="section-head">
+      <h2>ODS — Objetivos de Desenvolvimento Sustentável</h2>
+      <a href="#">Conheça os 17 Objetivos da Agenda 2030 da ONU →</a>
+    </div>
+
+    <div class="ods-row" aria-label="Objetivos de Desenvolvimento Sustentável">
+      <img src="assets/ref-ods-strip.jpg" alt="Os 17 Objetivos de Desenvolvimento Sustentável">
+    </div>
+  </section>
+
+  <section class="container" id="destaques">
+    <h2 class="content-title">Conteúdos em destaque</h2>
+
+    <div class="highlight-grid">
+      <article class="highlight-card" id="criterios">
+        <div class="section-head">
+          <h3>Critérios em destaque</h3>
+          <a href="#">Ver todos</a>
+        </div>
+
+        <div class="list-item">
+          <div class="list-icon"><i class="fa-regular fa-building"></i></div>
+          <div><strong>CRIT-SP 001</strong><span>Acessibilidade em edificações</span></div>
+          <span>→</span>
+        </div>
+        <div class="list-item">
+          <div class="list-icon"><i class="fa-solid fa-solar-panel"></i></div>
+          <div><strong>CRIT-SP 014</strong><span>Sistema fotovoltaico</span></div>
+          <span>→</span>
+        </div>
+        <div class="list-item">
+          <div class="list-icon"><i class="fa-solid fa-recycle"></i></div>
+          <div><strong>CRIT-SP 028</strong><span>Logística reversa de produtos</span></div>
+          <span>→</span>
+        </div>
+      </article>
+
+      <article class="highlight-card">
+        <div class="section-head">
+          <h3>Biblioteca em destaque</h3>
+          <a href="#">Ver todos</a>
+        </div>
+
+        <div class="list-item">
+          <div class="list-icon"><i class="fa-regular fa-file-lines"></i></div>
+          <div><strong>Guia de Compras Sustentáveis</strong><span>PDF · 2,4 MB</span></div>
+          <button class="icon-btn download" aria-label="Baixar Guia"><i class="fa-solid fa-download"></i></button>
+        </div>
+        <div class="list-item">
+          <div class="list-icon"><i class="fa-regular fa-file-lines"></i></div>
+          <div><strong>Manual de Aplicação dos Critérios</strong><span>PDF · 3,1 MB</span></div>
+          <button class="icon-btn download" aria-label="Baixar Manual"><i class="fa-solid fa-download"></i></button>
+        </div>
+        <div class="list-item">
+          <div class="list-icon"><i class="fa-regular fa-file-lines"></i></div>
+          <div><strong>Cartilha Agenda 2030</strong><span>PDF · 1,8 MB</span></div>
+          <button class="icon-btn download" aria-label="Baixar Cartilha"><i class="fa-solid fa-download"></i></button>
+        </div>
+      </article>
+
+      <article class="highlight-card">
+        <div class="section-head">
+          <h3>Perguntas frequentes</h3>
+          <a href="#">Ver todas</a>
+        </div>
+
+        <button class="faq-item" data-answer="Selecione o critério adequado ao objeto e inclua as exigências no documento da contratação."><div class="faq-q">?</div>Como utilizar os critérios de sustentabilidade?</button>
+        <button class="faq-item" data-answer="A aplicação depende da legislação, do objeto e da justificativa técnica de cada contratação."><div class="faq-q">?</div>Os critérios de sustentabilidade são obrigatórios?</button>
+        <button class="faq-item" data-answer="Cada critério indica os ODS relacionados ao impacto sustentável esperado."><div class="faq-q">?</div>Como relacionar os critérios aos ODS?</button>
+        <button class="faq-item" data-answer="Os modelos ficam disponíveis na Biblioteca, organizados por tipo de contratação."><div class="faq-q">?</div>Onde encontro modelos de documentos?</button>
+      </article>
+    </div>
+
+    <div class="cta-strip">
+      <div>
+        <h3>Juntos por um São Paulo mais sustentável</h3>
+        <p>Use o conhecimento, aplique os critérios e promova impacto positivo nas contratações públicas.</p>
+      </div>
+      <a class="btn btn-secondary" href="#">Saiba mais sobre a plataforma →</a>
+    </div>
+  </section>
+</main>
+
+<footer id="rodape">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/ref-footer-brand.jpg" alt="Governo do Estado de São Paulo">
+        </div>
+        <a href="#">Plataforma Estadual de Sustentabilidade em Contratações Públicas</a>
+      </div>
+
+      <div>
+        <h4>Plataforma</h4>
+        <a href="#">Sobre a plataforma</a>
+        <a href="#">Indicadores</a>
+        <a href="#">Contratações</a>
+        <a href="#">Biblioteca</a>
+        <a href="#">Transparência</a>
+      </div>
+
+      <div>
+        <h4>Recursos</h4>
+        <a href="#">Critérios</a>
+        <a href="#">Glossário</a>
+        <a href="#">A Lei de Licitações e os ODS</a>
+        <a href="#">API Pública</a>
+      </div>
+
+      <div>
+        <h4>Suporte</h4>
+        <a href="#">Fale conosco</a>
+        <a href="#">Perguntas frequentes</a>
+        <a href="#">Ouvidoria</a>
+        <a href="#">Acessibilidade</a>
+      </div>
+
+      <div>
+        <h4>Governo do Estado de São Paulo</h4>
+        <a href="#">Casa Civil</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2024 Governo do Estado de São Paulo. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<dialog id="site-dialog"><button class="dialog-close" aria-label="Fechar">×</button><h2 id="dialog-title"></h2><p id="dialog-copy"></p></dialog>
+<script src="main.js"></script>
+
 </body>
 </html>
