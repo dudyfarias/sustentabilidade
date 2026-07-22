@@ -32,6 +32,8 @@ Reference and implementation were opened together at 1024 px. The implementation
 - Document download controls open a clear prototype state.
 - About-platform CTA opens a native dialog.
 - External publication link remains available.
+- The ODS section contains 17 independent links plus the Agenda 2030 wheel; each goal opens its matching ONU Brasil page.
+- All 18 ODS elements fit the desktop row without overflow and remain horizontally navigable on small screens.
 - Desktop and mobile have no horizontal overflow.
 - Browser console errors checked: none.
 
@@ -42,6 +44,7 @@ Reference and implementation were opened together at 1024 px. The implementation
 3. Replaced approximated editorial artwork with individual source assets.
 4. Corrected the desktop header row, FAQ native styling, hero artwork crop and footer mark.
 5. Verified desktop, mobile, search, filters and FAQ after fixes.
+6. Replaced the single ODS strip with official individual ONU Brasil assets and validated all 17 destinations.
 
 ## Follow-up polish
 
