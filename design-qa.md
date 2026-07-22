@@ -36,6 +36,7 @@ Reference and implementation were opened together at 1024 px. The implementation
 - All 18 ODS elements fit the desktop row without overflow and remain horizontally navigable on small screens.
 - Desktop and mobile have no horizontal overflow.
 - Browser console errors checked: none.
+- The three featured "Ver todos" actions open functional internal pages with search, filters, details and FAQ accordions.
 
 ## Comparison history
 

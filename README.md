@@ -21,6 +21,7 @@ Importe este repositório na Vercel. O projeto é estático e a configuração e
 - Componentes reais para header, hero, busca, filtros, cards, ODS, destaques, CTA e footer
 - Busca, filtros, navegação, ODS, critérios, documentos e FAQ interativos
 - Cada um dos 17 ODS possui card e link individual para a página oficial da ONU Brasil
+- Páginas internas funcionais para critérios, biblioteca e perguntas frequentes
 - Diálogos, feedbacks e foco por teclado
 - Layout responsivo para desktop e dispositivos móveis
 - Sem autenticação, banco de dados ou APIs nesta fase
