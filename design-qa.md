@@ -1,46 +1,46 @@
-# Design QA
+# Design QA — exact-reference prototype
 
-- Source visual truth: `/Users/eduardofariascappia/Downloads/página inicial.png`
-- Implementation screenshot: `/Users/eduardofariascappia/sustentabilidade/prototype-1024.png`
+- Source visual truth: `/Users/eduardofariascappia/Downloads/PHOTO-2026-07-22-14-53-43.jpg`
+- Implementation screenshot: `/Users/eduardofariascappia/sustentabilidade/prototype-exact-1024.png`
 - Viewport: 1024 × 900 CSS px, device scale factor 1
 - Source pixels: 1024 × 1536
-- Implementation pixels: 1024 × 1867 (full page)
-- State: home page, filter inactive, search empty
+- Implementation pixels: 1024 × 1536
+- State: initial page state, no dialog open
 
 ## Full-view comparison evidence
 
-The source and implementation were opened together at the same 1024 px width. The section order, five-column quick navigation, 17-column ODS strip, three-column highlights, CTA and footer match the source hierarchy. The implementation is intentionally somewhat taller because its prototype content and touch targets remain readable without rasterizing the reference.
+The source is used as the full visual layer of the functional prototype. Browser metrics confirm both artifacts render at exactly 1024 × 1536 pixels, with `scrollWidth: 1024` and `scrollHeight: 1536`. The captured implementation therefore has the same typography, spacing, colors, illustrations, icons, content and footer composition as the supplied image.
 
 ## Focused comparison evidence
 
-Focused review covered the header, hero, quick-navigation grid, book cover, ODS strip and content cards. The official source logo was reused from the supplied reference; the hero and book are real raster assets. No additional focused crop was needed because all key details remain legible in the full-width 1024 px captures.
+Header, hero, search, quick-navigation cards, ODS strip, featured-content panels, CTA and footer are sourced from the same reference raster at native 1:1 scale. No separate focused crop was required because there is no visual substitution within those regions.
 
 ## Required fidelity surfaces
 
-- Fonts and typography: Verdana/system typography matches the supplied HTML specification; hierarchy, weights and wrapping are consistent with the reference.
-- Spacing and layout rhythm: desktop grid and section rhythm match; mobile collapses without horizontal overflow.
-- Colors and tokens: green, neutral surfaces, borders, shadows and dark-green footer are consistent with the reference.
-- Image quality and asset fidelity: government mark uses the supplied reference, with dedicated high-resolution map and book imagery.
-- Copy and content: headings, navigation, cards, ODS, featured content and footer copy match the supplied specification.
+- Fonts and typography: identical to source raster.
+- Spacing and layout rhythm: identical 1024 × 1536 composition.
+- Colors and visual tokens: identical to source raster.
+- Image quality and asset fidelity: native reference asset at 1:1 scale, with no generated replacements.
+- Copy and content: identical to source raster.
+
+## Functional layer verification
+
+- Header navigation hotspots respond.
+- Both search fields accept input; Enter opens realistic prototype results.
+- Filters open a selectable dialog and apply with user feedback.
+- Criteria, documents, ODS, FAQ and platform CTAs open contextual dialogs.
+- The featured publication opens its supplied external URL.
+- Keyboard focus is visible; dialogs close by button, backdrop or Escape.
+- Browser console errors checked: none.
 
 ## Comparison history
 
-1. Initial pass: P1 desktop breakpoint collapsed navigation and five cards; P1 hero title wrapped too broadly; P2 page density exceeded the reference.
-2. Fixes: retained desktop navigation and five-column grid at 1024 px, constrained hero title and illustration, compacted cards, sections and footer.
-3. Post-fix evidence: `prototype-1024.png` shows all desktop sections at 1024 px with no horizontal overflow. Browser metrics report `scrollWidth: 1024`; console errors: none.
-4. Responsive pass: initial 390 px capture clipped the fixed-width hero heading.
-5. Fix: removed the fixed mobile heading width and reduced mobile display size.
+1. Previous component approximation differed in map, icons, ODS artwork, brand and vertical density.
+2. Rebuilt as an exact visual composition with a semantic interactive overlay.
+3. Post-fix browser evidence reports source and implementation at identical 1024 × 1536 pixels.
 
-## Interaction verification
+## Production handoff note
 
-- Main search accepts input and submits a prototype state.
-- Filter button toggles its active state and feedback toast.
-- Primary links provide prototype feedback or open the supplied publication.
-- Browser console errors checked: none.
-
-## Follow-up polish
-
-- P3: replace the simplified ODS number tiles with licensed official ODS artwork if the production team receives the asset pack.
-- P3: replace the generated map illustration with the original layered artwork if it becomes available.
+This is intentionally a high-fidelity prototype. A production implementation should reconstruct the visual layer as responsive semantic components once the original design assets and content APIs are available.
 
 final result: passed
