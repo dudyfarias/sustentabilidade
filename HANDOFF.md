@@ -17,7 +17,7 @@ python3 -m http.server 4173
 
 | Item | Situação |
 | --- | --- |
-| Telas | 13 páginas concluídas |
+| Telas | 12 páginas concluídas |
 | Estilo | `styles.css` único, compartilhado por todas as páginas |
 | Comportamento | `main.js` global + um script por página de catálogo |
 | Dados | **Estáticos no HTML** — a substituir pela API |
@@ -42,8 +42,11 @@ python3 -m http.server 4173
 | `/sobre` | `sobre.html` | `main.js` | Não |
 | `/termos` | `termos.html` | `main.js` | Não |
 | `/privacidade` | `privacidade.html` | `main.js` | Não |
-| `/ouvidoria` | `ouvidoria.html` | `main.js` | Sim, se houver formulário de manifestação |
 | `/acessibilidade` | `acessibilidade.html` | `main.js` | Não |
+
+> Ouvidoria e Fale conosco são atendidos pelos canais oficiais do Estado
+> (`fala.sp.gov.br` e `compras.sp.gov.br/fale-conosco`) e não têm página própria
+> nem endpoint nesta plataforma.
 
 > `vercel.json` usa `cleanUrls: true`. As URLs canônicas **não têm `.html`**.
 > Mantenha esse comportamento ao migrar de host, ou atualize `sitemap.xml`,
@@ -171,7 +174,6 @@ GET /api/v1/biblioteca?tipo=&q=
 GET /api/v1/faq?categoria=&q=
 GET /api/v1/ods
 GET /api/v1/indicadores?escopo=contratacoes|transparencia|ods
-POST /api/v1/ouvidoria            # se o formulário for implementado
 ```
 
 Envelope sugerido para as listagens:
@@ -275,7 +277,7 @@ O protótipo já implementa três estados por catálogo. Mantenha-os ao integrar
 
 ## 9. Verificações já realizadas
 
-- As 13 páginas e a 404 respondem HTTP 200.
+- As 12 páginas e a 404 respondem HTTP 200.
 - Nenhum link interno aponta para arquivo inexistente e não há `href="#"` no site.
 - Todo `data-dialog` do HTML tem entrada correspondente em `main.js`.
 - Filtros, buscas, ordenações e estados vazios testados no navegador em cada catálogo.

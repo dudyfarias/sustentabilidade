@@ -24,7 +24,6 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 | Perguntas frequentes | `faq.html` | `faq.js` | 8 perguntas com categorias e busca |
 | Termos de Uso | `termos.html` | — | 12 seções sobre condições de uso da plataforma |
 | Política de Privacidade | `privacidade.html` | — | 11 seções conforme a LGPD |
-| Ouvidoria | `ouvidoria.html` | — | 9 seções sobre manifestações, prazos e LAI |
 | Acessibilidade | `acessibilidade.html` | — | 8 seções com recursos e limitações conhecidas |
 | Página não encontrada | `404.html` | `main.js` | Atalhos para as áreas principais e canal da Ouvidoria |
 
@@ -61,7 +60,7 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 ## Indexação e compartilhamento
 
 - `robots.txt` liberando indexação e apontando para o sitemap.
-- `sitemap.xml` com as treze URLs canônicas, em formato limpo (sem `.html`).
+- `sitemap.xml` com as doze URLs canônicas, em formato limpo (sem `.html`).
 - `canonical` em todas as páginas, coerente com `cleanUrls` da Vercel.
 - Open Graph e Twitter Card completos, com imagem própria de 1200×630.
 - Favicon em `.ico`, `.svg`, `apple-touch-icon` e ícones de 192 e 512 px.
@@ -75,7 +74,7 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 Cada item abaixo foi executado no navegador contra a implementação.
 
 **Navegação**
-- As 13 páginas e a 404 respondem HTTP 200.
+- As 12 páginas e a 404 respondem HTTP 200.
 - `robots.txt`, `sitemap.xml`, `favicon.ico`, `og-image.png` e `site.webmanifest` são servidos corretamente.
 - O `sitemap.xml` é XML válido e o `site.webmanifest` é JSON válido.
 - Nenhum link interno aponta para arquivo inexistente.
@@ -153,7 +152,7 @@ Descrito em detalhe em [`HANDOFF.md`](./HANDOFF.md).
 ## Pendências institucionais
 
 - Validação institucional do conteúdo antes da publicação oficial.
-- Revisão jurídica das minutas de Termos de Uso, Política de Privacidade e Ouvidoria.
+- Revisão jurídica das minutas de Termos de Uso e Política de Privacidade.
 - Designação formal do Encarregado pelo tratamento de dados pessoais (DPO).
 - Auditoria externa de acessibilidade e submissão ao avaliador oficial do eMAG.
 

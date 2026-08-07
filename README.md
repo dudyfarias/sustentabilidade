@@ -18,7 +18,7 @@ Importe este repositório na Vercel. O projeto é estático e a configuração e
 
 ## Escopo
 
-Treze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
+Doze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 
 | Página | Arquivo |
 | --- | --- |
@@ -33,7 +33,6 @@ Treze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 | Perguntas frequentes | `faq.html` |
 | Termos de Uso | `termos.html` |
 | Política de Privacidade | `privacidade.html` |
-| Ouvidoria | `ouvidoria.html` |
 | Acessibilidade | `acessibilidade.html` |
 
 - Navegação institucional de 9 itens, com TCE e PGE sinalizados como "Em breve"
