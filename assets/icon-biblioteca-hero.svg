@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Biblioteca de sustentabilidade">
+  <!-- Halo -->
+  <circle cx="130" cy="132" r="104" fill="#F2F8F4"/>
+
+  <!-- Documentos ao fundo -->
+  <g fill="#FFFFFF" stroke="#CFE3D6" stroke-width="4" stroke-linejoin="round">
+    <rect x="60" y="52" width="92" height="118" rx="7" transform="rotate(-8 106 111)"/>
+    <rect x="106" y="52" width="92" height="118" rx="7" transform="rotate(7 152 111)"/>
+  </g>
+
+  <!-- Livro aberto -->
+  <g fill="none" stroke="#0B7A3E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M130 96c-16-13-38-17-60-11v92c22-6 44-2 60 11 16-13 38-17 60-11V85c-22-6-44-2-60 11Z" fill="#FFFFFF"/>
+    <path d="M130 96v92"/>
+  </g>
+
+  <!-- Linhas de texto -->
+  <g stroke="#9CCFB1" stroke-width="5" stroke-linecap="round">
+    <path d="M88 116h26M88 134h26M88 152h18"/>
+    <path d="M146 116h26M146 134h26"/>
+  </g>
+
+  <!-- Folha -->
+  <g transform="translate(148 146)">
+    <path d="M0 40C0 19 17 2 42 0c0 22-17 40-42 40Z" fill="#0B7A3E"/>
+    <path d="M7 34C16 24 27 14 38 7" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Perguntas frequentes">
+  <!-- Halo -->
+  <circle cx="130" cy="130" r="104" fill="#F2F8F4"/>
+
+  <!-- Balão secundário -->
+  <path d="M150 60h56a12 12 0 0 1 12 12v44a12 12 0 0 1-12 12h-14l-16 18v-18h-26a12 12 0 0 1-12-12V72a12 12 0 0 1 12-12Z"
+        fill="#FFFFFF" stroke="#CFE3D6" stroke-width="6" stroke-linejoin="round"/>
+  <g stroke="#9CCFB1" stroke-width="6" stroke-linecap="round">
+    <path d="M164 84h32M164 102h20"/>
+  </g>
+
+  <!-- Balão principal -->
+  <path d="M54 96h104a14 14 0 0 1 14 14v58a14 14 0 0 1-14 14h-52l-28 26v-26H54a14 14 0 0 1-14-14v-58a14 14 0 0 1 14-14Z"
+        fill="#FFFFFF" stroke="#0B7A3E" stroke-width="7" stroke-linejoin="round"/>
+
+  <!-- Interrogação -->
+  <g fill="none" stroke="#0B7A3E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M90 128c0-10 8-18 18-18s18 8 18 18c0 12-16 12-18 24"/>
+  </g>
+  <circle cx="108" cy="164" r="6" fill="#0B7A3E"/>
+</svg>

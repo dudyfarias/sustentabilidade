@@ -42,6 +42,22 @@ const DIALOGS = {
   contato: {
     title: 'Fale conosco',
     copy: 'Envie sugestões de novos critérios ou dúvidas técnicas para sustentabilidade-contratacoes@sp.gov.br. A equipe responde em até cinco dias úteis.'
+  },
+  download: {
+    title: 'Download em preparação',
+    copy: 'O arquivo definitivo será disponibilizado quando a biblioteca documental for integrada às fontes oficiais.'
+  },
+  'doc-guia': {
+    title: 'Guia de Compras Sustentáveis',
+    copy: 'Guia introdutório com roteiro de planejamento, exemplos de requisitos e formas de comprovação. Cobre planejamento, pesquisa de mercado, especificação, julgamento e gestão contratual.'
+  },
+  'doc-manual': {
+    title: 'Manual de Aplicação dos Critérios',
+    copy: 'Manual voltado a equipes de planejamento, agentes de contratação e fiscais. Cobre seleção de critérios, matriz de riscos, evidências e monitoramento.'
+  },
+  'doc-cartilha': {
+    title: 'Cartilha Agenda 2030',
+    copy: 'Apresenta os 17 Objetivos de Desenvolvimento Sustentável e exemplos de contribuição por meio das compras públicas, com metas prioritárias e casos de aplicação.'
   }
 };
 
