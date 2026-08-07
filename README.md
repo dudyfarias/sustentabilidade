@@ -18,7 +18,7 @@ Importe este repositório na Vercel. O projeto é estático e a configuração e
 
 ## Escopo
 
-Oito páginas funcionais, todas compartilhando `styles.css` e `main.js`:
+Doze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 
 | Página | Arquivo |
 | --- | --- |
@@ -30,11 +30,16 @@ Oito páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 | Transparência | `transparencia.html` |
 | Sobre | `sobre.html` |
 | Perguntas frequentes | `faq.html` |
+| Termos de Uso | `termos.html` |
+| Política de Privacidade | `privacidade.html` |
+| Ouvidoria | `ouvidoria.html` |
+| Acessibilidade | `acessibilidade.html` |
 
 - Navegação institucional de 9 itens, com TCE e PGE sinalizados como "Em breve"
 - Busca, filtros combináveis, ordenação e estados vazios em todos os catálogos
 - Busca insensível a acentuação em todas as páginas
 - Cada um dos 17 ODS possui card e link individual para a página oficial da ONU Brasil
+- Link de salto e foco visível em todas as páginas
 - Diálogos, feedbacks e navegação por teclado
 - Layout responsivo para desktop e dispositivos móveis
 - Sem autenticação, banco de dados ou APIs nesta fase
