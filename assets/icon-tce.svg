@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-hidden="true">
+  <!-- Sede do tribunal: frontão e colunas -->
+  <g fill="none" stroke="#0B7A3E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m10 33 36-21 36 21Z"/>
+    <path d="M17 40h58"/>
+    <path d="M26 46v27M40 46v27M54 46v27M68 46v27"/>
+    <path d="M19 79h54"/>
+    <path d="M12 87h68"/>
+  </g>
+
+  <!-- Lupa da fiscalização de contas: recorte branco separa do prédio -->
+  <circle cx="70" cy="66" r="17" fill="#fff" stroke="#fff" stroke-width="8"/>
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round">
+    <path d="m82 78 8 8"/>
+  </g>
+  <g fill="none" stroke="#0B7A3E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="70" cy="66" r="17"/>
+    <path d="m82 78 8 8"/>
+    <path d="m62 66 6 6 12-13"/>
+  </g>
+</svg>

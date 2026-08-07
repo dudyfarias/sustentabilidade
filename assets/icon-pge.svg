@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-hidden="true">
+  <!-- Escudo da defesa jurídica do Estado -->
+  <g fill="none" stroke="#0B7A3E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M50 9 16 21v27c0 21 14 34 34 43 20-9 34-22 34-43V21Z"/>
+  </g>
+
+  <!-- Balança da justiça dentro do escudo -->
+  <g fill="none" stroke="#0B7A3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M50 33v33"/>
+    <path d="M34 41h32"/>
+    <path d="m34 41-7 13h14z"/>
+    <path d="m66 41-7 13h14z"/>
+    <path d="M40 68h20"/>
+  </g>
+  <circle cx="50" cy="31" r="2.8" fill="#0B7A3E"/>
+</svg>

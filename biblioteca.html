@@ -78,7 +78,7 @@
       </nav>
 
       <h1>Biblioteca de <span>Sustentabilidade</span></h1>
-      <p>Guias, manuais e materiais de apoio para planejar contratações públicas sustentáveis e aplicar os critérios estaduais.</p>
+      <p>Guias, manuais, modelos editáveis e materiais de apoio para planejar contratações públicas sustentáveis e aplicar os critérios estaduais.</p>
 
       <img class="page-hero-art" src="assets/icon-biblioteca-hero.svg" alt="" aria-hidden="true">
     </div>
@@ -93,19 +93,43 @@
       </button>
     </form>
 
+    <section class="doc-destaque" id="doc-destaque" aria-labelledby="destaque-titulo">
+      <div class="doc-destaque-capa">
+        <img src="assets/ref-icon-book.jpg" alt="" aria-hidden="true">
+      </div>
+      <div class="doc-destaque-corpo">
+        <p class="doc-destaque-eyebrow"><i class="fa-solid fa-star" aria-hidden="true"></i> Comece por aqui</p>
+        <h2 id="destaque-titulo">Guia de Compras Sustentáveis</h2>
+        <p class="doc-destaque-texto">Roteiro completo para incorporar sustentabilidade ao planejamento das compras públicas, do estudo técnico preliminar à gestão do contrato.</p>
+        <ul class="doc-destaque-lista">
+          <li>Roteiro das cinco etapas, do estudo técnico preliminar à gestão do contrato</li>
+          <li>Exemplos de requisitos redigidos de forma objetiva e verificável</li>
+          <li>Formas de comprovação aceitas para cada tipo de critério</li>
+          <li>Erros frequentes que levam à impugnação do edital</li>
+        </ul>
+        <div class="doc-destaque-acoes">
+          <button class="btn btn-primary" type="button" data-dialog="download">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Baixar o guia
+          </button>
+          <a class="doc-destaque-link" href="#doc-grid">Ver todos os materiais →</a>
+        </div>
+      </div>
+    </section>
+
     <h2 class="chips-label">Tipos de documento</h2>
     <div class="chips-row" role="group" aria-label="Filtrar por tipo de documento">
       <button class="chip active" type="button" data-doc-type="todos"><i class="fa-solid fa-table-cells-large"></i> Todos</button>
       <button class="chip" type="button" data-doc-type="guia"><i class="fa-regular fa-compass"></i> Guias</button>
-      <button class="chip" type="button" data-doc-type="manual"><i class="fa-regular fa-file-lines"></i> Manuais</button>
+      <button class="chip" type="button" data-doc-type="manual"><i class="fa-solid fa-list-check"></i> Manuais</button>
       <button class="chip" type="button" data-doc-type="cartilha"><i class="fa-solid fa-book-open"></i> Cartilhas</button>
+      <button class="chip" type="button" data-doc-type="modelo"><i class="fa-regular fa-clipboard"></i> Modelos</button>
       <button class="chip" type="button" data-doc-type="publicacao"><i class="fa-solid fa-scale-balanced"></i> Publicações</button>
     </div>
 
     <div class="results-head">
       <div>
         <h2 class="results-title">Todos os documentos</h2>
-        <p class="results-meta"><span id="doc-count">4</span> documentos disponíveis &nbsp;•&nbsp; Atualizado em julho de 2026</p>
+        <p class="results-meta"><span id="doc-count">13</span> documentos disponíveis &nbsp;•&nbsp; Atualizado em julho de 2026</p>
       </div>
       <label class="sort-box">
         Ordenar por:
@@ -118,59 +142,186 @@
 
     <div class="doc-grid" id="doc-grid">
 
-      <article class="doc-card" data-doc-type="guia">
-        <div class="doc-icon"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></div>
+      <article class="doc-card" data-doc-type="guia" style="--c:#0B9247" data-doc-sinopse="Guia introdutório com roteiro de planejamento, exemplos de requisitos e formas de comprovação. Percorre as cinco etapas da contratação: planejamento, pesquisa de mercado, especificação do objeto, julgamento das propostas e gestão contratual. Indicado para quem está começando a aplicar critérios de sustentabilidade.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-regular fa-compass"></i></span>
+          <span class="doc-tipo">Guia</span>
+        </div>
         <h3>Guia de Compras Sustentáveis</h3>
-        <p>Orientações para incorporar sustentabilidade ao planejamento das compras públicas.</p>
-        <div class="doc-meta"><span>PDF</span><span>2,4 MB</span><span>2026</span></div>
-        <div class="doc-actions">
-          <button class="doc-btn primary" type="button" data-dialog="doc-guia">Ler resumo</button>
-          <button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Guia de Compras Sustentáveis">
-            <i class="fa-solid fa-download" aria-hidden="true"></i>
-          </button>
-        </div>
+        <p>Roteiro completo para incorporar sustentabilidade ao planejamento das compras públicas, do estudo técnico preliminar à gestão do contrato.</p>
+        <div class="doc-tags"><span class="doc-tag">Planejamento</span><span class="doc-tag">Especificação</span><span class="doc-tag">ETP</span></div>
+        <div class="doc-meta"><span>PDF</span><span>68 páginas</span><span>2,4 MB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Guia de Compras Sustentáveis"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
       </article>
-
-      <article class="doc-card" data-doc-type="manual">
-        <div class="doc-icon"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></div>
+      <article class="doc-card" data-doc-type="guia" style="--c:#0B9247" data-doc-sinopse="Orienta a transformar diretrizes gerais de sustentabilidade em cláusulas mensuráveis. Traz exemplos de redação, erros frequentes que geram impugnação e a relação entre requisito, forma de comprovação e critério de aceitação.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-regular fa-compass"></i></span>
+          <span class="doc-tipo">Guia</span>
+        </div>
+        <h3>Guia de Elaboração do Termo de Referência</h3>
+        <p>Como redigir termos de referência que traduzem critérios de sustentabilidade em requisitos objetivos e verificáveis.</p>
+        <div class="doc-tags"><span class="doc-tag">Especificação</span><span class="doc-tag">Termo de referência</span></div>
+        <div class="doc-meta"><span>PDF</span><span>44 páginas</span><span>1,9 MB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Guia de Elaboração do Termo de Referência"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
+      </article>
+      <article class="doc-card" data-doc-type="guia" style="--c:#0B9247" data-doc-sinopse="Aborda as fontes admitidas na pesquisa de preços, como avaliar se o mercado local atende ao critério pretendido e como registrar a justificativa quando o requisito eleva o preço estimado. Inclui o tratamento a dar quando há fornecedor único.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-regular fa-compass"></i></span>
+          <span class="doc-tipo">Guia</span>
+        </div>
+        <h3>Guia de Pesquisa de Mercado Sustentável</h3>
+        <p>Métodos para estimar preços e verificar a existência de fornecedores capazes de atender aos critérios exigidos.</p>
+        <div class="doc-tags"><span class="doc-tag">Pesquisa de preços</span><span class="doc-tag">Mercado</span></div>
+        <div class="doc-meta"><span>PDF</span><span>32 páginas</span><span>1,5 MB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Guia de Pesquisa de Mercado Sustentável"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
+      </article>
+      <article class="doc-card" data-doc-type="manual" style="--c:#1B6FB8" data-doc-sinopse="Manual voltado a equipes de planejamento, agentes de contratação e fiscais. Cobre a seleção de critérios por categoria de objeto, a montagem da matriz de riscos, as evidências aceitas em cada caso e o monitoramento ao longo da execução.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-solid fa-list-check"></i></span>
+          <span class="doc-tipo">Manual</span>
+        </div>
         <h3>Manual de Aplicação dos Critérios</h3>
-        <p>Procedimentos práticos para selecionar, justificar e fiscalizar os critérios.</p>
-        <div class="doc-meta"><span>PDF</span><span>3,1 MB</span><span>2026</span></div>
-        <div class="doc-actions">
-          <button class="doc-btn primary" type="button" data-dialog="doc-manual">Ler resumo</button>
-          <button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Manual de Aplicação dos Critérios">
-            <i class="fa-solid fa-download" aria-hidden="true"></i>
-          </button>
-        </div>
+        <p>Procedimentos práticos para selecionar, justificar, exigir e fiscalizar cada critério do catálogo estadual.</p>
+        <div class="doc-tags"><span class="doc-tag">Critérios</span><span class="doc-tag">Julgamento</span><span class="doc-tag">Matriz de riscos</span></div>
+        <div class="doc-meta"><span>PDF</span><span>96 páginas</span><span>3,1 MB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Manual de Aplicação dos Critérios"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
       </article>
-
-      <article class="doc-card" data-doc-type="cartilha">
-        <div class="doc-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+      <article class="doc-card" data-doc-type="manual" style="--c:#1B6FB8" data-doc-sinopse="Estrutura a rotina do fiscal: o que conferir no recebimento provisório e no definitivo, como documentar não conformidades, quando notificar a contratada e em que hipóteses a obrigação de sustentabilidade enseja sanção administrativa.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-solid fa-list-check"></i></span>
+          <span class="doc-tipo">Manual</span>
+        </div>
+        <h3>Manual de Fiscalização de Contratos Sustentáveis</h3>
+        <p>O que verificar, com que periodicidade e como registrar o descumprimento de obrigações de sustentabilidade.</p>
+        <div class="doc-tags"><span class="doc-tag">Gestão contratual</span><span class="doc-tag">Fiscalização</span></div>
+        <div class="doc-meta"><span>PDF</span><span>58 páginas</span><span>2,2 MB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Manual de Fiscalização de Contratos Sustentáveis"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
+      </article>
+      <article class="doc-card" data-doc-type="manual" style="--c:#1B6FB8" data-doc-sinopse="Reúne as formas de comprovação admitidas — certificações de terceira parte, autodeclaração, laudo de ensaio, registro em cadastro oficial — indicando o grau de confiabilidade de cada uma e quando exigir mais de uma evidência.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-solid fa-list-check"></i></span>
+          <span class="doc-tipo">Manual</span>
+        </div>
+        <h3>Manual de Comprovação e Evidências</h3>
+        <p>Quais documentos, certificações e laudos são aceitos como prova de atendimento a cada tipo de critério.</p>
+        <div class="doc-tags"><span class="doc-tag">Comprovação</span><span class="doc-tag">Certificações</span></div>
+        <div class="doc-meta"><span>PDF</span><span>40 páginas</span><span>1,7 MB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Manual de Comprovação e Evidências"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
+      </article>
+      <article class="doc-card" data-doc-type="cartilha" style="--c:#C77A0A" data-doc-sinopse="Apresenta os 17 Objetivos de Desenvolvimento Sustentável e exemplos de contribuição por meio das compras públicas, com as metas prioritárias para o Estado e casos de aplicação em objetos contratuais frequentes.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+          <span class="doc-tipo">Cartilha</span>
+        </div>
         <h3>Cartilha Agenda 2030</h3>
-        <p>Visão geral dos ODS e sua relação com as contratações governamentais.</p>
-        <div class="doc-meta"><span>PDF</span><span>1,8 MB</span><span>2026</span></div>
-        <div class="doc-actions">
-          <button class="doc-btn primary" type="button" data-dialog="doc-cartilha">Ler resumo</button>
-          <button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Cartilha Agenda 2030">
-            <i class="fa-solid fa-download" aria-hidden="true"></i>
-          </button>
-        </div>
+        <p>Visão geral dos 17 Objetivos de Desenvolvimento Sustentável e sua relação com as contratações governamentais.</p>
+        <div class="doc-tags"><span class="doc-tag">ODS</span><span class="doc-tag">Agenda 2030</span></div>
+        <div class="doc-meta"><span>PDF</span><span>28 páginas</span><span>1,8 MB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Cartilha Agenda 2030"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
       </article>
-
-      <article class="doc-card" data-doc-type="publicacao">
-        <div class="doc-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
+      <article class="doc-card" data-doc-type="cartilha" style="--c:#C77A0A" data-doc-sinopse="Explica, em linguagem direta, como a Política Nacional de Resíduos Sólidos alcança as contratações públicas: quem responde pela destinação, o que exigir do fornecedor e como comprovar que o resíduo teve destino adequado.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+          <span class="doc-tipo">Cartilha</span>
+        </div>
+        <h3>Cartilha de Gestão de Resíduos em Contratos</h3>
+        <p>Obrigações de destinação, logística reversa e comprovação em contratos de fornecimento e de serviço.</p>
+        <div class="doc-tags"><span class="doc-tag">Resíduos</span><span class="doc-tag">Logística reversa</span></div>
+        <div class="doc-meta"><span>PDF</span><span>24 páginas</span><span>1,4 MB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Cartilha de Gestão de Resíduos em Contratos"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
+      </article>
+      <article class="doc-card" data-doc-type="cartilha" style="--c:#C77A0A" data-doc-sinopse="Escrita para o mercado, e não para a Administração. Esclarece o que costuma ser exigido, quais certificações são reconhecidas, como preparar a documentação e onde acompanhar as contratações em andamento.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+          <span class="doc-tipo">Cartilha</span>
+        </div>
+        <h3>Cartilha do Fornecedor</h3>
+        <p>Material de orientação para empresas que desejam participar de contratações com critérios de sustentabilidade.</p>
+        <div class="doc-tags"><span class="doc-tag">Fornecedores</span><span class="doc-tag">Habilitação</span></div>
+        <div class="doc-meta"><span>PDF</span><span>20 páginas</span><span>1,2 MB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Cartilha do Fornecedor"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
+      </article>
+      <article class="doc-card" data-doc-type="modelo" style="--c:#7A4FBF" data-doc-sinopse="Arquivo editável com cláusulas de obrigação, de comprovação e de sanção, cada uma acompanhada de nota explicativa sobre quando usá-la e do que precisa constar no termo de referência para que a cláusula seja exigível.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-regular fa-clipboard"></i></span>
+          <span class="doc-tipo">Modelo</span>
+        </div>
+        <h3>Modelo de Cláusulas Contratuais Sustentáveis</h3>
+        <p>Redações prontas de cláusulas de sustentabilidade, com notas explicativas e alternativas por tipo de objeto.</p>
+        <div class="doc-tags"><span class="doc-tag">Minutas</span><span class="doc-tag">Cláusulas</span></div>
+        <div class="doc-meta"><span>DOCX</span><span>18 cláusulas</span><span>320 KB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Modelo de Cláusulas Contratuais Sustentáveis"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
+      </article>
+      <article class="doc-card" data-doc-type="modelo" style="--c:#7A4FBF" data-doc-sinopse="Percorre os pontos que mais geram questionamento: o critério está descrito de forma objetiva, existe forma de comprovação definida, o preço estimado considerou o requisito e a exigência é proporcional ao objeto.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-regular fa-clipboard"></i></span>
+          <span class="doc-tipo">Modelo</span>
+        </div>
+        <h3>Checklist de Verificação Pré-Contratação</h3>
+        <p>Lista de conferência a percorrer antes de publicar o edital, para reduzir impugnação e retrabalho.</p>
+        <div class="doc-tags"><span class="doc-tag">Checklist</span><span class="doc-tag">Planejamento</span></div>
+        <div class="doc-meta"><span>PDF</span><span>6 páginas</span><span>480 KB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Checklist de Verificação Pré-Contratação"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
+      </article>
+      <article class="doc-card" data-doc-type="modelo" style="--c:#7A4FBF" data-doc-sinopse="Estrutura de coleta alinhada aos indicadores publicados na página de Transparência, para que cada órgão acompanhe seus próprios números com a mesma metodologia usada no consolidado estadual.">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-regular fa-clipboard"></i></span>
+          <span class="doc-tipo">Modelo</span>
+        </div>
+        <h3>Planilha de Indicadores de Contratação</h3>
+        <p>Planilha para acompanhar a adoção de critérios e consolidar os indicadores da unidade contratante.</p>
+        <div class="doc-tags"><span class="doc-tag">Indicadores</span><span class="doc-tag">Monitoramento</span></div>
+        <div class="doc-meta"><span>XLSX</span><span>4 abas</span><span>210 KB</span><span>2026</span></div>
+        <div class="doc-actions"><button class="doc-btn primary" type="button" data-doc-resumo>Ler resumo</button><button class="doc-btn only-icon" type="button" data-dialog="download" aria-label="Baixar Planilha de Indicadores de Contratação"><i class="fa-solid fa-download" aria-hidden="true"></i></button></div>
+      </article>
+      <article class="doc-card" data-doc-type="publicacao" style="--c:#A03030">
+        <div class="doc-topo">
+          <span class="doc-icon" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i></span>
+          <span class="doc-tipo">Publicação</span>
+        </div>
         <h3>A Lei de Licitações e os ODS</h3>
         <p>Publicação de Renato Fenili e Cristina Castro-Lucas sobre a conexão entre a Lei nº 14.133/2021 e a Agenda 2030.</p>
-        <div class="doc-meta"><span>Publicação</span><span>Externo</span></div>
-        <div class="doc-actions">
-          <a class="doc-btn primary" href="https://online.fliphtml5.com/kpxxz/qqct/#p=1" target="_blank" rel="noopener noreferrer">
-            Acessar publicação <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-          </a>
-        </div>
+        <div class="doc-tags"><span class="doc-tag">Lei 14.133/2021</span><span class="doc-tag">ODS</span></div>
+        <div class="doc-meta"><span>Publicação</span><span>Acesso externo</span></div>
+        <div class="doc-actions"><a class="doc-btn primary" href="https://online.fliphtml5.com/kpxxz/qqct/#p=1" target="_blank" rel="noopener noreferrer">Acessar publicação <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
       </article>
 
       <p class="criteria-empty" id="doc-empty">Nenhum documento encontrado. Ajuste a busca ou selecione outro tipo.</p>
     </div>
+
+    <section class="normas-bloco" aria-labelledby="normas-titulo">
+      <div class="normas-head">
+        <h2 id="normas-titulo">Legislação de referência</h2>
+        <p>Textos oficiais que fundamentam os critérios reunidos nesta plataforma. Os links levam à íntegra publicada no Planalto.</p>
+      </div>
+      <div class="normas-lista">
+        <a class="norma-item" href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm" target="_blank" rel="noopener noreferrer">
+          <span class="norma-sigla">Lei nº 14.133/2021</span>
+          <span class="norma-corpo"><strong>Lei de Licitações e Contratos Administrativos</strong>Estabelece o desenvolvimento nacional sustentável como um dos objetivos do processo licitatório.</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+        <a class="norma-item" href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/decreto/d7746.htm" target="_blank" rel="noopener noreferrer">
+          <span class="norma-sigla">Decreto nº 7.746/2012</span>
+          <span class="norma-corpo"><strong>Critérios e práticas de sustentabilidade</strong>Regulamenta a adoção de critérios de sustentabilidade nas contratações da Administração Pública.</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+        <a class="norma-item" href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noopener noreferrer">
+          <span class="norma-sigla">Lei nº 12.305/2010</span>
+          <span class="norma-corpo"><strong>Política Nacional de Resíduos Sólidos</strong>Define responsabilidade compartilhada e logística reversa, com reflexo direto nas contratações.</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+        <a class="norma-item" href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm" target="_blank" rel="noopener noreferrer">
+          <span class="norma-sigla">Lei nº 12.527/2011</span>
+          <span class="norma-corpo"><strong>Lei de Acesso à Informação</strong>Fundamenta a publicidade dos dados de contratação divulgados nesta plataforma.</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+        <a class="norma-item" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm" target="_blank" rel="noopener noreferrer">
+          <span class="norma-sigla">Lei nº 13.709/2018</span>
+          <span class="norma-corpo"><strong>Lei Geral de Proteção de Dados Pessoais</strong>Orienta o tratamento de dados pessoais eventualmente presentes nos documentos publicados.</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
 
     <div class="help-strip">
       <div>
@@ -234,7 +385,7 @@
     </div>
 
     <div class="footer-copy">
-      © 2024 Governo do Estado de São Paulo. Todos os direitos reservados.
+      © 2026 Governo do Estado de São Paulo. Todos os direitos reservados.
     </div>
   </div>
 </footer>

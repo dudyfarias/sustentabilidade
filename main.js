@@ -46,18 +46,6 @@ const DIALOGS = {
   download: {
     title: 'Download em preparação',
     copy: 'O arquivo definitivo será disponibilizado quando a biblioteca documental for integrada às fontes oficiais.'
-  },
-  'doc-guia': {
-    title: 'Guia de Compras Sustentáveis',
-    copy: 'Guia introdutório com roteiro de planejamento, exemplos de requisitos e formas de comprovação. Cobre planejamento, pesquisa de mercado, especificação, julgamento e gestão contratual.'
-  },
-  'doc-manual': {
-    title: 'Manual de Aplicação dos Critérios',
-    copy: 'Manual voltado a equipes de planejamento, agentes de contratação e fiscais. Cobre seleção de critérios, matriz de riscos, evidências e monitoramento.'
-  },
-  'doc-cartilha': {
-    title: 'Cartilha Agenda 2030',
-    copy: 'Apresenta os 17 Objetivos de Desenvolvimento Sustentável e exemplos de contribuição por meio das compras públicas, com metas prioritárias e casos de aplicação.'
   }
 };
 
@@ -117,6 +105,4 @@ document.querySelectorAll('.faq-item').forEach((item) => item.addEventListener('
   showDialog(item.textContent.trim(), item.dataset.answer);
 }));
 
-document.querySelectorAll('.download').forEach((item) => item.addEventListener('click', () => {
-  showDialog('Download demonstrativo', 'O arquivo estará disponível quando a biblioteca for conectada à API de documentos.');
-}));
+

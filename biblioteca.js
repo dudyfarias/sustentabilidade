@@ -7,6 +7,7 @@ if (docGrid) {
   const docs = [...docGrid.querySelectorAll('.doc-card')];
   const empty = document.querySelector('#doc-empty');
   const countEl = document.querySelector('#doc-count');
+  const destaque = document.querySelector('#doc-destaque');
   const searchField = document.querySelector('#biblioteca-search');
   const form = document.querySelector('#biblioteca-form');
   const clearBtn = document.querySelector('#biblioteca-clear');
@@ -25,9 +26,24 @@ if (docGrid) {
       card.hidden = !ok;
       if (ok) visible += 1;
     });
+
+    // O destaque é uma seleção editorial da visão inicial: sai de cena assim
+    // que o leitor busca ou filtra, para não competir com o resultado pedido.
+    if (destaque) destaque.hidden = Boolean(state.q || state.tipo);
+
     if (empty) empty.classList.toggle('show', visible === 0);
     if (countEl) countEl.textContent = String(visible);
   }
+
+  // O resumo vem do próprio card, não de um mapa fixo no main.js: acrescentar
+  // um documento na página deixa de exigir alteração no JavaScript.
+  docs.forEach((card) => {
+    const botao = card.querySelector('[data-doc-resumo]');
+    if (!botao || !card.dataset.docSinopse) return;
+    botao.addEventListener('click', () => {
+      showDialog(card.querySelector('h3').textContent, card.dataset.docSinopse);
+    });
+  });
 
   if (searchField) {
     searchField.addEventListener('input', () => {

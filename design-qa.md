@@ -13,11 +13,11 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 
 | Página | Arquivo | Script | Conteúdo |
 | --- | --- | --- | --- |
-| Início | `index.html` | `main.js` | Hero, busca, navegação rápida (6 cards), ODS, destaques e chamada final |
+| Início | `index.html` | `main.js` | Hero, busca, navegação rápida (6 cards alinhados), ODS, destaques e chamada final |
 | Critérios | `criterios.html` | `criterios.js` | Catálogo com busca, 5 filtros, chips de categoria, 6 critérios e paginação |
 | Contratações | `contratacoes.html` | `contratacoes.js` | KPIs, filtros por objeto e situação, 6 contratações |
 | Glossário | `glossario.html` | `glossario.js` | 60 termos agrupados por letra, com sigla, categoria, remissões e links |
-| Biblioteca | `biblioteca.html` | `biblioteca.js` | 4 documentos com metadados, resumo e download |
+| Biblioteca | `biblioteca.html` | `biblioteca.js` | Documento em destaque, 13 documentos em 5 tipos e legislação de referência |
 | Transparência | `transparencia.html` | — | KPIs, 3 conjuntos de dados abertos, 3 relatórios e API pública |
 | Sobre | `sobre.html` | — | Objetivos, referências institucionais e canais de contato |
 | ODS | `ods.html` | `main.js` | 17 objetivos agrupados nos 5 eixos da Agenda 2030 |
@@ -106,9 +106,13 @@ Cada item abaixo foi executado no navegador contra a implementação.
 - As contagens exibidas nos chips conferem com o número real de termos.
 
 **Biblioteca**
-- Chips por tipo de documento filtram os cards.
-- "Ler resumo" abre diálogo com a descrição do documento.
-- Download informa que o arquivo será disponibilizado após a integração.
+- Chips por tipo filtram os cards e a contagem exibida acompanha o resultado.
+- O documento em destaque some assim que há busca ou filtro, e volta ao limpar.
+- A busca alcança título, descrição, temas e formato: "XLSX" encontra a planilha.
+- "Ler resumo" abre diálogo com o texto do próprio card, sem mapa fixo no JavaScript.
+- Ordenação por título percorre os 13 documentos em ordem alfabética.
+- Os cinco links de legislação apontam para a íntegra publicada no Planalto,
+  todos verificados com resposta HTTP 200.
 
 **Transparência**
 - Conjuntos de dados, relatórios e painel da API renderizam corretamente.
@@ -122,8 +126,17 @@ Cada item abaixo foi executado no navegador contra a implementação.
 - O cabeçalho de um grupo desaparece junto quando nenhuma pergunta dele resta visível.
 - A busca ignora acentuação e expande automaticamente as perguntas encontradas.
 
+**Navegação rápida da página inicial**
+- Os seis cards compartilham a mesma caixa de arte, a mesma linha de base de
+  título, de texto e de link: uma única medida para cada, em vez de três ritmos.
+- TCE e PGE deixaram de dividir o mesmo ícone.
+- O card inteiro responde ao clique, e não apenas o link no rodapé do card.
+- Os downloads de "Biblioteca em destaque" abrem diálogo — antes eram inertes.
+
 **Geral**
 - Sem erros no console em nenhuma página.
+- Nove páginas verificadas a 1024 px e a 390 px: nenhuma imagem quebrada,
+  nenhum erro e nenhuma sobra horizontal.
 - Sem overflow horizontal em 1024 px nem em 390 px.
 - A faixa de ODS rola horizontalmente dentro do próprio contêiner em telas estreitas,
   sem provocar rolagem lateral da página.
@@ -165,4 +178,4 @@ Descrito em detalhe em [`HANDOFF.md`](./HANDOFF.md).
 
 ---
 
-_Última atualização: julho de 2026._
+_Última atualização: agosto de 2026._

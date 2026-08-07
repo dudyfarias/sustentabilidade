@@ -125,17 +125,32 @@ Origem: `glossario.html`, `<article class="termo-card">`, agrupados por letra em
 
 ### 3.4 Documento da biblioteca
 
-Origem: `biblioteca.html`, `<article class="doc-card">`.
+Origem: `biblioteca.html`, `<article class="doc-card">`. São 13 documentos.
 
 | Campo | Tipo | Atributo | Domínio |
 | --- | --- | --- | --- |
 | `titulo` | string | `<h3>` | — |
 | `descricao` | string | `<p>` | — |
-| `tipo` | enum | `data-doc-type` | `guia`, `manual`, `cartilha`, `publicacao` |
-| `formato` | string | `.doc-meta` | `PDF`, `Publicação` |
+| `tipo` | enum | `data-doc-type` | `guia`, `manual`, `cartilha`, `modelo`, `publicacao` |
+| `cor` | hex | `style="--c:…"` | cor do tipo; tinge ícone e etiqueta via `color-mix` |
+| `temas` | string[] | `.doc-tag` | rótulos livres, alcançados pela busca |
+| `formato` | string | `.doc-meta` | `PDF`, `DOCX`, `XLSX`, `Publicação` |
+| `extensao` | string | `.doc-meta` | `68 páginas`, `18 cláusulas`, `4 abas` |
 | `tamanho` | string | `.doc-meta` | `2,4 MB` |
 | `ano` | int | `.doc-meta` | — |
+| `sinopse` | string | `data-doc-sinopse` | texto do diálogo "Ler resumo" |
 | `url_arquivo` | string | — | **não existe ainda**; hoje abre diálogo informativo |
+| `url_externa` | string | `a.doc-btn[href]` | só em `publicacao`; substitui as duas ações |
+
+O resumo é lido do próprio card (`data-doc-sinopse`), não de um mapa no
+JavaScript: acrescentar um documento no HTML não exige tocar em `biblioteca.js`.
+
+O bloco **Documento em destaque** (`#doc-destaque`) é uma seleção editorial da
+visão inicial e some assim que há busca ou filtro. O documento destacado também
+está na listagem, então nenhuma busca deixa de encontrá-lo.
+
+A seção **Legislação de referência** (`.normas-bloco`) é conteúdo fixo com cinco
+links para o Planalto — não vem de API.
 
 ### 3.5 Pergunta frequente
 
@@ -231,7 +246,6 @@ Todos usam `data-dialog` e estão mapeados em `main.js`, no objeto `DIALOGS`.
 | `download` | Biblioteca, Transparência | Baixar o arquivo real |
 | `dados` | Transparência | Gerar CSV/JSON/XLSX do conjunto |
 | `dicionario` | Transparência | Abrir o dicionário de dados |
-| `doc-guia`, `doc-manual`, `doc-cartilha` | Biblioteca | Resumo vindo do CMS |
 | `contato` | Várias | Formulário ou `mailto:` |
 | `tce`, `pge`, `selo` | Menu e home | Liberar as áreas quando existirem |
 
@@ -287,6 +301,8 @@ O protótipo já implementa três estados por catálogo. Mantenha-os ao integrar
 ## 9. Verificações já realizadas
 
 - As 12 páginas e a 404 respondem HTTP 200.
+- Os oito `data-dialog` do HTML correspondem 1:1 às entradas de `main.js`: nenhum
+  gatilho órfão e nenhuma entrada ociosa.
 - Nenhum link interno aponta para arquivo inexistente e não há `href="#"` no site.
 - Todo `data-dialog` do HTML tem entrada correspondente em `main.js`.
 - Filtros, buscas, ordenações e estados vazios testados no navegador em cada catálogo.
@@ -297,4 +313,4 @@ Detalhamento em [`design-qa.md`](./design-qa.md).
 
 ---
 
-_Última atualização: julho de 2026._
+_Última atualização: agosto de 2026._
