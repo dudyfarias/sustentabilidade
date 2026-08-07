@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Objetivos de Desenvolvimento Sustentável">
+  <circle cx="130" cy="130" r="104" fill="#F2F8F4"/>
+
+  <!-- Roda ODS: 17 segmentos nas cores oficiais -->
+  <g transform="translate(130 130)">
+    <g fill="none" stroke-width="26">
+      <circle r="70" stroke="#E5243B" stroke-dasharray="25.9 414.0" transform="rotate(-90)"/>
+      <circle r="70" stroke="#DDA63A" stroke-dasharray="25.9 414.0" transform="rotate(-68.8)"/>
+      <circle r="70" stroke="#4C9F38" stroke-dasharray="25.9 414.0" transform="rotate(-47.6)"/>
+      <circle r="70" stroke="#C5192D" stroke-dasharray="25.9 414.0" transform="rotate(-26.5)"/>
+      <circle r="70" stroke="#FF3A21" stroke-dasharray="25.9 414.0" transform="rotate(-5.3)"/>
+      <circle r="70" stroke="#26BDE2" stroke-dasharray="25.9 414.0" transform="rotate(15.9)"/>
+      <circle r="70" stroke="#FCC30B" stroke-dasharray="25.9 414.0" transform="rotate(37.1)"/>
+      <circle r="70" stroke="#A21942" stroke-dasharray="25.9 414.0" transform="rotate(58.2)"/>
+      <circle r="70" stroke="#FD6925" stroke-dasharray="25.9 414.0" transform="rotate(79.4)"/>
+      <circle r="70" stroke="#DD1367" stroke-dasharray="25.9 414.0" transform="rotate(100.6)"/>
+      <circle r="70" stroke="#FD9D24" stroke-dasharray="25.9 414.0" transform="rotate(121.8)"/>
+      <circle r="70" stroke="#BF8B2E" stroke-dasharray="25.9 414.0" transform="rotate(142.9)"/>
+      <circle r="70" stroke="#3F7E44" stroke-dasharray="25.9 414.0" transform="rotate(164.1)"/>
+      <circle r="70" stroke="#0A97D9" stroke-dasharray="25.9 414.0" transform="rotate(185.3)"/>
+      <circle r="70" stroke="#56C02B" stroke-dasharray="25.9 414.0" transform="rotate(206.5)"/>
+      <circle r="70" stroke="#00689D" stroke-dasharray="25.9 414.0" transform="rotate(227.6)"/>
+      <circle r="70" stroke="#19486A" stroke-dasharray="25.9 414.0" transform="rotate(248.8)"/>
+    </g>
+
+    <!-- Miolo branco -->
+    <circle r="50" fill="#FFFFFF"/>
+
+    <!-- Folha institucional no centro -->
+    <g transform="translate(0 6)">
+      <path d="M0 22C0 6 12-6 30-8c0 17-12 29-30 30Z" fill="#087A3E"/>
+      <path d="M0 22C0 6-12-6-30-8c0 17 12 29 30 30Z" fill="#087A3E"/>
+      <path d="M0 22V-12" stroke="#087A3E" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

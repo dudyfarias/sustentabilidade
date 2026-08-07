@@ -998,3 +998,37 @@
 
     /* Página 404 */
     .erro-codigo{margin:0 0 4px;font-size:74px;font-weight:800;line-height:1;letter-spacing:-.04em;color:var(--green-line)}
+
+    /* =====================================================================
+       PÁGINA ODS
+       ===================================================================== */
+    .ods-eixo{margin-top:22px}
+    .ods-eixo-head{display:flex;align-items:center;gap:13px;margin-bottom:12px}
+    .ods-eixo-icone{display:grid;place-items:center;width:38px;height:38px;flex:0 0 auto;border-radius:10px;background:var(--green-soft);color:var(--green);font-size:15px}
+    .ods-eixo-head h2{margin:0;font-size:15px;color:var(--ink)}
+    .ods-eixo-head p{margin:3px 0 0;font-size:10px;line-height:1.6;color:#6C7276}
+    .ods-eixo-contagem{margin-left:auto;flex:0 0 auto;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:9.5px;font-weight:700;color:#5A6165;white-space:nowrap}
+
+    .ods-lista{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .ods-item{position:relative;display:grid;grid-template-columns:60px 1fr 28px;align-items:start;gap:13px;padding:15px;border:1px solid var(--line);border-radius:10px;background:#fff;transition:.18s ease}
+    .ods-item:hover{border-color:#BDDCC8;box-shadow:0 8px 20px rgba(20,48,34,.07);transform:translateY(-2px)}
+    .ods-selo{display:grid;place-items:center;width:60px;height:60px;border-radius:9px;background:var(--c,#087A3E)}
+    .ods-selo-num{font-size:24px;font-weight:800;line-height:1;color:#fff}
+    .ods-corpo h3{margin:0;font-size:12.5px;line-height:1.35}
+    .ods-corpo p{margin:7px 0 0;font-size:10px;line-height:1.75;color:#5A6165}
+    .ods-criterios{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:9.5px;font-weight:700;color:var(--green)}
+    .ods-criterios:hover{text-decoration:underline}
+    .ods-criterios.vazio{color:#9AA3A6;font-weight:400}
+    .ods-externo{display:grid;place-items:center;width:28px;height:28px;border-radius:7px;color:#A6AEB1;font-size:11px}
+    .ods-externo:hover{background:var(--green-soft);color:var(--green)}
+
+    @media(max-width:900px){
+      .ods-lista{grid-template-columns:1fr}
+      .ods-eixo-contagem{display:none}
+    }
+    @media(max-width:560px){
+      .ods-item{grid-template-columns:48px 1fr;gap:11px}
+      .ods-selo{width:48px;height:48px}
+      .ods-selo-num{font-size:19px}
+      .ods-externo{position:absolute;top:12px;right:12px}
+    }

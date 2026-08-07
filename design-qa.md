@@ -3,6 +3,10 @@
 Protótipo funcional em HTML semântico, CSS e JavaScript, sem dependências de build.
 Este documento registra o estado atual da implementação e as verificações feitas.
 
+Os dados exibidos são **demonstrativos por decisão de escopo**: esta entrega é a camada
+visual, destinada ao time que implementará o backend. O contrato de dados de cada tela
+está descrito em [`HANDOFF.md`](./HANDOFF.md).
+
 ---
 
 ## Páginas
@@ -16,6 +20,7 @@ Este documento registra o estado atual da implementação e as verificações fe
 | Biblioteca | `biblioteca.html` | `biblioteca.js` | 4 documentos com metadados, resumo e download |
 | Transparência | `transparencia.html` | — | KPIs, 3 conjuntos de dados abertos, 3 relatórios e API pública |
 | Sobre | `sobre.html` | — | Objetivos, referências institucionais e canais de contato |
+| ODS | `ods.html` | `main.js` | 17 objetivos agrupados nos 5 eixos da Agenda 2030 |
 | Perguntas frequentes | `faq.html` | `faq.js` | 8 perguntas com categorias e busca |
 | Termos de Uso | `termos.html` | — | 12 seções sobre condições de uso da plataforma |
 | Política de Privacidade | `privacidade.html` | — | 11 seções conforme a LGPD |
@@ -54,7 +59,7 @@ Este documento registra o estado atual da implementação e as verificações fe
 ## Indexação e compartilhamento
 
 - `robots.txt` liberando indexação e apontando para o sitemap.
-- `sitemap.xml` com as doze URLs canônicas, em formato limpo (sem `.html`).
+- `sitemap.xml` com as treze URLs canônicas, em formato limpo (sem `.html`).
 - `canonical` em todas as páginas, coerente com `cleanUrls` da Vercel.
 - Open Graph e Twitter Card completos, com imagem própria de 1200×630.
 - Favicon em `.ico`, `.svg`, `apple-touch-icon` e ícones de 192 e 512 px.
@@ -68,7 +73,7 @@ Este documento registra o estado atual da implementação e as verificações fe
 Cada item abaixo foi executado no navegador contra a implementação.
 
 **Navegação**
-- As 12 páginas e a 404 respondem HTTP 200.
+- As 13 páginas e a 404 respondem HTTP 200.
 - `robots.txt`, `sitemap.xml`, `favicon.ico`, `og-image.png` e `site.webmanifest` são servidos corretamente.
 - O `sitemap.xml` é XML válido e o `site.webmanifest` é JSON válido.
 - Nenhum link interno aponta para arquivo inexistente.
@@ -131,13 +136,20 @@ Cada item abaixo foi executado no navegador contra a implementação.
 
 ---
 
-## Pendências para a implementação definitiva
+## Escopo do time de backend
+
+Descrito em detalhe em [`HANDOFF.md`](./HANDOFF.md).
 
 - Substituir os dados demonstrativos por integração com as bases oficiais.
 - Publicar os arquivos reais da biblioteca e dos conjuntos de dados abertos.
 - Implementar a API pública descrita na página de Transparência.
 - Liberar as áreas de TCE, PGE e Produtos com Selo Verde, hoje sinalizadas como "Em breve".
 - Substituir os recortes editoriais por arquivos-fonte quando o time de design os fornecer.
+
+---
+
+## Pendências institucionais
+
 - Validação institucional do conteúdo antes da publicação oficial.
 - Revisão jurídica das minutas de Termos de Uso, Política de Privacidade e Ouvidoria.
 - Designação formal do Encarregado pelo tratamento de dados pessoais (DPO).

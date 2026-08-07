@@ -18,13 +18,14 @@ Importe este repositório na Vercel. O projeto é estático e a configuração e
 
 ## Escopo
 
-Doze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
+Treze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 
 | Página | Arquivo |
 | --- | --- |
 | Início | `index.html` |
 | Critérios | `criterios.html` |
 | Contratações | `contratacoes.html` |
+| ODS | `ods.html` |
 | Glossário | `glossario.html` |
 | Biblioteca | `biblioteca.html` |
 | Transparência | `transparencia.html` |
@@ -46,6 +47,12 @@ Doze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 - `robots.txt`, `sitemap.xml`, favicon, manifest e página 404 institucional
 - Sem autenticação, banco de dados ou APIs nesta fase
 
+## Documentação
+
+- [`HANDOFF.md`](./HANDOFF.md) — modelo de dados, endpoints sugeridos e pontos de integração para o time de backend
+- [`design-qa.md`](./design-qa.md) — estado da implementação e verificações realizadas
+
 ## Nota para produção
 
-Na implementação definitiva, a equipe deve substituir os dados locais pelas APIs reais e trocar os recortes editoriais pelos arquivos-fonte do design quando estiverem disponíveis.
+Esta entrega é a **camada visual**. Todos os dados exibidos são demonstrativos e devem ser
+substituídos pelas APIs reais, conforme o contrato descrito em [`HANDOFF.md`](./HANDOFF.md).
