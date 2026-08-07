@@ -141,7 +141,10 @@ São 30 perguntas distribuídas nas cinco categorias abaixo; o grupo é derivado
 | Campo | Tipo | Atributo | Domínio |
 | --- | --- | --- | --- |
 | `pergunta` | string | `<summary>` | — |
-| `resposta` | string (HTML) | `.faq-answer` | aceita links |
+| `resposta` | string (HTML) | `.faq-answer p` | aceita links |
+| `resumo` | string | `.faq-resumo` | teaser exibido com o card fechado |
+| `icone` | string | `.faq-icone i` | classe do Font Awesome, um por pergunta |
+| `relacionados` | link[] | `.faq-link` | rótulo, destino e indicação de link externo |
 | `categoria` | enum | `data-faq-item` | `plataforma`, `criterios`, `aplicacao`, `comprovacao`, `suporte` |
 | `ordem` | int | ordem no HTML | define a exibição dentro do grupo |
 

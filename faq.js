@@ -11,7 +11,7 @@ if (faqList) {
   const searchField = document.querySelector('#faq-search');
   const form = document.querySelector('#faq-form');
   const clearBtn = document.querySelector('#faq-clear');
-  const cats = [...document.querySelectorAll('.faq-cat')];
+  const cats = [...document.querySelectorAll('.chip[data-faq-category]')];
 
   const state = { q: '', categoria: '' };
   const strip = (text) => text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
