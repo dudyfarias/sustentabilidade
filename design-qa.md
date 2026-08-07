@@ -1,55 +1,122 @@
-# Design QA — semantic component implementation
+# Design QA — Plataforma Estadual de Sustentabilidade
 
-- Source visual truth: `/Users/eduardofariascappia/Downloads/PHOTO-2026-07-22-14-53-43.jpg`
-- Implementation screenshot: `/Users/eduardofariascappia/sustentabilidade/prototype-real-site.png`
-- Mobile screenshot: `/Users/eduardofariascappia/sustentabilidade/prototype-real-mobile.png`
-- Desktop viewport: 1024 px wide, device scale factor 1
-- Mobile viewport: 390 × 844 CSS px, device scale factor 1
-- State: initial page state
+Protótipo funcional em HTML semântico, CSS e JavaScript, sem dependências de build.
+Este documento registra o estado atual da implementação e as verificações feitas.
 
-## Architecture evidence
+---
 
-The implementation contains real semantic elements: header, six-link navigation, search form, five quick-navigation articles, ODS section, three highlight articles, FAQ buttons, CTA and footer. Browser inspection confirms there are no full-page visual overlays or hotspot elements. The supplied reference is not rendered as a page background.
+## Páginas
 
-## Full-view comparison evidence
+| Página | Arquivo | Script | Conteúdo |
+| --- | --- | --- | --- |
+| Início | `index.html` | `main.js` | Hero, busca, navegação rápida (6 cards), ODS, destaques e chamada final |
+| Critérios | `criterios.html` | `criterios.js` | Catálogo com busca, 5 filtros, chips de categoria, 6 critérios e paginação |
+| Contratações | `contratacoes.html` | `contratacoes.js` | KPIs, filtros por objeto e situação, 6 contratações |
+| Glossário | `glossario.html` | `glossario.js` | 16 termos, filtro por categoria e por letra inicial |
+| Biblioteca | `biblioteca.html` | `biblioteca.js` | 4 documentos com metadados, resumo e download |
+| Transparência | `transparencia.html` | — | KPIs, 3 conjuntos de dados abertos, 3 relatórios e API pública |
+| Sobre | `sobre.html` | — | Objetivos, referências institucionais e canais de contato |
+| Perguntas frequentes | `faq.html` | `faq.js` | 8 perguntas com categorias e busca |
 
-Reference and implementation were opened together at 1024 px. The implementation reproduces the reference hierarchy, proportions, green/neutral palette, hero composition, five-column navigation grid, ODS artwork, three-column highlights, CTA and dark footer. Its native content height is approximately 1,548 px, within 12 px of the 1,536 px reference.
+---
 
-## Required fidelity surfaces
+## Arquitetura
 
-- Fonts and typography: real Arial/system text with matching hierarchy, weight and wrapping.
-- Spacing and layout rhythm: 930 px content frame, compact desktop rhythm and matching section order.
-- Colors and tokens: green, white, neutral borders and dark-green footer follow the reference.
-- Image quality and asset fidelity: only discrete editorial artwork is rasterized: government marks, hero map, quick-navigation illustrations, book cover, ODS strip and CTA illustration.
-- Copy and content: all visible labels, headings, descriptions and document names match the source.
+- **`styles.css`** concentra todo o CSS do site. Nenhuma página tem estilo inline.
+- **`main.js`** carrega em todas as páginas: diálogos, busca da home e filtros da home.
+  Todos os seletores são opcionais, então incluir o arquivo em qualquer página é seguro.
+- Cada página com catálogo tem seu próprio script, isolado por uma checagem do
+  contêiner principal (`if (grid) { ... }`).
+- Ícones vetoriais próprios em `assets/`, sem dependência de imagens rasterizadas
+  para os elementos de interface.
 
-## Functional verification
+---
 
-- Navigation scrolls to real page sections.
-- Search returns a visible result status and honors selected filters.
-- Filter panel toggles and maintains checkbox state.
-- FAQ items open accessible native dialogs with answers.
-- Document download controls open a clear prototype state.
-- About-platform CTA opens a native dialog.
-- External publication link remains available.
-- The ODS section contains 17 independent links plus the Agenda 2030 wheel; each goal opens its matching ONU Brasil page.
-- All 18 ODS elements fit the desktop row without overflow and remain horizontally navigable on small screens.
-- Desktop and mobile have no horizontal overflow.
-- Browser console errors checked: none.
-- The three featured "Ver todos" actions open functional internal pages with search, filters, details and FAQ accordions.
+## Identidade visual
 
-## Comparison history
+- **Marca institucional**: brasão + "Governo do Estado de São Paulo" +
+  "Secretaria de Gestão e Governo Digital", repetida no cabeçalho e no rodapé.
+- **Verde** `#087A3E` como cor principal da plataforma.
+- **Vermelho institucional** `#ED1C24` reservado ao indicador do item ativo da navegação.
+- **Navegação de 9 itens**: Início, Critérios, Contratações, ODS, Glossário,
+  A Lei de Licitações e os ODS, TCE, PGE e Transparência.
+  TCE e PGE exibem selo "Em breve" e abrem diálogo explicativo.
+- **Rodapé de 5 colunas** com redes sociais e assinatura institucional.
+- Composição fiel a 1024 px de largura, com contêiner de 1000 px.
 
-1. Removed the rejected full-page reference image and all hotspot overlays.
-2. Restored semantic HTML/CSS components and real interaction state.
-3. Replaced approximated editorial artwork with individual source assets.
-4. Corrected the desktop header row, FAQ native styling, hero artwork crop and footer mark.
-5. Verified desktop, mobile, search, filters and FAQ after fixes.
-6. Replaced the single ODS strip with official individual ONU Brasil assets and validated all 17 destinations.
+---
 
-## Follow-up polish
+## Verificação funcional
 
-- P3: replace cropped editorial assets with original transparent/source files when the design team supplies them.
-- P3: connect search, documents and criteria to production APIs in the implementation phase.
+Cada item abaixo foi executado no navegador contra a implementação.
 
-final result: passed
+**Navegação**
+- As 8 páginas respondem HTTP 200.
+- Nenhum link interno aponta para arquivo inexistente.
+- Nenhum asset referenciado está ausente.
+- Todo `data-dialog` presente no HTML tem entrada correspondente em `main.js`.
+- O item ativo da navegação é destacado corretamente em cada página.
+
+**Critérios**
+- Chips de categoria filtram os cards e sincronizam com o select "Categoria".
+- Filtros de ODS, tipo de documento, nível e área temática são combináveis.
+- Busca ignora acentuação: "residuos" encontra "Resíduos".
+- Ordenação por código e por título reordena os cards.
+- Favoritar alterna o ícone e o estado `aria-pressed`.
+- Estado vazio aparece quando nenhum critério atende aos filtros.
+- Painel de filtros recolhe e expande.
+
+**Contratações**
+- Chips por objeto contratual e select de situação filtram os cards.
+- Busca cobre código, objeto e órgão contratante, ignorando acentuação.
+- Contador de resultados e estado vazio acompanham os filtros.
+
+**Glossário**
+- Filtro por categoria e por letra inicial funcionam de forma combinada.
+- Letras sem termos correspondentes ficam desabilitadas.
+- Busca ignora acentuação: "criterio" e "critério" retornam o mesmo resultado.
+
+**Biblioteca**
+- Chips por tipo de documento filtram os cards.
+- "Ler resumo" abre diálogo com a descrição do documento.
+- Download informa que o arquivo será disponibilizado após a integração.
+
+**Transparência**
+- Conjuntos de dados, relatórios e painel da API renderizam corretamente.
+- Ações de download e de dicionário de dados abrem diálogo explicativo.
+
+**Perguntas frequentes**
+- Categorias filtram as perguntas.
+- A busca expande automaticamente as perguntas encontradas.
+
+**Geral**
+- Sem erros no console em nenhuma página.
+- Sem overflow horizontal em 1024 px nem em 390 px.
+- A faixa de ODS rola horizontalmente dentro do próprio contêiner em telas estreitas,
+  sem provocar rolagem lateral da página.
+
+---
+
+## Acessibilidade
+
+- Estrutura semântica: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`.
+- `aria-label` em todas as navegações e nos botões sem texto visível.
+- `aria-current="page"` no item ativo da navegação e da trilha de navegação.
+- Acordeões do FAQ usam `details`/`summary` nativos, operáveis por teclado.
+- Ícones decorativos marcados com `aria-hidden="true"`.
+- Os 17 cards de ODS abrem as páginas oficiais da ONU Brasil, cada um com rótulo próprio.
+
+---
+
+## Pendências para a implementação definitiva
+
+- Substituir os dados demonstrativos por integração com as bases oficiais.
+- Publicar os arquivos reais da biblioteca e dos conjuntos de dados abertos.
+- Implementar a API pública descrita na página de Transparência.
+- Liberar as áreas de TCE, PGE e Produtos com Selo Verde, hoje sinalizadas como "Em breve".
+- Substituir os recortes editoriais por arquivos-fonte quando o time de design os fornecer.
+- Validação institucional do conteúdo antes da publicação oficial.
+
+---
+
+_Última atualização: julho de 2026._

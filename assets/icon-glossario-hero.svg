@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Glossário de sustentabilidade">
+  <circle cx="130" cy="132" r="102" fill="#F2F8F4"/>
+
+  <!-- Livro aberto -->
+  <g fill="none" stroke="#0B7A3E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M130 88c-17-14-40-18-63-12v96c23-6 46-2 63 12 17-14 40-18 63-12V76c-23-6-46-2-63 12Z" fill="#FFFFFF"/>
+    <path d="M130 88v96"/>
+  </g>
+
+  <!-- Entradas do glossário -->
+  <g stroke="#0B7A3E" stroke-width="5" stroke-linecap="round">
+    <path d="M84 112h20"/>
+  </g>
+  <g stroke="#B4DCC5" stroke-width="4.5" stroke-linecap="round">
+    <path d="M84 126h30M84 138h24"/>
+    <path d="M84 156h20"/>
+    <path d="M84 170h30"/>
+  </g>
+  <g stroke="#0B7A3E" stroke-width="5" stroke-linecap="round">
+    <path d="M148 112h20"/>
+  </g>
+  <g stroke="#B4DCC5" stroke-width="4.5" stroke-linecap="round">
+    <path d="M148 126h30M148 138h24"/>
+    <path d="M148 156h20"/>
+    <path d="M148 170h30"/>
+  </g>
+
+  <!-- Lupa sobre o livro -->
+  <g transform="translate(150 128)">
+    <circle r="40" fill="#FFFFFF" fill-opacity="0.94" stroke="#0B7A3E" stroke-width="8"/>
+    <path d="M28 28 52 52" stroke="#075B31" stroke-width="11" stroke-linecap="round"/>
+    <text x="0" y="12" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+          font-size="34" font-weight="700" fill="#0B7A3E">A</text>
+  </g>
+</svg>

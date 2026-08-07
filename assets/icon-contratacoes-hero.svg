@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Contratações sustentáveis">
+  <circle cx="130" cy="130" r="102" fill="#F2F8F4"/>
+
+  <!-- Documento de contrato -->
+  <path d="M76 40h72l40 40v134a10 10 0 0 1-10 10H76a10 10 0 0 1-10-10V50a10 10 0 0 1 10-10Z"
+        fill="#FFFFFF" stroke="#0B7A3E" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M148 40v32a8 8 0 0 0 8 8h32" fill="none" stroke="#0B7A3E" stroke-width="7" stroke-linejoin="round"/>
+
+  <!-- Linhas do contrato -->
+  <g stroke="#B4DCC5" stroke-width="6" stroke-linecap="round">
+    <path d="M92 104h60M92 124h72M92 144h48"/>
+  </g>
+
+  <!-- Assinatura -->
+  <path d="M92 176c10-12 18 8 27-4s16 6 27-8" fill="none" stroke="#0B7A3E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M92 196h72" stroke="#DCEDE2" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Selo de aprovação sustentável -->
+  <g transform="translate(180 178)">
+    <circle r="42" fill="#0B7A3E"/>
+    <circle r="42" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="6 7"/>
+    <path d="M-6 16C-6 0 6-12 24-14c0 17-12 29-30 30Z" fill="#FFFFFF"/>
+    <path d="M-1 12C5 5 13-2 21-8" stroke="#0B7A3E" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

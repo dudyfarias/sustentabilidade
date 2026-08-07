@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Transparência e dados abertos">
+  <circle cx="130" cy="130" r="102" fill="#F2F8F4"/>
+
+  <!-- Painel de dados -->
+  <rect x="44" y="62" width="172" height="126" rx="12" fill="#FFFFFF" stroke="#0B7A3E" stroke-width="7"/>
+  <path d="M44 92h172" stroke="#0B7A3E" stroke-width="7"/>
+  <g fill="#B4DCC5">
+    <circle cx="63" cy="77" r="4.5"/>
+    <circle cx="79" cy="77" r="4.5"/>
+    <circle cx="95" cy="77" r="4.5"/>
+  </g>
+
+  <!-- Barras -->
+  <g fill="#0B7A3E">
+    <rect x="66" y="140" width="18" height="30" rx="4"/>
+    <rect x="94" y="124" width="18" height="46" rx="4"/>
+    <rect x="122" y="132" width="18" height="38" rx="4"/>
+  </g>
+  <g fill="#9CCFB1">
+    <rect x="150" y="112" width="18" height="58" rx="4"/>
+    <rect x="178" y="104" width="18" height="66" rx="4"/>
+  </g>
+
+  <!-- Linha de tendência -->
+  <path d="M70 132 L103 116 L131 124 L159 104 L187 94" fill="none" stroke="#075B31"
+        stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="187" cy="94" r="6" fill="#075B31"/>
+
+  <!-- Cadeado aberto: dados abertos -->
+  <g transform="translate(64 190)">
+    <rect x="-22" y="0" width="44" height="34" rx="7" fill="#0B7A3E"/>
+    <path d="M-10 0v-10a12 12 0 0 1 24 0" fill="none" stroke="#0B7A3E" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="0" cy="16" r="5" fill="#FFFFFF"/>
+  </g>
+</svg>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transparência e Dados Abertos — Plataforma Estadual de Sustentabilidade</title>
+  <meta name="description" content="Relatórios, bases de dados abertas e API pública da Plataforma Estadual de Sustentabilidade." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Governo do Estado de São Paulo">
+      <img src="assets/brasao-estado-sp.svg" alt="" aria-hidden="true">
+      <span class="government-name">
+        <span>Governo do Estado</span>
+        <span>de São Paulo</span>
+        <span class="secretaria">Secretaria de Gestão e Governo Digital</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html"><span>Início</span></a>
+      <a href="criterios.html"><span>Critérios</span></a>
+      <a href="contratacoes.html"><span>Contratações</span></a>
+      <a href="index.html#ods"><span>ODS</span></a>
+      <a href="glossario.html"><span>Glossário</span></a>
+      <a href="https://online.fliphtml5.com/kpxxz/qqct/#p=1" target="_blank" rel="noopener noreferrer"><span>A Lei de Licitações<br>e os ODS</span></a>
+      <a href="#tce" data-dialog="tce"><span>TCE</span><span class="nav-badge">Em breve</span></a>
+      <a href="#pge" data-dialog="pge"><span>PGE</span><span class="nav-badge">Em breve</span></a>
+      <a class="active" href="transparencia.html"><span>Transparência</span></a>
+    </nav>
+
+    <div class="header-tools">
+      <label class="top-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" placeholder="Buscar na plataforma..." />
+      </label>
+      <button class="icon-btn" aria-label="Notificações: 1 não lida">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notif-badge" aria-hidden="true">1</span>
+      </button>
+      <button class="icon-btn" aria-label="Acessibilidade"><i class="fa-solid fa-universal-access"></i></button>
+      <div class="profile"><i class="fa-regular fa-circle-user"></i> Olá, gestor</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Você está aqui">
+        <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Início</a>
+        <span class="sep" aria-hidden="true">›</span>
+        <span aria-current="page">Transparência</span>
+      </nav>
+
+      <h1>Transparência e <span>dados abertos</span></h1>
+      <p>Consulte relatórios, baixe as bases de dados e integre as informações da plataforma ao seu sistema.</p>
+
+      <img class="page-hero-art" src="assets/icon-transparencia-hero.svg" alt="" aria-hidden="true">
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="kpi-panel">
+      <div class="kpi">
+        <span class="kpi-value">356</span>
+        <span class="kpi-label">Critérios publicados</span>
+        <span class="kpi-hint">Base atualizada mensalmente</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-value">1.248</span>
+        <span class="kpi-label">Contratações registradas</span>
+        <span class="kpi-hint">Exercício de 2026</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-value">6</span>
+        <span class="kpi-label">Conjuntos de dados</span>
+        <span class="kpi-hint">CSV, JSON e XLSX</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-value">100%</span>
+        <span class="kpi-label">Dados sob licença aberta</span>
+        <span class="kpi-hint">Creative Commons BY 4.0</span>
+      </div>
+    </div>
+
+    <h2 class="chips-label">Conjuntos de dados abertos</h2>
+    <div class="doc-grid">
+      <article class="doc-card">
+        <div class="doc-icon"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i></div>
+        <h3>Catálogo de critérios</h3>
+        <p>Todos os critérios publicados, com área temática, nível de aplicação, ODS e base legal.</p>
+        <div class="doc-meta"><span>CSV</span><span>JSON</span><span>420 KB</span></div>
+        <div class="doc-actions">
+          <button class="doc-btn primary" type="button" data-dialog="dados">Baixar dados</button>
+          <button class="doc-btn only-icon" type="button" data-dialog="dicionario" aria-label="Dicionário de dados do catálogo de critérios">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="doc-card">
+        <div class="doc-icon"><i class="fa-solid fa-file-signature" aria-hidden="true"></i></div>
+        <h3>Contratações sustentáveis</h3>
+        <p>Contratações com critérios aplicados, por órgão, objeto, modalidade e valor empenhado.</p>
+        <div class="doc-meta"><span>CSV</span><span>XLSX</span><span>1,8 MB</span></div>
+        <div class="doc-actions">
+          <button class="doc-btn primary" type="button" data-dialog="dados">Baixar dados</button>
+          <button class="doc-btn only-icon" type="button" data-dialog="dicionario" aria-label="Dicionário de dados de contratações">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="doc-card">
+        <div class="doc-icon"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></div>
+        <h3>Indicadores por ODS</h3>
+        <p>Série histórica da aderência das contratações estaduais a cada Objetivo da Agenda 2030.</p>
+        <div class="doc-meta"><span>CSV</span><span>JSON</span><span>260 KB</span></div>
+        <div class="doc-actions">
+          <button class="doc-btn primary" type="button" data-dialog="dados">Baixar dados</button>
+          <button class="doc-btn only-icon" type="button" data-dialog="dicionario" aria-label="Dicionário de dados de indicadores">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+
+    <h2 class="chips-label">Relatórios e normativos</h2>
+    <div class="report-list">
+      <article class="report-row">
+        <span class="report-icon"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></span>
+        <div>
+          <h3>Relatório anual de sustentabilidade em contratações — 2025</h3>
+          <p>Balanço consolidado da aplicação de critérios, por órgão e área temática.</p>
+        </div>
+        <button class="doc-btn" type="button" data-dialog="download">
+          <i class="fa-solid fa-download" aria-hidden="true"></i> PDF
+        </button>
+      </article>
+
+      <article class="report-row">
+        <span class="report-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+        <div>
+          <h3>Painel trimestral de indicadores — 1º trimestre de 2026</h3>
+          <p>Evolução dos indicadores de aderência e valor contratado com critérios.</p>
+        </div>
+        <button class="doc-btn" type="button" data-dialog="download">
+          <i class="fa-solid fa-download" aria-hidden="true"></i> PDF
+        </button>
+      </article>
+
+      <article class="report-row">
+        <span class="report-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
+        <div>
+          <h3>Normativos estaduais de contratações sustentáveis</h3>
+          <p>Decretos, resoluções e portarias que fundamentam os critérios da plataforma.</p>
+        </div>
+        <button class="doc-btn" type="button" data-dialog="download">
+          <i class="fa-solid fa-download" aria-hidden="true"></i> PDF
+        </button>
+      </article>
+    </div>
+
+    <h2 class="chips-label">API pública</h2>
+    <div class="api-panel">
+      <div class="api-info">
+        <h3>Integre os dados ao seu sistema</h3>
+        <p>API REST aberta, sem necessidade de autenticação para consultas públicas. Respostas em JSON e paginação por cursor.</p>
+        <ul class="api-list">
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Consulta de critérios por área, ODS e nível</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Contratações por órgão, período e objeto</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Indicadores agregados por trimestre</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Limite de 1.000 requisições por hora</li>
+        </ul>
+      </div>
+      <pre class="api-code"><span class="c-com"># Listar critérios obrigatórios de energia</span>
+GET /api/v1/criterios?area=<span class="c-str">energia</span>&amp;nivel=<span class="c-str">obrigatorio</span>
+
+<span class="c-key">{</span>
+  <span class="c-str">"total"</span>: 16,
+  <span class="c-str">"itens"</span>: <span class="c-key">[</span>
+    <span class="c-key">{</span>
+      <span class="c-str">"codigo"</span>: <span class="c-str">"CRIT-SP-002"</span>,
+      <span class="c-str">"titulo"</span>: <span class="c-str">"Sistema Fotovoltaico"</span>,
+      <span class="c-str">"ods"</span>: <span class="c-key">[</span>7, 11, 13<span class="c-key">]</span>,
+      <span class="c-str">"documento"</span>: <span class="c-str">"ETP"</span>
+    <span class="c-key">}</span>
+  <span class="c-key">]</span>
+<span class="c-key">}</span></pre>
+    </div>
+
+    <div class="help-strip">
+      <div>
+        <h3>Precisa de um dado que não está publicado?</h3>
+        <p>Solicite informações pela Ouvidoria ou pelo canal da Lei de Acesso à Informação.</p>
+      </div>
+      <button class="btn btn-secondary" type="button" data-dialog="contato">Fale conosco <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </section>
+</main>
+
+<footer id="rodape">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/brasao-estado-sp.svg" alt="" aria-hidden="true">
+          <span class="government-name"><span>Governo do Estado</span><span>de São Paulo</span></span>
+        </div>
+        <p class="footer-secretaria">Secretaria de Gestão e<br>Governo Digital</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/governosp" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/governosp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/governosp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://x.com/governosp" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Plataforma</h4>
+        <a href="sobre.html">Sobre a plataforma</a>
+        <a href="criterios.html">Critérios</a>
+        <a href="contratacoes.html">Contratações</a>
+        <a href="index.html#ods">ODS</a>
+        <a href="glossario.html">Glossário</a>
+        <a href="https://online.fliphtml5.com/kpxxz/qqct/#p=1" target="_blank" rel="noopener noreferrer">A Lei de Licitações e os ODS</a>
+      </div>
+
+      <div>
+        <h4>Recursos</h4>
+        <a href="transparencia.html">Normativos</a>
+        <a href="biblioteca.html">Guias e Manuais</a>
+        <a href="faq.html">Perguntas frequentes</a>
+        <a href="biblioteca.html">Modelos de documentos</a>
+      </div>
+
+      <div>
+        <h4>Suporte</h4>
+        <a href="mailto:sustentabilidade-contratacoes@sp.gov.br">Fale conosco</a>
+        <a href="#">Ouvidoria</a>
+        <a href="#">Acessibilidade</a>
+      </div>
+
+      <div>
+        <h4>Governo do Estado de São Paulo</h4>
+        <a href="https://www.casacivil.sp.gov.br" target="_blank" rel="noopener noreferrer">Casa Civil</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2024 Governo do Estado de São Paulo. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<dialog id="site-dialog"><button class="dialog-close" aria-label="Fechar">×</button><h2 id="dialog-title"></h2><p id="dialog-copy"></p></dialog>
+<script src="main.js"></script>
+
+</body>
+</html>

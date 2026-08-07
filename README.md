@@ -1,6 +1,6 @@
 # Portal de Sustentabilidade
 
-Protótipo funcional da Plataforma Estadual de Sustentabilidade em Contratações Públicas, reconstruído em HTML semântico, CSS responsivo e JavaScript.
+Protótipo funcional da Plataforma Estadual de Sustentabilidade em Contratações Públicas, em HTML semântico, CSS responsivo e JavaScript, sem etapa de build.
 
 ## Executar localmente
 
@@ -18,11 +18,24 @@ Importe este repositório na Vercel. O projeto é estático e a configuração e
 
 ## Escopo
 
-- Componentes reais para header, hero, busca, filtros, cards, ODS, destaques, CTA e footer
-- Busca, filtros, navegação, ODS, critérios, documentos e FAQ interativos
+Oito páginas funcionais, todas compartilhando `styles.css` e `main.js`:
+
+| Página | Arquivo |
+| --- | --- |
+| Início | `index.html` |
+| Critérios | `criterios.html` |
+| Contratações | `contratacoes.html` |
+| Glossário | `glossario.html` |
+| Biblioteca | `biblioteca.html` |
+| Transparência | `transparencia.html` |
+| Sobre | `sobre.html` |
+| Perguntas frequentes | `faq.html` |
+
+- Navegação institucional de 9 itens, com TCE e PGE sinalizados como "Em breve"
+- Busca, filtros combináveis, ordenação e estados vazios em todos os catálogos
+- Busca insensível a acentuação em todas as páginas
 - Cada um dos 17 ODS possui card e link individual para a página oficial da ONU Brasil
-- Páginas internas funcionais para critérios, biblioteca e perguntas frequentes
-- Diálogos, feedbacks e foco por teclado
+- Diálogos, feedbacks e navegação por teclado
 - Layout responsivo para desktop e dispositivos móveis
 - Sem autenticação, banco de dados ou APIs nesta fase
 

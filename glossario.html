@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossário de Sustentabilidade — Plataforma Estadual de Sustentabilidade</title>
+  <meta name="description" content="Termos técnicos de contratações públicas sustentáveis explicados de forma simples e objetiva." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Governo do Estado de São Paulo">
+      <img src="assets/brasao-estado-sp.svg" alt="" aria-hidden="true">
+      <span class="government-name">
+        <span>Governo do Estado</span>
+        <span>de São Paulo</span>
+        <span class="secretaria">Secretaria de Gestão e Governo Digital</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html"><span>Início</span></a>
+      <a href="criterios.html"><span>Critérios</span></a>
+      <a href="contratacoes.html"><span>Contratações</span></a>
+      <a href="index.html#ods"><span>ODS</span></a>
+      <a class="active" href="glossario.html"><span>Glossário</span></a>
+      <a href="https://online.fliphtml5.com/kpxxz/qqct/#p=1" target="_blank" rel="noopener noreferrer"><span>A Lei de Licitações<br>e os ODS</span></a>
+      <a href="#tce" data-dialog="tce"><span>TCE</span><span class="nav-badge">Em breve</span></a>
+      <a href="#pge" data-dialog="pge"><span>PGE</span><span class="nav-badge">Em breve</span></a>
+      <a href="transparencia.html"><span>Transparência</span></a>
+    </nav>
+
+    <div class="header-tools">
+      <label class="top-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" placeholder="Buscar na plataforma..." />
+      </label>
+      <button class="icon-btn" aria-label="Notificações: 1 não lida">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notif-badge" aria-hidden="true">1</span>
+      </button>
+      <button class="icon-btn" aria-label="Acessibilidade"><i class="fa-solid fa-universal-access"></i></button>
+      <div class="profile"><i class="fa-regular fa-circle-user"></i> Olá, gestor</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Você está aqui">
+        <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Início</a>
+        <span class="sep" aria-hidden="true">›</span>
+        <span aria-current="page">Glossário</span>
+      </nav>
+
+      <h1>Glossário de <span>Sustentabilidade</span></h1>
+      <p>Termos técnicos de contratações públicas sustentáveis explicados de forma simples e objetiva.</p>
+
+      <img class="page-hero-art" src="assets/icon-glossario-hero.svg" alt="" aria-hidden="true">
+    </div>
+  </section>
+
+  <section class="container">
+    <form class="global-search" id="glossario-form" role="search">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input id="glossario-search" type="search" placeholder="Pesquisar termo ou definição..." />
+      <button class="filter-button" type="button" id="glossario-clear">
+        <i class="fa-solid fa-rotate"></i> Limpar
+      </button>
+    </form>
+
+    <h2 class="chips-label">Categorias</h2>
+    <div class="chips-row" role="group" aria-label="Filtrar por categoria">
+        <button class="chip active" type="button" data-term-category="todas"><i class="fa-solid fa-table-cells-large"></i> Todas</button>
+        <button class="chip" type="button" data-term-category="contratacao">Contratação</button>
+        <button class="chip" type="button" data-term-category="ambiental">Ambiental</button>
+        <button class="chip" type="button" data-term-category="normativo">Normativo</button>
+        <button class="chip" type="button" data-term-category="ods">ODS</button>
+        <button class="chip" type="button" data-term-category="indicadores">Indicadores</button>
+    </div>
+
+    <h2 class="chips-label">Inicial</h2>
+    <div class="alpha-row" role="group" aria-label="Filtrar por letra inicial">
+        <button class="alpha-btn active" type="button" data-alpha="todas">Todas</button>
+        <button class="alpha-btn" type="button" data-alpha="A">A</button>
+        <button class="alpha-btn" type="button" data-alpha="B" disabled>B</button>
+        <button class="alpha-btn" type="button" data-alpha="C">C</button>
+        <button class="alpha-btn" type="button" data-alpha="D" disabled>D</button>
+        <button class="alpha-btn" type="button" data-alpha="E">E</button>
+        <button class="alpha-btn" type="button" data-alpha="F" disabled>F</button>
+        <button class="alpha-btn" type="button" data-alpha="G" disabled>G</button>
+        <button class="alpha-btn" type="button" data-alpha="H" disabled>H</button>
+        <button class="alpha-btn" type="button" data-alpha="I" disabled>I</button>
+        <button class="alpha-btn" type="button" data-alpha="J" disabled>J</button>
+        <button class="alpha-btn" type="button" data-alpha="K" disabled>K</button>
+        <button class="alpha-btn" type="button" data-alpha="L">L</button>
+        <button class="alpha-btn" type="button" data-alpha="M">M</button>
+        <button class="alpha-btn" type="button" data-alpha="N" disabled>N</button>
+        <button class="alpha-btn" type="button" data-alpha="O">O</button>
+        <button class="alpha-btn" type="button" data-alpha="P">P</button>
+        <button class="alpha-btn" type="button" data-alpha="Q" disabled>Q</button>
+        <button class="alpha-btn" type="button" data-alpha="R">R</button>
+        <button class="alpha-btn" type="button" data-alpha="S" disabled>S</button>
+        <button class="alpha-btn" type="button" data-alpha="T">T</button>
+        <button class="alpha-btn" type="button" data-alpha="U" disabled>U</button>
+        <button class="alpha-btn" type="button" data-alpha="V" disabled>V</button>
+        <button class="alpha-btn" type="button" data-alpha="W" disabled>W</button>
+        <button class="alpha-btn" type="button" data-alpha="X" disabled>X</button>
+        <button class="alpha-btn" type="button" data-alpha="Y" disabled>Y</button>
+        <button class="alpha-btn" type="button" data-alpha="Z" disabled>Z</button>
+    </div>
+
+    <div class="results-head">
+      <div>
+        <h2 class="results-title">Todos os termos</h2>
+        <p class="results-meta"><span id="term-count">16</span> termos no glossário &nbsp;•&nbsp; Atualizado em julho de 2026</p>
+      </div>
+    </div>
+
+    <div class="term-grid" id="term-grid">
+      <article class="term-card" data-term-category="ods" data-term-initial="A">
+        <div class="term-head">
+          <h3>Agenda 2030</h3>
+          <span class="term-initial" aria-hidden="true">A</span>
+        </div>
+        <p>Plano global da ONU com 17 Objetivos de Desenvolvimento Sustentável e 169 metas a serem alcançadas até 2030 por governos, empresas e sociedade civil.</p>
+        <div class="term-tags"><span class="tag" style="--c:#E07A1F">ODS</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="ambiental" data-term-initial="A">
+        <div class="term-head">
+          <h3>Análise de Ciclo de Vida</h3>
+          <span class="term-initial" aria-hidden="true">A</span>
+        </div>
+        <p>Avaliação dos impactos ambientais de um produto ao longo de toda a sua existência: extração da matéria-prima, produção, transporte, uso e descarte.</p>
+        <div class="term-tags"><span class="tag" style="--c:#0B7A3E">Ambiental</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="contratacao" data-term-initial="C">
+        <div class="term-head">
+          <h3>Compras Públicas Sustentáveis</h3>
+          <span class="term-initial" aria-hidden="true">C</span>
+        </div>
+        <p>Aquisições da administração pública que consideram, além do preço, os impactos ambientais, sociais e econômicos ao longo do ciclo de vida do objeto contratado.</p>
+        <div class="term-tags"><span class="tag" style="--c:#1B6EC2">Contratação</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="contratacao" data-term-initial="C">
+        <div class="term-head">
+          <h3>Critério de Sustentabilidade</h3>
+          <span class="term-initial" aria-hidden="true">C</span>
+        </div>
+        <p>Requisito ambiental, social ou econômico inserido no planejamento e nos documentos da contratação para reduzir impactos negativos e ampliar benefícios.</p>
+        <div class="term-tags"><span class="tag" style="--c:#1B6EC2">Contratação</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="ambiental" data-term-initial="E">
+        <div class="term-head">
+          <h3>Economia Circular</h3>
+          <span class="term-initial" aria-hidden="true">E</span>
+        </div>
+        <p>Modelo econômico que mantém materiais em uso pelo maior tempo possível por meio de reparo, reuso, remanufatura e reciclagem, reduzindo a extração de recursos virgens.</p>
+        <div class="term-tags"><span class="tag" style="--c:#0B7A3E">Ambiental</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="normativo" data-term-initial="E">
+        <div class="term-head">
+          <h3>Edital</h3>
+          <span class="term-initial" aria-hidden="true">E</span>
+        </div>
+        <p>Documento que torna pública a licitação e fixa suas regras, incluindo objeto, critérios de julgamento, requisitos de habilitação e exigências de sustentabilidade.</p>
+        <div class="term-tags"><span class="tag" style="--c:#7A4FBF">Normativo</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="normativo" data-term-initial="E">
+        <div class="term-head">
+          <h3>Estudo Técnico Preliminar</h3>
+          <span class="term-initial" aria-hidden="true">E</span>
+        </div>
+        <p>Documento que caracteriza o problema a ser resolvido e avalia alternativas de solução, sendo a etapa ideal para inserir e justificar critérios de sustentabilidade.</p>
+        <div class="term-tags"><span class="tag" style="--c:#7A4FBF">Normativo</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="ambiental" data-term-initial="E">
+        <div class="term-head">
+          <h3>Externalidade Ambiental</h3>
+          <span class="term-initial" aria-hidden="true">E</span>
+        </div>
+        <p>Custo ou benefício ambiental gerado por uma atividade e não refletido no preço pago, como emissões atmosféricas ou preservação de nascentes.</p>
+        <div class="term-tags"><span class="tag" style="--c:#0B7A3E">Ambiental</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="ambiental" data-term-initial="L">
+        <div class="term-head">
+          <h3>Logística Reversa</h3>
+          <span class="term-initial" aria-hidden="true">L</span>
+        </div>
+        <p>Conjunto de ações que viabiliza o retorno de produtos e embalagens ao setor produtivo após o consumo, garantindo destinação ambientalmente adequada.</p>
+        <div class="term-tags"><span class="tag" style="--c:#0B7A3E">Ambiental</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="contratacao" data-term-initial="M">
+        <div class="term-head">
+          <h3>Matriz de Riscos</h3>
+          <span class="term-initial" aria-hidden="true">M</span>
+        </div>
+        <p>Instrumento que identifica riscos da contratação, avalia probabilidade e impacto, define responsáveis e estabelece medidas de mitigação e contingência.</p>
+        <div class="term-tags"><span class="tag" style="--c:#1B6EC2">Contratação</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="ods" data-term-initial="O">
+        <div class="term-head">
+          <h3>ODS</h3>
+          <span class="term-initial" aria-hidden="true">O</span>
+        </div>
+        <p>Objetivos de Desenvolvimento Sustentável: os 17 objetivos da Agenda 2030 que orientam ações de erradicação da pobreza, proteção do planeta e promoção da prosperidade.</p>
+        <div class="term-tags"><span class="tag" style="--c:#E07A1F">ODS</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="indicadores" data-term-initial="P">
+        <div class="term-head">
+          <h3>Pegada de Carbono</h3>
+          <span class="term-initial" aria-hidden="true">P</span>
+        </div>
+        <p>Total de gases de efeito estufa emitidos direta ou indiretamente por uma atividade, produto ou organização, expresso em toneladas de CO₂ equivalente.</p>
+        <div class="term-tags"><span class="tag" style="--c:#0E8A8A">Indicadores</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="indicadores" data-term-initial="P">
+        <div class="term-head">
+          <h3>Procel</h3>
+          <span class="term-initial" aria-hidden="true">P</span>
+        </div>
+        <p>Programa Nacional de Conservação de Energia Elétrica. Seu selo identifica os equipamentos mais eficientes de cada categoria, sendo o nível A o de maior eficiência.</p>
+        <div class="term-tags"><span class="tag" style="--c:#0E8A8A">Indicadores</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="normativo" data-term-initial="P">
+        <div class="term-head">
+          <h3>Projeto Básico</h3>
+          <span class="term-initial" aria-hidden="true">P</span>
+        </div>
+        <p>Conjunto de elementos que caracteriza a obra ou serviço com precisão suficiente para sua execução, onde devem constar as exigências técnicas de sustentabilidade.</p>
+        <div class="term-tags"><span class="tag" style="--c:#7A4FBF">Normativo</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="indicadores" data-term-initial="R">
+        <div class="term-head">
+          <h3>Rotulagem Ambiental</h3>
+          <span class="term-initial" aria-hidden="true">R</span>
+        </div>
+        <p>Certificações e declarações que atestam características ambientais de um produto, servindo como evidência do atendimento a critérios de sustentabilidade.</p>
+        <div class="term-tags"><span class="tag" style="--c:#0E8A8A">Indicadores</span></div>
+      </article>
+
+      <article class="term-card" data-term-category="normativo" data-term-initial="T">
+        <div class="term-head">
+          <h3>Termo de Referência</h3>
+          <span class="term-initial" aria-hidden="true">T</span>
+        </div>
+        <p>Documento que detalha o objeto, os requisitos, os prazos e as obrigações da contratação de bens e serviços, incluindo os critérios de sustentabilidade aplicáveis.</p>
+        <div class="term-tags"><span class="tag" style="--c:#7A4FBF">Normativo</span></div>
+      </article>
+
+      <p class="criteria-empty" id="term-empty">Nenhum termo encontrado. Ajuste a busca ou selecione outra categoria.</p>
+    </div>
+
+    <div class="help-strip">
+      <div>
+        <h3>Faltou algum termo?</h3>
+        <p>Sugira novas definições para ampliar o glossário da plataforma.</p>
+      </div>
+      <button class="btn btn-secondary" type="button" data-dialog="contato">Fale conosco <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </section>
+</main>
+
+<footer id="rodape">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/brasao-estado-sp.svg" alt="" aria-hidden="true">
+          <span class="government-name"><span>Governo do Estado</span><span>de São Paulo</span></span>
+        </div>
+        <p class="footer-secretaria">Secretaria de Gestão e<br>Governo Digital</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/governosp" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/governosp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/governosp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://x.com/governosp" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Plataforma</h4>
+        <a href="sobre.html">Sobre a plataforma</a>
+        <a href="criterios.html">Critérios</a>
+        <a href="contratacoes.html">Contratações</a>
+        <a href="index.html#ods">ODS</a>
+        <a href="glossario.html">Glossário</a>
+        <a href="https://online.fliphtml5.com/kpxxz/qqct/#p=1" target="_blank" rel="noopener noreferrer">A Lei de Licitações e os ODS</a>
+      </div>
+
+      <div>
+        <h4>Recursos</h4>
+        <a href="transparencia.html">Normativos</a>
+        <a href="biblioteca.html">Guias e Manuais</a>
+        <a href="faq.html">Perguntas frequentes</a>
+        <a href="biblioteca.html">Modelos de documentos</a>
+      </div>
+
+      <div>
+        <h4>Suporte</h4>
+        <a href="mailto:sustentabilidade-contratacoes@sp.gov.br">Fale conosco</a>
+        <a href="#">Ouvidoria</a>
+        <a href="#">Acessibilidade</a>
+      </div>
+
+      <div>
+        <h4>Governo do Estado de São Paulo</h4>
+        <a href="https://www.casacivil.sp.gov.br" target="_blank" rel="noopener noreferrer">Casa Civil</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2024 Governo do Estado de São Paulo. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<dialog id="site-dialog"><button class="dialog-close" aria-label="Fechar">×</button><h2 id="dialog-title"></h2><p id="dialog-copy"></p></dialog>
+<script src="main.js"></script>
+<script src="glossario.js"></script>
+
+</body>
+</html>

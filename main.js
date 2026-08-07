@@ -31,9 +31,13 @@ const DIALOGS = {
     title: 'Produtos com Selo Verde — Em breve',
     copy: 'A consulta a produtos certificados que atendem a critérios de sustentabilidade será disponibilizada em breve, com filtros por categoria e certificação.'
   },
-  glossario: {
-    title: 'Glossário de Sustentabilidade',
-    copy: 'O glossário reunirá termos técnicos de sustentabilidade em contratações públicas explicados de forma simples e objetiva. Publicação prevista para a próxima etapa.'
+  dados: {
+    title: 'Download de dados abertos',
+    copy: 'Os arquivos CSV, JSON e XLSX serão gerados dinamicamente quando a plataforma for integrada às bases oficiais. Enquanto isso, os conjuntos exibidos são demonstrativos.'
+  },
+  dicionario: {
+    title: 'Dicionário de dados',
+    copy: 'Cada conjunto será publicado com dicionário de dados descrevendo campos, tipos, domínios de valores e periodicidade de atualização, conforme a Política de Dados Abertos do Estado.'
   },
   categorias: {
     title: 'Mais categorias',
