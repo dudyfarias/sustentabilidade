@@ -1,0 +1,7 @@
+# Plataforma Estadual de Sustentabilidade em Contratações Públicas
+# Governo do Estado de São Paulo
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sustentabilidade-neon.vercel.app/sitemap.xml

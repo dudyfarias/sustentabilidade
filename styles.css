@@ -995,3 +995,6 @@
       .legal-doc{padding:20px}
       .contact-cards{grid-template-columns:1fr}
     }
+
+    /* Página 404 */
+    .erro-codigo{margin:0 0 4px;font-size:74px;font-weight:800;line-height:1;letter-spacing:-.04em;color:var(--green-line)}

@@ -21,6 +21,7 @@ Este documento registra o estado atual da implementação e as verificações fe
 | Política de Privacidade | `privacidade.html` | — | 11 seções conforme a LGPD |
 | Ouvidoria | `ouvidoria.html` | — | 9 seções sobre manifestações, prazos e LAI |
 | Acessibilidade | `acessibilidade.html` | — | 8 seções com recursos e limitações conhecidas |
+| Página não encontrada | `404.html` | `main.js` | Atalhos para as áreas principais e canal da Ouvidoria |
 
 ---
 
@@ -50,12 +51,26 @@ Este documento registra o estado atual da implementação e as verificações fe
 
 ---
 
+## Indexação e compartilhamento
+
+- `robots.txt` liberando indexação e apontando para o sitemap.
+- `sitemap.xml` com as doze URLs canônicas, em formato limpo (sem `.html`).
+- `canonical` em todas as páginas, coerente com `cleanUrls` da Vercel.
+- Open Graph e Twitter Card completos, com imagem própria de 1200×630.
+- Favicon em `.ico`, `.svg`, `apple-touch-icon` e ícones de 192 e 512 px.
+- `site.webmanifest` com nome, cores e ícones para instalação em dispositivos.
+- `404.html` institucional, marcado com `noindex`.
+
+---
+
 ## Verificação funcional
 
 Cada item abaixo foi executado no navegador contra a implementação.
 
 **Navegação**
-- As 12 páginas respondem HTTP 200.
+- As 12 páginas e a 404 respondem HTTP 200.
+- `robots.txt`, `sitemap.xml`, `favicon.ico`, `og-image.png` e `site.webmanifest` são servidos corretamente.
+- O `sitemap.xml` é XML válido e o `site.webmanifest` é JSON válido.
 - Nenhum link interno aponta para arquivo inexistente.
 - Nenhum asset referenciado está ausente.
 - Nenhum link do rodapé aponta para `#`: todos têm destino real.

@@ -42,6 +42,8 @@ Doze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 - Link de salto e foco visível em todas as páginas
 - Diálogos, feedbacks e navegação por teclado
 - Layout responsivo para desktop e dispositivos móveis
+- Metadados de compartilhamento (Open Graph e Twitter Card) com imagem própria
+- `robots.txt`, `sitemap.xml`, favicon, manifest e página 404 institucional
 - Sem autenticação, banco de dados ou APIs nesta fase
 
 ## Nota para produção
