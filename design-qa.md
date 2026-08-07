@@ -52,6 +52,8 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
   As demais áreas são alcançadas pelo rodapé e pela navegação rápida da página
   inicial, onde TCE, PGE e Selo Verde exibem selo "Em breve" e abrem diálogo.
 - **Rodapé de 5 colunas** com redes sociais e assinatura institucional.
+- **Ouvidoria** e **Fale conosco** apontam para os canais oficiais do Estado
+  (`fala.sp.gov.br` e `compras.sp.gov.br/fale-conosco`), abertos em nova aba.
 - Composição fiel a 1024 px de largura, com contêiner de 1000 px.
 
 ---

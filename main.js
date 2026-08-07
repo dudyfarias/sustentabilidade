@@ -43,10 +43,6 @@ const DIALOGS = {
     title: 'Mais categorias',
     copy: 'Além das categorias em destaque, o catálogo cobre mobiliário, limpeza e higiene, saúde, eventos, comunicação e serviços continuados. A listagem completa será liberada com a integração ao catálogo oficial.'
   },
-  contato: {
-    title: 'Fale conosco',
-    copy: 'Envie sugestões de novos critérios ou dúvidas técnicas para sustentabilidade-contratacoes@sp.gov.br. A equipe responde em até cinco dias úteis.'
-  },
   download: {
     title: 'Download em preparação',
     copy: 'O arquivo definitivo será disponibilizado quando a biblioteca documental for integrada às fontes oficiais.'
