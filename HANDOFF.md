@@ -135,13 +135,15 @@ Origem: `biblioteca.html`, `<article class="doc-card">`.
 
 ### 3.5 Pergunta frequente
 
-Origem: `faq.html`, `<details class="faq-entry">`.
+Origem: `faq.html`, `<details class="faq-entry">`, agrupados em `<section class="faq-grupo">`.
+São 30 perguntas distribuídas nas cinco categorias abaixo; o grupo é derivado da categoria.
 
 | Campo | Tipo | Atributo | Domínio |
 | --- | --- | --- | --- |
 | `pergunta` | string | `<summary>` | — |
 | `resposta` | string (HTML) | `.faq-answer` | aceita links |
-| `categoria` | enum | `data-faq-item` | `criterios`, `documentos`, `ods`, `plataforma` |
+| `categoria` | enum | `data-faq-item` | `plataforma`, `criterios`, `aplicacao`, `comprovacao`, `suporte` |
+| `ordem` | int | ordem no HTML | define a exibição dentro do grupo |
 
 ### 3.6 ODS
 

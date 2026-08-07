@@ -1032,3 +1032,19 @@
       .ods-selo-num{font-size:19px}
       .ods-externo{position:absolute;top:12px;right:12px}
     }
+
+    /* FAQ — agrupamento por categoria */
+    .faq-grupo + .faq-grupo{margin-top:24px}
+    .faq-grupo-head{display:flex;align-items:center;gap:11px;margin-bottom:11px}
+    .faq-grupo-icone{display:grid;place-items:center;width:34px;height:34px;flex:0 0 auto;border-radius:9px;background:var(--green-soft);color:var(--green);font-size:13px}
+    .faq-grupo-head h2{margin:0;font-size:14px;color:var(--ink)}
+    .faq-grupo-contagem{margin-left:auto;flex:0 0 auto;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:9px;font-weight:700;color:#5A6165;white-space:nowrap}
+    .faq-lista{display:flex;flex-direction:column;gap:8px}
+    .faq-cat{display:flex;align-items:center;gap:8px}
+    .faq-cat-num{margin-left:auto;padding:1px 7px;border-radius:999px;background:var(--surface-2);font-size:8.5px;font-weight:700;color:#6C7276}
+    .faq-cat.active .faq-cat-num{background:#fff;color:var(--green)}
+
+    @media(max-width:900px){
+      .faq-grupo-contagem{display:none}
+      .faq-cat{flex:1 1 auto}
+    }

@@ -21,7 +21,7 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 | Transparência | `transparencia.html` | — | KPIs, 3 conjuntos de dados abertos, 3 relatórios e API pública |
 | Sobre | `sobre.html` | — | Objetivos, referências institucionais e canais de contato |
 | ODS | `ods.html` | `main.js` | 17 objetivos agrupados nos 5 eixos da Agenda 2030 |
-| Perguntas frequentes | `faq.html` | `faq.js` | 8 perguntas com categorias e busca |
+| Perguntas frequentes | `faq.html` | `faq.js` | 30 perguntas em 5 categorias, com agrupamento visual e busca |
 | Termos de Uso | `termos.html` | — | 12 seções sobre condições de uso da plataforma |
 | Política de Privacidade | `privacidade.html` | — | 11 seções conforme a LGPD |
 | Acessibilidade | `acessibilidade.html` | — | 8 seções com recursos e limitações conhecidas |
@@ -112,8 +112,9 @@ Cada item abaixo foi executado no navegador contra a implementação.
 - Ações de download e de dicionário de dados abrem diálogo explicativo.
 
 **Perguntas frequentes**
-- Categorias filtram as perguntas.
-- A busca expande automaticamente as perguntas encontradas.
+- As cinco categorias filtram as perguntas e o contador acompanha o resultado.
+- O cabeçalho de um grupo desaparece junto quando nenhuma pergunta dele resta visível.
+- A busca ignora acentuação e expande automaticamente as perguntas encontradas.
 
 **Geral**
 - Sem erros no console em nenhuma página.

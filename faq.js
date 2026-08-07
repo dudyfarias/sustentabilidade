@@ -1,9 +1,10 @@
 /* =========================================================================
-   FAQ: filtro por categoria e busca por palavra-chave.
+   FAQ: filtro por categoria e busca por palavra-chave, com agrupamento visual.
    ========================================================================= */
 
 const faqList = document.querySelector('#faq-items');
 if (faqList) {
+  const grupos = [...faqList.querySelectorAll('.faq-grupo')];
   const entries = [...faqList.querySelectorAll('.faq-entry')];
   const empty = document.querySelector('#faq-empty');
   const countEl = document.querySelector('#faq-count');
@@ -16,20 +17,28 @@ if (faqList) {
   const strip = (text) => text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
   function apply() {
-    let visible = 0;
+    let visiveis = 0;
+
     entries.forEach((entry) => {
       const okCat = !state.categoria || entry.dataset.faqItem === state.categoria;
       const okBusca = !state.q || strip(entry.textContent).includes(strip(state.q));
       const ok = okCat && okBusca;
       entry.hidden = !ok;
       if (ok) {
-        visible += 1;
-        // Abre automaticamente quando a busca encontra poucos resultados
+        visiveis += 1;
+        // Com busca ativa, abre o que foi encontrado para a resposta ficar à vista
         if (state.q) entry.open = true;
       }
     });
-    if (empty) empty.classList.toggle('show', visible === 0);
-    if (countEl) countEl.textContent = String(visible);
+
+    // Um grupo sem nenhuma pergunta visível some junto com seu cabeçalho
+    grupos.forEach((grupo) => {
+      const temVisivel = [...grupo.querySelectorAll('.faq-entry')].some((e) => !e.hidden);
+      grupo.hidden = !temVisivel;
+    });
+
+    if (empty) empty.classList.toggle('show', visiveis === 0);
+    if (countEl) countEl.textContent = String(visiveis);
   }
 
   if (searchField) {
