@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glossário de Sustentabilidade — Plataforma Estadual de Sustentabilidade</title>
-  <meta name="description" content="Termos técnicos de contratações públicas sustentáveis explicados de forma simples e objetiva." />
+  <meta name="description" content="Glossário da Plataforma Estadual de Sustentabilidade: 60 termos de contratações públicas sustentáveis explicados de forma simples e objetiva." />
+  <title>Glossário — Plataforma Estadual de Sustentabilidade</title>
   <link rel="canonical" href="https://sustentabilidade-neon.vercel.app/glossario" />
   <meta name="theme-color" content="#087A3E" />
 
@@ -13,7 +13,7 @@
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:url" content="https://sustentabilidade-neon.vercel.app/glossario" />
   <meta property="og:title" content="Glossário de Sustentabilidade" />
-  <meta property="og:description" content="Termos técnicos de contratações públicas sustentáveis explicados de forma simples e objetiva." />
+  <meta property="og:description" content="Glossário da Plataforma Estadual de Sustentabilidade: 60 termos de contratações públicas sustentáveis explicados de forma simples e objetiva." />
   <meta property="og:image" content="https://sustentabilidade-neon.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -21,7 +21,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Glossário de Sustentabilidade" />
-  <meta name="twitter:description" content="Termos técnicos de contratações públicas sustentáveis explicados de forma simples e objetiva." />
+  <meta name="twitter:description" content="Glossário da Plataforma Estadual de Sustentabilidade: 60 termos de contratações públicas sustentáveis explicados de forma simples e objetiva." />
   <meta name="twitter:image" content="https://sustentabilidade-neon.vercel.app/og-image.png" />
 
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -69,53 +69,42 @@
 </header>
 
 <main id="conteudo" tabindex="-1">
-  <section class="page-hero">
+  <section class="ajuda-hero">
     <div class="container">
-      <nav class="breadcrumb" aria-label="Você está aqui">
+      <nav class="breadcrumb ajuda-breadcrumb" aria-label="Você está aqui">
         <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Início</a>
         <span class="sep" aria-hidden="true">›</span>
         <span aria-current="page">Glossário</span>
       </nav>
 
-      <h1>Glossário de <span>Sustentabilidade</span></h1>
-      <p>Termos técnicos de contratações públicas sustentáveis explicados de forma simples e objetiva.</p>
+      <span class="ajuda-icone" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+      <p class="ajuda-eyebrow">Glossário</p>
+      <h1>O que significa <span>esse termo?</span></h1>
+      <p class="ajuda-sub">60 termos de contratações públicas sustentáveis explicados de forma simples, objetiva e conectada aos critérios da plataforma.</p>
 
-      <img class="page-hero-art" src="assets/icon-glossario-hero.svg" alt="" aria-hidden="true">
+      <form class="ajuda-busca" id="glossario-form" role="search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="glossario-search" type="search" placeholder="Digite um termo ou sigla. Ex.: ETP, ciclo de vida, logística reversa…" />
+        <button class="ajuda-limpar" type="button" id="glossario-clear">
+          <i class="fa-solid fa-rotate" aria-hidden="true"></i> Limpar
+        </button>
+      </form>
     </div>
   </section>
 
-  <section class="container">
-    <form class="global-search" id="glossario-form" role="search">
-      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-      <input id="glossario-search" type="search" placeholder="Pesquisar termo ou definição..." />
-      <button class="filter-button" type="button" id="glossario-clear">
-        <i class="fa-solid fa-rotate"></i> Limpar
-      </button>
-    </form>
-
-    <h2 class="chips-label">Categorias</h2>
-    <div class="chips-row" role="group" aria-label="Filtrar por categoria">
-        <button class="chip active" type="button" data-term-category="todas"><i class="fa-solid fa-table-cells-large"></i> Todas</button>
-        <button class="chip" type="button" data-term-category="contratacao">Contratação</button>
-        <button class="chip" type="button" data-term-category="ambiental">Ambiental</button>
-        <button class="chip" type="button" data-term-category="normativo">Normativo</button>
-        <button class="chip" type="button" data-term-category="ods">ODS</button>
-        <button class="chip" type="button" data-term-category="indicadores">Indicadores</button>
-    </div>
-
-    <h2 class="chips-label">Inicial</h2>
-    <div class="alpha-row" role="group" aria-label="Filtrar por letra inicial">
+  <nav class="glossario-alfabeto" aria-label="Índice alfabético">
+    <div class="container alpha-row">
         <button class="alpha-btn active" type="button" data-alpha="todas">Todas</button>
         <button class="alpha-btn" type="button" data-alpha="A">A</button>
-        <button class="alpha-btn" type="button" data-alpha="B" disabled>B</button>
+        <button class="alpha-btn" type="button" data-alpha="B">B</button>
         <button class="alpha-btn" type="button" data-alpha="C">C</button>
-        <button class="alpha-btn" type="button" data-alpha="D" disabled>D</button>
+        <button class="alpha-btn" type="button" data-alpha="D">D</button>
         <button class="alpha-btn" type="button" data-alpha="E">E</button>
-        <button class="alpha-btn" type="button" data-alpha="F" disabled>F</button>
-        <button class="alpha-btn" type="button" data-alpha="G" disabled>G</button>
-        <button class="alpha-btn" type="button" data-alpha="H" disabled>H</button>
-        <button class="alpha-btn" type="button" data-alpha="I" disabled>I</button>
-        <button class="alpha-btn" type="button" data-alpha="J" disabled>J</button>
+        <button class="alpha-btn" type="button" data-alpha="F">F</button>
+        <button class="alpha-btn" type="button" data-alpha="G">G</button>
+        <button class="alpha-btn" type="button" data-alpha="H">H</button>
+        <button class="alpha-btn" type="button" data-alpha="I">I</button>
+        <button class="alpha-btn" type="button" data-alpha="J">J</button>
         <button class="alpha-btn" type="button" data-alpha="K" disabled>K</button>
         <button class="alpha-btn" type="button" data-alpha="L">L</button>
         <button class="alpha-btn" type="button" data-alpha="M">M</button>
@@ -124,169 +113,1061 @@
         <button class="alpha-btn" type="button" data-alpha="P">P</button>
         <button class="alpha-btn" type="button" data-alpha="Q" disabled>Q</button>
         <button class="alpha-btn" type="button" data-alpha="R">R</button>
-        <button class="alpha-btn" type="button" data-alpha="S" disabled>S</button>
+        <button class="alpha-btn" type="button" data-alpha="S">S</button>
         <button class="alpha-btn" type="button" data-alpha="T">T</button>
         <button class="alpha-btn" type="button" data-alpha="U" disabled>U</button>
-        <button class="alpha-btn" type="button" data-alpha="V" disabled>V</button>
+        <button class="alpha-btn" type="button" data-alpha="V">V</button>
         <button class="alpha-btn" type="button" data-alpha="W" disabled>W</button>
         <button class="alpha-btn" type="button" data-alpha="X" disabled>X</button>
         <button class="alpha-btn" type="button" data-alpha="Y" disabled>Y</button>
         <button class="alpha-btn" type="button" data-alpha="Z" disabled>Z</button>
     </div>
+  </nav>
 
-    <div class="results-head">
-      <div>
-        <h2 class="results-title">Todos os termos</h2>
-        <p class="results-meta"><span id="term-count">16</span> termos no glossário &nbsp;•&nbsp; Atualizado em julho de 2026</p>
-      </div>
+  <section class="container">
+    <div class="chips-row ajuda-chips" role="group" aria-label="Filtrar por categoria">
+      <button class="chip active" type="button" data-term-category="todas"><i class="fa-solid fa-table-cells-large"></i> Todas <span class="chip-num">60</span></button>
+      <button class="chip" type="button" data-term-category="contratacao"><i class="fa-solid fa-file-signature"></i> Contratação <span class="chip-num">24</span></button>
+      <button class="chip" type="button" data-term-category="ambiental"><i class="fa-solid fa-leaf"></i> Ambiental <span class="chip-num">12</span></button>
+      <button class="chip" type="button" data-term-category="normativo"><i class="fa-solid fa-gavel"></i> Normativo <span class="chip-num">14</span></button>
+      <button class="chip" type="button" data-term-category="ods"><i class="fa-solid fa-earth-americas"></i> ODS <span class="chip-num">3</span></button>
+      <button class="chip" type="button" data-term-category="indicadores"><i class="fa-solid fa-gauge-high"></i> Indicadores <span class="chip-num">7</span></button>
     </div>
 
-    <div class="term-grid" id="term-grid">
-      <article class="term-card" data-term-category="ods" data-term-initial="A">
-        <div class="term-head">
-          <h3>Agenda 2030</h3>
-          <span class="term-initial" aria-hidden="true">A</span>
-        </div>
-        <p>Plano global da ONU com 17 Objetivos de Desenvolvimento Sustentável e 169 metas a serem alcançadas até 2030 por governos, empresas e sociedade civil.</p>
-        <div class="term-tags"><span class="tag" style="--c:#E07A1F">ODS</span></div>
-      </article>
+    <p class="ajuda-contagem"><span id="term-count">60</span> termos no glossário &nbsp;•&nbsp; Atualizado em julho de 2026</p>
 
-      <article class="term-card" data-term-category="ambiental" data-term-initial="A">
-        <div class="term-head">
-          <h3>Análise de Ciclo de Vida</h3>
-          <span class="term-initial" aria-hidden="true">A</span>
+    <div class="termo-lista" id="term-grid">
+      <section class="letra-grupo" id="letra-A" data-letra="A" aria-labelledby="titulo-letra-A">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-A">A</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">6 termos</span>
         </div>
-        <p>Avaliação dos impactos ambientais de um produto ao longo de toda a sua existência: extração da matéria-prima, produção, transporte, uso e descarte.</p>
-        <div class="term-tags"><span class="tag" style="--c:#0B7A3E">Ambiental</span></div>
-      </article>
 
-      <article class="term-card" data-term-category="contratacao" data-term-initial="C">
-        <div class="term-head">
-          <h3>Compras Públicas Sustentáveis</h3>
-          <span class="term-initial" aria-hidden="true">C</span>
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-aditivo-contratual" data-term-category="contratacao" data-term-initial="A">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Aditivo contratual</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Instrumento que altera o contrato durante sua vigência, para acréscimo ou supressão de quantitativos, prorrogação de prazo ou ajuste de condições. Alterações que afetem requisitos de sustentabilidade exigem a mesma justificativa técnica da contratação original.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-repactuacao">Repactuação</a> <a href="#termo-gestao-contratual">Gestão contratual</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-agenda-2030" data-term-category="ods" data-term-initial="A">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#E07A1F" aria-hidden="true"><i class="fa-solid fa-earth-americas"></i></span>
+            <div class="termo-titulo">
+              <h3>Agenda 2030</h3>
+              <span class="termo-cat" style="--c:#E07A1F">ODS</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Plano de ação global aprovado pela ONU em 2015, com 17 Objetivos de Desenvolvimento Sustentável e 169 metas a serem alcançadas até 2030. Assumida por 193 países, orienta políticas públicas, investimentos e, no caso das compras governamentais, a definição de critérios de sustentabilidade.</p>
+          <div class="termo-links">
+            <a class="termo-link" href="ods.html"><i class="fa-solid fa-earth-americas" aria-hidden="true"></i> Ver os 17 ODS</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-agente-de-contratacao" data-term-category="contratacao" data-term-initial="A">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Agente de contratação</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Servidor designado para conduzir a licitação, receber e responder impugnações, conduzir a sessão pública e encaminhar a decisão à autoridade superior. É quem, na prática, aplica os critérios de sustentabilidade definidos no planejamento.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-fiscalizacao-contratual">Fiscalização contratual</a> <a href="#termo-gestao-contratual">Gestão contratual</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-analise-de-ciclo-de-vida" data-term-category="ambiental" data-term-initial="A">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Análise de Ciclo de Vida</h3>
+              <span class="termo-sigla">ACV</span><span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Metodologia que avalia os impactos ambientais de um produto ou serviço em todas as suas etapas: extração da matéria-prima, fabricação, transporte, uso e descarte. Difere do custo do ciclo de vida por medir impacto ambiental, e não valor financeiro.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-ciclo-de-vida">Ciclo de vida</a> <a href="#termo-custo-do-ciclo-de-vida">Custo do ciclo de vida</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-ata-de-registro-de-precos" data-term-category="contratacao" data-term-initial="A">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Ata de Registro de Preços</h3>
+              <span class="termo-sigla">ARP</span><span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Documento que registra preços, fornecedores e condições para contratações futuras, com validade determinada. Como pode ser utilizada por vários órgãos, é um instrumento eficaz para disseminar requisitos de sustentabilidade em escala.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-sistema-de-registro-de-precos">Sistema de Registro de Preços</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="contratacoes.html"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Ver contratações</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-aterro-sanitario" data-term-category="ambiental" data-term-initial="A">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Aterro sanitário</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Instalação licenciada para disposição final de resíduos sólidos, com impermeabilização do solo, captação de chorume e de gases. A destinação em aterro só é admitida para rejeitos, ou seja, para o que não pode ser reaproveitado ou reciclado.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-destinacao-final-ambientalmente-adequada">Destinação final ambientalmente adequada</a> <a href="#termo-rejeito">Rejeito</a></p>
+        </article>
         </div>
-        <p>Aquisições da administração pública que consideram, além do preço, os impactos ambientais, sociais e econômicos ao longo do ciclo de vida do objeto contratado.</p>
-        <div class="term-tags"><span class="tag" style="--c:#1B6EC2">Contratação</span></div>
-      </article>
+      </section>
 
-      <article class="term-card" data-term-category="contratacao" data-term-initial="C">
-        <div class="term-head">
-          <h3>Critério de Sustentabilidade</h3>
-          <span class="term-initial" aria-hidden="true">C</span>
+      <section class="letra-grupo" id="letra-B" data-letra="B" aria-labelledby="titulo-letra-B">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-B">B</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">1 termo</span>
         </div>
-        <p>Requisito ambiental, social ou econômico inserido no planejamento e nos documentos da contratação para reduzir impactos negativos e ampliar benefícios.</p>
-        <div class="term-tags"><span class="tag" style="--c:#1B6EC2">Contratação</span></div>
-      </article>
 
-      <article class="term-card" data-term-category="ambiental" data-term-initial="E">
-        <div class="term-head">
-          <h3>Economia Circular</h3>
-          <span class="term-initial" aria-hidden="true">E</span>
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-biodegradavel" data-term-category="ambiental" data-term-initial="B">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Biodegradável</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Material capaz de ser decomposto por microrganismos em condições ambientais definidas, em prazo e grau estabelecidos por norma técnica. A alegação deve ser comprovada por ensaio, e não apenas declarada pelo fornecedor.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-rotulagem-ambiental">Rotulagem ambiental</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
         </div>
-        <p>Modelo econômico que mantém materiais em uso pelo maior tempo possível por meio de reparo, reuso, remanufatura e reciclagem, reduzindo a extração de recursos virgens.</p>
-        <div class="term-tags"><span class="tag" style="--c:#0B7A3E">Ambiental</span></div>
-      </article>
+      </section>
 
-      <article class="term-card" data-term-category="normativo" data-term-initial="E">
-        <div class="term-head">
-          <h3>Edital</h3>
-          <span class="term-initial" aria-hidden="true">E</span>
+      <section class="letra-grupo" id="letra-C" data-letra="C" aria-labelledby="titulo-letra-C">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-C">C</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">7 termos</span>
         </div>
-        <p>Documento que torna pública a licitação e fixa suas regras, incluindo objeto, critérios de julgamento, requisitos de habilitação e exigências de sustentabilidade.</p>
-        <div class="term-tags"><span class="tag" style="--c:#7A4FBF">Normativo</span></div>
-      </article>
 
-      <article class="term-card" data-term-category="normativo" data-term-initial="E">
-        <div class="term-head">
-          <h3>Estudo Técnico Preliminar</h3>
-          <span class="term-initial" aria-hidden="true">E</span>
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-catalogo-eletronico-de-padronizacao" data-term-category="contratacao" data-term-initial="C">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Catálogo eletrônico de padronização</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Base que reúne especificações padronizadas de bens, serviços e obras, para uso na descrição do objeto. Quando o catálogo já incorpora requisitos ambientais, a contratação sustentável passa a ser o caminho padrão, e não a exceção.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-especificacao-tecnica">Especificação técnica</a> <a href="#termo-objeto-da-contratacao">Objeto da contratação</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-certificacao-ambiental" data-term-category="indicadores" data-term-initial="C">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0E8A8A" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+            <div class="termo-titulo">
+              <h3>Certificação ambiental</h3>
+              <span class="termo-cat" style="--c:#0E8A8A">Indicadores</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Atestado emitido por organismo independente de que um produto, processo ou serviço atende a requisitos ambientais previamente definidos. Em contratações, deve ser exigida com aceitação de certificados equivalentes, sob pena de restringir a competição.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-rotulagem-ambiental">Rotulagem ambiental</a> <a href="#termo-selo-verde">Selo verde</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-ciclo-de-vida" data-term-category="ambiental" data-term-initial="C">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Ciclo de vida</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Conjunto de etapas pelas quais um produto passa, da obtenção da matéria-prima à disposição final. É o conceito que fundamenta tanto a análise de impactos quanto o cálculo de custos ao longo do tempo.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-analise-de-ciclo-de-vida">Análise de Ciclo de Vida</a> <a href="#termo-custo-do-ciclo-de-vida">Custo do ciclo de vida</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-compras-publicas-sustentaveis" data-term-category="contratacao" data-term-initial="C">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Compras Públicas Sustentáveis</h3>
+              <span class="termo-sigla">CPS</span><span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Aquisições da Administração Pública que consideram, além do preço, os impactos ambientais, sociais e econômicos ao longo do ciclo de vida do objeto. Não constituem uma modalidade própria de licitação, mas uma forma de conduzir qualquer contratação.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-criterio-de-sustentabilidade">Critério de sustentabilidade</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+            <a class="termo-link" href="contratacoes.html"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Ver contratações</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-contratacao-direta" data-term-category="normativo" data-term-initial="C">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Contratação direta</h3>
+              <span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Contratação realizada sem licitação, nas hipóteses de dispensa ou inexigibilidade previstas em lei. A ausência de disputa não afasta a exigência de justificar tecnicamente os requisitos, inclusive os de sustentabilidade.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-dispensa-de-licitacao">Dispensa de licitação</a> <a href="#termo-inexigibilidade-de-licitacao">Inexigibilidade de licitação</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-criterio-de-sustentabilidade" data-term-category="contratacao" data-term-initial="C">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Critério de sustentabilidade</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Requisito ambiental, social ou econômico inserido no planejamento e nos documentos da contratação para reduzir impactos negativos e ampliar benefícios. Deve ser objetivo, verificável, proporcional ao objeto e acompanhado da respectiva forma de comprovação.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-compras-publicas-sustentaveis">Compras Públicas Sustentáveis</a> <a href="#termo-especificacao-tecnica">Especificação técnica</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-custo-do-ciclo-de-vida" data-term-category="contratacao" data-term-initial="C">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Custo do ciclo de vida</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Soma de todos os custos ao longo da vida útil do objeto: aquisição, instalação, consumo de energia e insumos, manutenção e disposição final. Para ser usado no julgamento das propostas, o método de cálculo precisa constar do edital com parâmetros objetivos.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-ciclo-de-vida">Ciclo de vida</a> <a href="#termo-vida-util">Vida útil</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
         </div>
-        <p>Documento que caracteriza o problema a ser resolvido e avalia alternativas de solução, sendo a etapa ideal para inserir e justificar critérios de sustentabilidade.</p>
-        <div class="term-tags"><span class="tag" style="--c:#7A4FBF">Normativo</span></div>
-      </article>
+      </section>
 
-      <article class="term-card" data-term-category="ambiental" data-term-initial="E">
-        <div class="term-head">
-          <h3>Externalidade Ambiental</h3>
-          <span class="term-initial" aria-hidden="true">E</span>
+      <section class="letra-grupo" id="letra-D" data-letra="D" aria-labelledby="titulo-letra-D">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-D">D</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">3 termos</span>
         </div>
-        <p>Custo ou benefício ambiental gerado por uma atividade e não refletido no preço pago, como emissões atmosféricas ou preservação de nascentes.</p>
-        <div class="term-tags"><span class="tag" style="--c:#0B7A3E">Ambiental</span></div>
-      </article>
 
-      <article class="term-card" data-term-category="ambiental" data-term-initial="L">
-        <div class="term-head">
-          <h3>Logística Reversa</h3>
-          <span class="term-initial" aria-hidden="true">L</span>
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-destinacao-final-ambientalmente-adequada" data-term-category="ambiental" data-term-initial="D">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Destinação final ambientalmente adequada</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Encaminhamento de resíduos para reutilização, reciclagem, compostagem, recuperação energética ou outra solução admitida pelos órgãos competentes, evitando danos à saúde e ao meio ambiente. Aterro é a última alternativa e só cabe para rejeitos.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-aterro-sanitario">Aterro sanitário</a> <a href="#termo-logistica-reversa">Logística reversa</a> <a href="#termo-rejeito">Rejeito</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-dispensa-de-licitacao" data-term-category="normativo" data-term-initial="D">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Dispensa de licitação</h3>
+              <span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Hipótese em que a lei autoriza contratar sem licitação, embora a competição fosse possível, como em contratações de pequeno valor ou emergenciais. Exige processo formal, pesquisa de preços e justificativa da escolha.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-contratacao-direta">Contratação direta</a> <a href="#termo-pesquisa-de-precos">Pesquisa de preços</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-documento-de-formalizacao-da-demanda" data-term-category="normativo" data-term-initial="D">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Documento de Formalização da Demanda</h3>
+              <span class="termo-sigla">DFD</span><span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Documento que registra a necessidade da área requisitante e dá início ao processo de contratação. É o primeiro ponto em que o impacto ambiental e social do objeto pode ser sinalizado.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-estudo-tecnico-preliminar">Estudo Técnico Preliminar</a> <a href="#termo-plano-de-contratacoes-anual">Plano de Contratações Anual</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
         </div>
-        <p>Conjunto de ações que viabiliza o retorno de produtos e embalagens ao setor produtivo após o consumo, garantindo destinação ambientalmente adequada.</p>
-        <div class="term-tags"><span class="tag" style="--c:#0B7A3E">Ambiental</span></div>
-      </article>
+      </section>
 
-      <article class="term-card" data-term-category="contratacao" data-term-initial="M">
-        <div class="term-head">
-          <h3>Matriz de Riscos</h3>
-          <span class="term-initial" aria-hidden="true">M</span>
+      <section class="letra-grupo" id="letra-E" data-letra="E" aria-labelledby="titulo-letra-E">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-E">E</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">7 termos</span>
         </div>
-        <p>Instrumento que identifica riscos da contratação, avalia probabilidade e impacto, define responsáveis e estabelece medidas de mitigação e contingência.</p>
-        <div class="term-tags"><span class="tag" style="--c:#1B6EC2">Contratação</span></div>
-      </article>
 
-      <article class="term-card" data-term-category="ods" data-term-initial="O">
-        <div class="term-head">
-          <h3>ODS</h3>
-          <span class="term-initial" aria-hidden="true">O</span>
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-economia-circular" data-term-category="ambiental" data-term-initial="E">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Economia circular</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Modelo econômico que mantém materiais em uso pelo maior tempo possível por meio de reparo, reuso, remanufatura e reciclagem, reduzindo a extração de recursos virgens e a geração de resíduos. Opõe-se ao modelo linear de extrair, produzir e descartar.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-logistica-reversa">Logística reversa</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-edital" data-term-category="normativo" data-term-initial="E">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Edital</h3>
+              <span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Documento que torna pública a licitação e fixa suas regras: objeto, critérios de julgamento, requisitos de habilitação, obrigações contratuais e exigências de sustentabilidade com as respectivas formas de comprovação.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-habilitacao">Habilitação</a> <a href="#termo-termo-de-referencia">Termo de Referência</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-eficiencia-energetica" data-term-category="indicadores" data-term-initial="E">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0E8A8A" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+            <div class="termo-titulo">
+              <h3>Eficiência energética</h3>
+              <span class="termo-cat" style="--c:#0E8A8A">Indicadores</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Relação entre o serviço prestado por um equipamento e a energia consumida para isso. Em contratações, costuma ser exigida por meio de etiquetagem oficial, que classifica os produtos por faixa de desempenho.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-procel">Procel</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-emissao-de-gases-de-efeito-estufa" data-term-category="ambiental" data-term-initial="E">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Emissão de gases de efeito estufa</h3>
+              <span class="termo-sigla">GEE</span><span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Liberação de gases que intensificam o aquecimento global, como dióxido de carbono, metano e óxido nitroso. Em contratações, aparece em requisitos de frota, energia, logística e em planos de redução exigidos na execução contratual.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-pegada-de-carbono">Pegada de carbono</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+            <a class="termo-link" href="ods.html"><i class="fa-solid fa-earth-americas" aria-hidden="true"></i> Ver os 17 ODS</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-especificacao-tecnica" data-term-category="contratacao" data-term-initial="E">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Especificação técnica</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Descrição objetiva das características exigidas do objeto. É onde a maior parte dos critérios de sustentabilidade se materializa. Deve indicar desempenho esperado, e não marca ou solução única, para preservar a competitividade.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-criterio-de-sustentabilidade">Critério de sustentabilidade</a> <a href="#termo-termo-de-referencia">Termo de Referência</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-estudo-tecnico-preliminar" data-term-category="normativo" data-term-initial="E">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Estudo Técnico Preliminar</h3>
+              <span class="termo-sigla">ETP</span><span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Documento que caracteriza o problema a ser resolvido e avalia alternativas de solução antes da contratação. É a etapa mais adequada para identificar impactos e decidir, com justificativa, quais critérios de sustentabilidade serão adotados.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-projeto-basico">Projeto Básico</a> <a href="#termo-termo-de-referencia">Termo de Referência</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-externalidade-ambiental" data-term-category="ambiental" data-term-initial="E">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Externalidade ambiental</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Custo ou benefício ambiental gerado por uma atividade e não refletido no preço pago por ela, como emissões atmosféricas, contaminação de águas ou preservação de nascentes. Considerá-la é um dos fundamentos das compras sustentáveis.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-custo-do-ciclo-de-vida">Custo do ciclo de vida</a></p>
+        </article>
         </div>
-        <p>Objetivos de Desenvolvimento Sustentável: os 17 objetivos da Agenda 2030 que orientam ações de erradicação da pobreza, proteção do planeta e promoção da prosperidade.</p>
-        <div class="term-tags"><span class="tag" style="--c:#E07A1F">ODS</span></div>
-      </article>
+      </section>
 
-      <article class="term-card" data-term-category="indicadores" data-term-initial="P">
-        <div class="term-head">
-          <h3>Pegada de Carbono</h3>
-          <span class="term-initial" aria-hidden="true">P</span>
+      <section class="letra-grupo" id="letra-F" data-letra="F" aria-labelledby="titulo-letra-F">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-F">F</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">1 termo</span>
         </div>
-        <p>Total de gases de efeito estufa emitidos direta ou indiretamente por uma atividade, produto ou organização, expresso em toneladas de CO₂ equivalente.</p>
-        <div class="term-tags"><span class="tag" style="--c:#0E8A8A">Indicadores</span></div>
-      </article>
 
-      <article class="term-card" data-term-category="indicadores" data-term-initial="P">
-        <div class="term-head">
-          <h3>Procel</h3>
-          <span class="term-initial" aria-hidden="true">P</span>
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-fiscalizacao-contratual" data-term-category="contratacao" data-term-initial="F">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Fiscalização contratual</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Acompanhamento da execução do contrato pelo fiscal designado, que verifica se o objeto entregue corresponde ao contratado. É a etapa em que os requisitos de sustentabilidade deixam de ser promessa e passam a ser comprovados.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-gestao-contratual">Gestão contratual</a> <a href="#termo-recebimento-definitivo">Recebimento definitivo</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
         </div>
-        <p>Programa Nacional de Conservação de Energia Elétrica. Seu selo identifica os equipamentos mais eficientes de cada categoria, sendo o nível A o de maior eficiência.</p>
-        <div class="term-tags"><span class="tag" style="--c:#0E8A8A">Indicadores</span></div>
-      </article>
+      </section>
 
-      <article class="term-card" data-term-category="normativo" data-term-initial="P">
-        <div class="term-head">
-          <h3>Projeto Básico</h3>
-          <span class="term-initial" aria-hidden="true">P</span>
+      <section class="letra-grupo" id="letra-G" data-letra="G" aria-labelledby="titulo-letra-G">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-G">G</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">2 termos</span>
         </div>
-        <p>Conjunto de elementos que caracteriza a obra ou serviço com precisão suficiente para sua execução, onde devem constar as exigências técnicas de sustentabilidade.</p>
-        <div class="term-tags"><span class="tag" style="--c:#7A4FBF">Normativo</span></div>
-      </article>
 
-      <article class="term-card" data-term-category="indicadores" data-term-initial="R">
-        <div class="term-head">
-          <h3>Rotulagem Ambiental</h3>
-          <span class="term-initial" aria-hidden="true">R</span>
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-gestao-contratual" data-term-category="contratacao" data-term-initial="G">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Gestão contratual</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Coordenação administrativa do contrato: prazos, pagamentos, alterações, sanções e encerramento. Enquanto a fiscalização olha a execução técnica, a gestão cuida da vida do contrato como um todo.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-fiscalizacao-contratual">Fiscalização contratual</a> <a href="#termo-aditivo-contratual">Aditivo contratual</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-gestao-de-residuos-solidos" data-term-category="ambiental" data-term-initial="G">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Gestão de resíduos sólidos</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Conjunto de ações de coleta, transporte, tratamento e destinação de resíduos, com prioridade para a não geração, redução, reutilização e reciclagem. Em contratos de obras e serviços, costuma ser exigida por meio de plano específico.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-destinacao-final-ambientalmente-adequada">Destinação final ambientalmente adequada</a> <a href="#termo-politica-nacional-de-residuos-solidos">Política Nacional de Resíduos Sólidos</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
         </div>
-        <p>Certificações e declarações que atestam características ambientais de um produto, servindo como evidência do atendimento a critérios de sustentabilidade.</p>
-        <div class="term-tags"><span class="tag" style="--c:#0E8A8A">Indicadores</span></div>
-      </article>
+      </section>
 
-      <article class="term-card" data-term-category="normativo" data-term-initial="T">
-        <div class="term-head">
-          <h3>Termo de Referência</h3>
-          <span class="term-initial" aria-hidden="true">T</span>
+      <section class="letra-grupo" id="letra-H" data-letra="H" aria-labelledby="titulo-letra-H">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-H">H</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">1 termo</span>
         </div>
-        <p>Documento que detalha o objeto, os requisitos, os prazos e as obrigações da contratação de bens e serviços, incluindo os critérios de sustentabilidade aplicáveis.</p>
-        <div class="term-tags"><span class="tag" style="--c:#7A4FBF">Normativo</span></div>
-      </article>
 
-      <p class="criteria-empty" id="term-empty">Nenhum termo encontrado. Ajuste a busca ou selecione outra categoria.</p>
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-habilitacao" data-term-category="normativo" data-term-initial="H">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Habilitação</h3>
+              <span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Fase em que se verifica se o licitante reúne as condições jurídicas, técnicas, fiscais e econômicas para contratar. Exigências de sustentabilidade podem ser posicionadas aqui, na proposta ou na execução contratual, conforme sua natureza.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-edital">Edital</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-I" data-letra="I" aria-labelledby="titulo-letra-I">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-I">I</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">2 termos</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-impacto-ambiental" data-term-category="ambiental" data-term-initial="I">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Impacto ambiental</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Alteração das propriedades do meio ambiente causada por atividade humana, que afete a saúde, a segurança, as atividades sociais e econômicas, a biota ou a qualidade dos recursos naturais.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-externalidade-ambiental">Externalidade ambiental</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-inexigibilidade-de-licitacao" data-term-category="normativo" data-term-initial="I">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Inexigibilidade de licitação</h3>
+              <span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Hipótese em que a licitação é juridicamente impossível por inviabilidade de competição, como quando há fornecedor exclusivo. A exclusividade precisa ser comprovada, não presumida.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-contratacao-direta">Contratação direta</a> <a href="#termo-dispensa-de-licitacao">Dispensa de licitação</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-J" data-letra="J" aria-labelledby="titulo-letra-J">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-J">J</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">2 termos</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-julgamento-por-menor-preco" data-term-category="contratacao" data-term-initial="J">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Julgamento por menor preço</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Critério em que vence a proposta de menor valor entre as que atendem às exigências do edital. Como os requisitos de sustentabilidade ficam na especificação, a disputa ocorre entre soluções que já os atendem.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-custo-do-ciclo-de-vida">Custo do ciclo de vida</a> <a href="#termo-julgamento-por-tecnica-e-preco">Julgamento por técnica e preço</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-julgamento-por-tecnica-e-preco" data-term-category="contratacao" data-term-initial="J">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Julgamento por técnica e preço</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Critério que combina a nota técnica da proposta com o preço ofertado, mediante pesos definidos no edital. Permite pontuar desempenho ambiental acima do mínimo exigido, desde que com parâmetros objetivos.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-julgamento-por-menor-preco">Julgamento por menor preço</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-L" data-letra="L" aria-labelledby="titulo-letra-L">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-L">L</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">2 termos</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-logistica-reversa" data-term-category="ambiental" data-term-initial="L">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Logística reversa</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Conjunto de ações que viabiliza o retorno de produtos e embalagens ao setor produtivo após o consumo, garantindo destinação ambientalmente adequada. Aplica-se de forma obrigatória a categorias como eletroeletrônicos, pilhas, lâmpadas, pneus e óleos lubrificantes.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-economia-circular">Economia circular</a> <a href="#termo-politica-nacional-de-residuos-solidos">Política Nacional de Resíduos Sólidos</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-lote" data-term-category="contratacao" data-term-initial="L">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Lote</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Agrupamento de itens licitados em conjunto. A forma de agrupar afeta diretamente a competição: lotes muito amplos podem excluir fornecedores menores, inclusive os que ofereceriam alternativas mais sustentáveis.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-objeto-da-contratacao">Objeto da contratação</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-M" data-letra="M" aria-labelledby="titulo-letra-M">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-M">M</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">2 termos</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-margem-de-preferencia" data-term-category="contratacao" data-term-initial="M">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Margem de preferência</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Vantagem percentual admitida em lei para produtos manufaturados e serviços nacionais que atendam a normas técnicas brasileiras, inclusive as relacionadas a desempenho ambiental. Precisa estar prevista no edital para ser aplicada.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-edital">Edital</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-matriz-de-riscos" data-term-category="contratacao" data-term-initial="M">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Matriz de riscos</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Instrumento que identifica os riscos da contratação, avalia probabilidade e impacto, atribui responsabilidades e define medidas de mitigação. Também é onde se registra o risco de não atendimento a um requisito de sustentabilidade.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-estudo-tecnico-preliminar">Estudo Técnico Preliminar</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-O" data-letra="O" aria-labelledby="titulo-letra-O">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-O">O</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">2 termos</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-objetivos-de-desenvolvimento-sustentavel" data-term-category="ods" data-term-initial="O">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#E07A1F" aria-hidden="true"><i class="fa-solid fa-earth-americas"></i></span>
+            <div class="termo-titulo">
+              <h3>Objetivos de Desenvolvimento Sustentável</h3>
+              <span class="termo-sigla">ODS</span><span class="termo-cat" style="--c:#E07A1F">ODS</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Os 17 objetivos da Agenda 2030 que orientam ações de erradicação da pobreza, proteção do planeta e promoção da prosperidade. Na plataforma, cada critério indica a quais objetivos contribui.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-agenda-2030">Agenda 2030</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="ods.html"><i class="fa-solid fa-earth-americas" aria-hidden="true"></i> Ver os 17 ODS</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-objeto-da-contratacao" data-term-category="contratacao" data-term-initial="O">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Objeto da contratação</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">O bem, serviço ou obra que a Administração pretende contratar, descrito de forma clara, precisa e suficiente. É a partir da definição do objeto que se identificam os impactos e os critérios aplicáveis.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-especificacao-tecnica">Especificação técnica</a> <a href="#termo-lote">Lote</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-P" data-letra="P" aria-labelledby="titulo-letra-P">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-P">P</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">11 termos</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-pegada-de-carbono" data-term-category="indicadores" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0E8A8A" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+            <div class="termo-titulo">
+              <h3>Pegada de carbono</h3>
+              <span class="termo-cat" style="--c:#0E8A8A">Indicadores</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Total de gases de efeito estufa emitidos direta ou indiretamente por uma atividade, produto, serviço ou organização, expresso em toneladas de dióxido de carbono equivalente.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-emissao-de-gases-de-efeito-estufa">Emissão de gases de efeito estufa</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-pegada-hidrica" data-term-category="indicadores" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0E8A8A" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+            <div class="termo-titulo">
+              <h3>Pegada hídrica</h3>
+              <span class="termo-cat" style="--c:#0E8A8A">Indicadores</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Volume total de água doce utilizado, direta e indiretamente, na produção de um bem ou na prestação de um serviço, considerando toda a cadeia produtiva.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-ciclo-de-vida">Ciclo de vida</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-pesquisa-de-precos" data-term-category="contratacao" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Pesquisa de preços</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Levantamento que fundamenta o valor estimado da contratação, a partir de fontes como painéis oficiais, contratações similares e cotações de mercado. Deve refletir o objeto já com os requisitos de sustentabilidade exigidos.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-preco-estimado">Preço estimado</a> <a href="#termo-dispensa-de-licitacao">Dispensa de licitação</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-plano-de-contratacoes-anual" data-term-category="normativo" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Plano de Contratações Anual</h3>
+              <span class="termo-sigla">PCA</span><span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Documento que consolida as contratações pretendidas pelo órgão para o exercício seguinte. Antecipar exigências ambientais no plano dá tempo ao mercado para se preparar e reduz o risco de licitação deserta.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-documento-de-formalizacao-da-demanda">Documento de Formalização da Demanda</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-plano-de-gerenciamento-de-residuos-da-construcao-civil" data-term-category="normativo" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Plano de Gerenciamento de Resíduos da Construção Civil</h3>
+              <span class="termo-sigla">PGRCC</span><span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Documento que estabelece como os resíduos gerados em obras serão segregados, acondicionados, transportados e destinados. Costuma ser exigido como condição de execução em contratos de engenharia.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-gestao-de-residuos-solidos">Gestão de resíduos sólidos</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-politica-nacional-de-residuos-solidos" data-term-category="normativo" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Política Nacional de Resíduos Sólidos</h3>
+              <span class="termo-sigla">PNRS</span><span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Marco legal que estabelece a hierarquia de gestão de resíduos, a responsabilidade compartilhada pelo ciclo de vida dos produtos e as obrigações de logística reversa.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-logistica-reversa">Logística reversa</a> <a href="#termo-gestao-de-residuos-solidos">Gestão de resíduos sólidos</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-preco-estimado" data-term-category="contratacao" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Preço estimado</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Valor de referência da contratação, obtido pela pesquisa de preços. Serve de parâmetro para aceitar ou recusar propostas e para avaliar a economicidade do resultado.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-pesquisa-de-precos">Pesquisa de preços</a> <a href="#termo-custo-do-ciclo-de-vida">Custo do ciclo de vida</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-pregao-eletronico" data-term-category="normativo" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Pregão eletrônico</h3>
+              <span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Modalidade de licitação destinada à aquisição de bens e serviços comuns, realizada em sessão pública por meio eletrônico. Requisitos de sustentabilidade entram na especificação do objeto, e não como modalidade distinta.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-edital">Edital</a> <a href="#termo-especificacao-tecnica">Especificação técnica</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="contratacoes.html"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Ver contratações</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-procel" data-term-category="indicadores" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0E8A8A" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+            <div class="termo-titulo">
+              <h3>Procel</h3>
+              <span class="termo-cat" style="--c:#0E8A8A">Indicadores</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Programa Nacional de Conservação de Energia Elétrica. Seu selo identifica os equipamentos mais eficientes de cada categoria, sendo a faixa A a de melhor desempenho, e é referência frequente em especificações técnicas.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-eficiencia-energetica">Eficiência energética</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-projeto-basico" data-term-category="normativo" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Projeto Básico</h3>
+              <span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Conjunto de elementos que caracteriza a obra ou o serviço de engenharia com precisão suficiente para sua execução. É onde constam as exigências técnicas de sustentabilidade aplicáveis a obras, como acessibilidade e gestão de resíduos.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-estudo-tecnico-preliminar">Estudo Técnico Preliminar</a> <a href="#termo-termo-de-referencia">Termo de Referência</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-prova-de-conceito" data-term-category="contratacao" data-term-initial="P">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Prova de conceito</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Demonstração prática exigida do licitante para verificar se a solução ofertada atende aos requisitos do edital. Útil quando a comprovação documental não basta para atestar desempenho.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-especificacao-tecnica">Especificação técnica</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-R" data-letra="R" aria-labelledby="titulo-letra-R">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-R">R</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">4 termos</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-recebimento-definitivo" data-term-category="contratacao" data-term-initial="R">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Recebimento definitivo</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Ato que atesta a conformidade final do objeto com o que foi contratado, após verificação da qualidade e da quantidade. É o momento adequado para checar as evidências de sustentabilidade exigidas.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-fiscalizacao-contratual">Fiscalização contratual</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-rejeito" data-term-category="ambiental" data-term-initial="R">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0B7A3E" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <div class="termo-titulo">
+              <h3>Rejeito</h3>
+              <span class="termo-cat" style="--c:#0B7A3E">Ambiental</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Resíduo que, esgotadas as possibilidades de tratamento e recuperação por processos tecnológicos disponíveis e economicamente viáveis, não apresenta outra possibilidade senão a disposição final ambientalmente adequada.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-aterro-sanitario">Aterro sanitário</a> <a href="#termo-destinacao-final-ambientalmente-adequada">Destinação final ambientalmente adequada</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-repactuacao" data-term-category="contratacao" data-term-initial="R">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Repactuação</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Revisão de preços em contratos de serviços contínuos com dedicação exclusiva de mão de obra, em razão da variação dos custos de pessoal previstos em convenção coletiva.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-aditivo-contratual">Aditivo contratual</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-rotulagem-ambiental" data-term-category="indicadores" data-term-initial="R">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0E8A8A" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+            <div class="termo-titulo">
+              <h3>Rotulagem ambiental</h3>
+              <span class="termo-cat" style="--c:#0E8A8A">Indicadores</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Declarações e selos que informam características ambientais de um produto. Podem ser autodeclaradas pelo fabricante ou verificadas por terceira parte, o que altera significativamente seu valor como evidência em uma contratação.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-certificacao-ambiental">Certificação ambiental</a> <a href="#termo-selo-verde">Selo verde</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-S" data-letra="S" aria-labelledby="titulo-letra-S">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-S">S</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">5 termos</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-sancao-administrativa" data-term-category="normativo" data-term-initial="S">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Sanção administrativa</h3>
+              <span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Penalidade aplicável ao contratado que descumpre obrigações, como advertência, multa, impedimento de licitar ou declaração de inidoneidade. Requisitos de sustentabilidade só têm eficácia se seu descumprimento estiver vinculado a uma consequência prevista no contrato.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-gestao-contratual">Gestão contratual</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="transparencia.html"><i class="fa-solid fa-gavel" aria-hidden="true"></i> Consultar normativos</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-selo-verde" data-term-category="indicadores" data-term-initial="S">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#0E8A8A" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+            <div class="termo-titulo">
+              <h3>Selo verde</h3>
+              <span class="termo-cat" style="--c:#0E8A8A">Indicadores</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Identificação atribuída a produtos que atendem a critérios ambientais definidos por um programa de certificação. Seu peso como evidência depende de quem o emite e de quais requisitos foram verificados.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-certificacao-ambiental">Certificação ambiental</a> <a href="#termo-rotulagem-ambiental">Rotulagem ambiental</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-sistema-de-registro-de-precos" data-term-category="contratacao" data-term-initial="S">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Sistema de Registro de Preços</h3>
+              <span class="termo-sigla">SRP</span><span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Procedimento que permite registrar preços para contratações futuras, sem obrigação de compra imediata. Facilita padronizar exigências ambientais entre diferentes órgãos e ao longo do tempo.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-ata-de-registro-de-precos">Ata de Registro de Preços</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="contratacoes.html"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Ver contratações</a>
+          </div>
+        </article>
+
+        <article class="termo-card" id="termo-subcontratacao" data-term-category="contratacao" data-term-initial="S">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Subcontratação</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Transferência parcial da execução do objeto a terceiro, quando admitida no edital. Os requisitos de sustentabilidade exigidos do contratado devem alcançar também o subcontratado.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-fiscalizacao-contratual">Fiscalização contratual</a></p>
+        </article>
+
+        <article class="termo-card" id="termo-sustentabilidade" data-term-category="ods" data-term-initial="S">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#E07A1F" aria-hidden="true"><i class="fa-solid fa-earth-americas"></i></span>
+            <div class="termo-titulo">
+              <h3>Sustentabilidade</h3>
+              <span class="termo-cat" style="--c:#E07A1F">ODS</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Capacidade de atender às necessidades do presente sem comprometer a possibilidade de as gerações futuras atenderem às suas. Nas contratações, traduz-se no equilíbrio entre as dimensões ambiental, social e econômica.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-agenda-2030">Agenda 2030</a> <a href="#termo-compras-publicas-sustentaveis">Compras Públicas Sustentáveis</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-T" data-letra="T" aria-labelledby="titulo-letra-T">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-T">T</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">1 termo</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-termo-de-referencia" data-term-category="normativo" data-term-initial="T">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#7A4FBF" aria-hidden="true"><i class="fa-solid fa-gavel"></i></span>
+            <div class="termo-titulo">
+              <h3>Termo de Referência</h3>
+              <span class="termo-sigla">TR</span><span class="termo-cat" style="--c:#7A4FBF">Normativo</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Documento que detalha o objeto, os requisitos, os prazos, as obrigações das partes e a forma de fiscalização na contratação de bens e serviços. É onde os critérios de sustentabilidade viram exigência contratual verificável.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-especificacao-tecnica">Especificação técnica</a> <a href="#termo-estudo-tecnico-preliminar">Estudo Técnico Preliminar</a></p>
+          <div class="termo-links">
+            <a class="termo-link" href="criterios.html"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Ver critérios</a>
+            <a class="termo-link" href="biblioteca.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Abrir biblioteca</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="letra-grupo" id="letra-V" data-letra="V" aria-labelledby="titulo-letra-V">
+        <div class="letra-head">
+          <span class="letra-marca" id="titulo-letra-V">V</span>
+          <span class="letra-linha" aria-hidden="true"></span>
+          <span class="letra-contagem">1 termo</span>
+        </div>
+
+        <div class="termo-grid">
+        <article class="termo-card" id="termo-vida-util" data-term-category="contratacao" data-term-initial="V">
+          <div class="termo-topo">
+            <span class="termo-icone" style="--c:#1B6EC2" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></span>
+            <div class="termo-titulo">
+              <h3>Vida útil</h3>
+              <span class="termo-cat" style="--c:#1B6EC2">Contratação</span>
+            </div>
+          </div>
+          <p class="termo-definicao">Período estimado durante o qual um bem mantém as condições de uso previstas. É variável essencial no cálculo do custo do ciclo de vida: um bem mais barato com vida útil menor pode custar mais no conjunto.</p>
+          <p class="termo-veja"><span>Veja também</span> <a href="#termo-custo-do-ciclo-de-vida">Custo do ciclo de vida</a></p>
+        </article>
+        </div>
+      </section>
+
+      <p class="criteria-empty" id="term-empty">Nenhum termo encontrado. Ajuste a busca, escolha outra letra ou outra categoria.</p>
     </div>
 
     <div class="help-strip">

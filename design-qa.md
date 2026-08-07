@@ -16,7 +16,7 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 | Início | `index.html` | `main.js` | Hero, busca, navegação rápida (6 cards), ODS, destaques e chamada final |
 | Critérios | `criterios.html` | `criterios.js` | Catálogo com busca, 5 filtros, chips de categoria, 6 critérios e paginação |
 | Contratações | `contratacoes.html` | `contratacoes.js` | KPIs, filtros por objeto e situação, 6 contratações |
-| Glossário | `glossario.html` | `glossario.js` | 16 termos, filtro por categoria e por letra inicial |
+| Glossário | `glossario.html` | `glossario.js` | 60 termos agrupados por letra, com sigla, categoria, remissões e links |
 | Biblioteca | `biblioteca.html` | `biblioteca.js` | 4 documentos com metadados, resumo e download |
 | Transparência | `transparencia.html` | — | KPIs, 3 conjuntos de dados abertos, 3 relatórios e API pública |
 | Sobre | `sobre.html` | — | Objetivos, referências institucionais e canais de contato |
@@ -99,8 +99,11 @@ Cada item abaixo foi executado no navegador contra a implementação.
 
 **Glossário**
 - Filtro por categoria e por letra inicial funcionam de forma combinada.
-- Letras sem termos correspondentes ficam desabilitadas.
-- Busca ignora acentuação: "criterio" e "critério" retornam o mesmo resultado.
+- Letras sem termos correspondentes ficam desabilitadas no índice fixo.
+- A faixa de uma letra desaparece quando nenhum termo dela resta visível.
+- A busca alcança também as siglas: "SRP" encontra Sistema de Registro de Preços.
+- As 93 remissões entre termos apontam para verbetes existentes na página.
+- As contagens exibidas nos chips conferem com o número real de termos.
 
 **Biblioteca**
 - Chips por tipo de documento filtram os cards.

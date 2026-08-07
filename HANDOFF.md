@@ -110,14 +110,18 @@ Origem: `contratacoes.html`, um `<article class="contrato-card">` por registro.
 
 ### 3.3 Termo do glossário
 
-Origem: `glossario.html`, `<article class="term-card">`.
+Origem: `glossario.html`, `<article class="termo-card">`, agrupados por letra em
+`<section class="letra-grupo">`. São 60 verbetes; a letra é derivada do termo.
 
 | Campo | Tipo | Atributo | Domínio |
 | --- | --- | --- | --- |
 | `termo` | string | `<h3>` | — |
+| `sigla` | string | `.termo-sigla` | opcional, ex.: ETP, SRP, PCA |
 | `definicao` | string | `<p>` | — |
 | `categoria` | enum | `data-term-category` | `contratacao`, `ambiental`, `normativo`, `ods`, `indicadores` |
 | `inicial` | char | `data-term-initial` | A–Z, derivável de `termo` |
+| `remissoes` | string[] | `.termo-veja a` | outros verbetes, por âncora `#termo-slug` |
+| `relacionados` | link[] | `.termo-link` | páginas da plataforma ligadas ao verbete |
 
 ### 3.4 Documento da biblioteca
 

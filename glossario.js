@@ -1,10 +1,12 @@
 /* =========================================================================
-   Glossário: busca, filtro por categoria e por letra inicial.
+   Glossário: busca, filtro por categoria e por letra inicial, com
+   agrupamento alfabético.
    ========================================================================= */
 
 const termGrid = document.querySelector('#term-grid');
 if (termGrid) {
-  const terms = [...termGrid.querySelectorAll('.term-card')];
+  const grupos = [...termGrid.querySelectorAll('.letra-grupo')];
+  const terms = [...termGrid.querySelectorAll('.termo-card')];
   const empty = document.querySelector('#term-empty');
   const countEl = document.querySelector('#term-count');
   const searchField = document.querySelector('#glossario-search');
@@ -17,17 +19,25 @@ if (termGrid) {
   const strip = (text) => text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
   function apply() {
-    let visible = 0;
+    let visiveis = 0;
+
     terms.forEach((card) => {
       const okCat = !state.categoria || card.dataset.termCategory === state.categoria;
       const okIni = !state.inicial || card.dataset.termInitial === state.inicial;
       const okBusca = !state.q || strip(card.textContent).includes(strip(state.q));
       const ok = okCat && okIni && okBusca;
       card.hidden = !ok;
-      if (ok) visible += 1;
+      if (ok) visiveis += 1;
     });
-    if (empty) empty.classList.toggle('show', visible === 0);
-    if (countEl) countEl.textContent = String(visible);
+
+    // A faixa da letra some junto quando nenhum termo dela permanece visível
+    grupos.forEach((grupo) => {
+      const temVisivel = [...grupo.querySelectorAll('.termo-card')].some((c) => !c.hidden);
+      grupo.hidden = !temVisivel;
+    });
+
+    if (empty) empty.classList.toggle('show', visiveis === 0);
+    if (countEl) countEl.textContent = String(visiveis);
   }
 
   if (searchField) {
@@ -56,6 +66,12 @@ if (termGrid) {
       const value = btn.dataset.alpha;
       state.inicial = value === 'todas' ? '' : value;
       apply();
+
+      // Ao escolher uma letra, leva a leitura até a faixa correspondente
+      if (state.inicial) {
+        const alvo = document.querySelector('#letra-' + state.inicial);
+        if (alvo && !alvo.hidden) alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 
