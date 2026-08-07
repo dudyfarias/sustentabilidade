@@ -601,8 +601,8 @@
     .brand{min-width:0;gap:9px}.brand img{width:44px;height:51px}
     .government-name{font-size:10px;line-height:1.2}
     .government-name .secretaria{margin-top:4px;font-size:7.5px;font-weight:400;letter-spacing:0;text-transform:none;color:#5B6165}
-    .main-nav{display:flex;gap:11px;font-size:9.5px;align-items:stretch}
-    .main-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:24px 0 22px;text-align:center;line-height:1.25;white-space:normal}
+    .main-nav{display:flex;gap:44px;font-size:12.5px;align-items:stretch;justify-content:center}
+    .main-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:30px 0 27px;text-align:center;line-height:1.25;white-space:nowrap}
     .nav-badge{padding:2px 7px;border:1px solid var(--green);border-radius:999px;color:var(--green);font-size:7.5px;font-weight:700;line-height:1.45;white-space:nowrap}
     .header-tools{grid-column:auto;gap:6px}.top-search{width:140px;height:36px;border-radius:7px}.top-search input{font-size:9px}
     .icon-btn{width:27px;height:27px;position:relative}.profile{font-size:9px;gap:5px}
@@ -636,7 +636,7 @@
     .footer-social a:hover{background:rgba(255,255,255,.11)}
     .filter-panel{display:none;position:absolute;right:0;top:50px;width:230px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 16px 40px rgba(0,0,0,.15);z-index:20}.global-search{position:relative}.filter-panel.open{display:grid;gap:8px}.filter-panel label{font-size:11px;display:flex;gap:8px;align-items:center}.search-status{display:none;margin:8px auto 0;width:min(var(--container),calc(100% - 48px));font-size:11px;color:var(--green)}.search-status.show{display:block}
     dialog{border:0;border-radius:14px;padding:22px;max-width:440px;box-shadow:0 28px 80px rgba(0,0,0,.25)}dialog::backdrop{background:rgba(0,35,25,.45)}dialog h2{margin:0 0 8px;font-size:20px}dialog p{font-size:13px;line-height:1.6;color:#50585a}.dialog-close{float:right;border:0;background:#eef7f1;border-radius:50%;width:32px;height:32px;color:var(--green);cursor:pointer}
-    @media(max-width:1080px){.header-inner{grid-template-columns:178px 1fr 250px;gap:10px}.main-nav{gap:8px;font-size:8.5px}.nav-badge{font-size:7px;padding:1px 6px}.top-search{width:124px}.top-search input{font-size:8px}.government-name .secretaria{font-size:7px}.quick-card{padding:14px 8px 12px}.quick-card h3{font-size:11.5px}.quick-card p{font-size:9px}}
+    @media(max-width:1080px){.header-inner{grid-template-columns:190px 1fr 236px;gap:10px}.main-nav{gap:26px;font-size:11.5px}.nav-badge{font-size:7px;padding:1px 6px}.top-search{width:124px}.top-search input{font-size:8px}.government-name .secretaria{font-size:7px}.quick-card{padding:14px 8px 12px}.quick-card h3{font-size:11.5px}.quick-card p{font-size:9px}}
     @media(max-width:900px){.site-header{height:auto}.header-inner{grid-template-columns:1fr auto}.main-nav{display:none}.header-tools{grid-column:2}.hero-grid{grid-template-columns:1fr}.hero:before{inset:47% -18% -2% -18%;background-position:center;background-size:contain}.map-visual{min-height:280px}.quick-grid{grid-template-columns:repeat(2,1fr)}.ods-card{width:72px;min-width:72px;height:102px}.ods-card img{height:55px}.ods-name{font-size:6px}.ods-wheel{width:72px;min-width:72px;height:102px}.ods-wheel img{width:60px;height:60px}.highlight-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.top-search{display:none}}
     @media(max-width:560px){.container{width:min(100% - 28px,var(--container))}.hero h1{font-size:40px}.quick-grid{grid-template-columns:1fr}.cta-strip{padding-left:20px}.cta-strip:before{display:none}.footer-grid{grid-template-columns:1fr}.profile{display:none}}
 

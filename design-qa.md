@@ -48,9 +48,9 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
   "Secretaria de Gestão e Governo Digital", repetida no cabeçalho e no rodapé.
 - **Verde** `#087A3E` como cor principal da plataforma.
 - **Vermelho institucional** `#ED1C24` reservado ao indicador do item ativo da navegação.
-- **Navegação de 9 itens**: Início, Critérios, Contratações, ODS, Glossário,
-  A Lei de Licitações e os ODS, TCE, PGE e Transparência.
-  TCE e PGE exibem selo "Em breve" e abrem diálogo explicativo.
+- **Navegação enxuta de 3 itens**: Início, Critérios e Sobre.
+  As demais áreas são alcançadas pelo rodapé e pela navegação rápida da página
+  inicial, onde TCE, PGE e Selo Verde exibem selo "Em breve" e abrem diálogo.
 - **Rodapé de 5 colunas** com redes sociais e assinatura institucional.
 - Composição fiel a 1024 px de largura, com contêiner de 1000 px.
 

@@ -22,6 +22,7 @@ python3 -m http.server 4173
 | Comportamento | `main.js` global + um script por página de catálogo |
 | Dados | **Estáticos no HTML** — a substituir pela API |
 | Autenticação | Não existe. O "Olá, gestor" do cabeçalho é decorativo |
+| Navegação | Menu enxuto de 3 itens; demais páginas via rodapé e navegação rápida |
 | Backend | Inexistente |
 
 ---
