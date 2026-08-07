@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Critérios de sustentabilidade">
+  <!-- Cabo da lupa -->
+  <path d="M188 188 L232 232" stroke="#0B7A3E" stroke-width="20" stroke-linecap="round" fill="none"/>
+  <path d="M188 188 L232 232" stroke="#075B31" stroke-width="10" stroke-linecap="round" fill="none"/>
+
+  <!-- Lente -->
+  <circle cx="112" cy="112" r="96" fill="#FFFFFF"/>
+  <circle cx="112" cy="112" r="96" fill="none" stroke="#0B7A3E" stroke-width="13"/>
+  <circle cx="112" cy="112" r="84" fill="none" stroke="#E4F2E9" stroke-width="2"/>
+
+  <!-- Prancheta -->
+  <g fill="none" stroke="#0B7A3E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M74 62h60a8 8 0 0 1 8 8v88a8 8 0 0 1-8 8H74a8 8 0 0 1-8-8V70a8 8 0 0 1 8-8Z"/>
+    <path d="M92 62V54a12 12 0 0 1 12-12h0a12 12 0 0 1 12 12v8Z" fill="#F3F9F5"/>
+  </g>
+
+  <!-- Itens verificados -->
+  <g stroke="#0B7A3E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="m80 92 6 6 11-12"/>
+    <path d="M106 94h22"/>
+    <path d="m80 118 6 6 11-12"/>
+    <path d="M106 120h22"/>
+    <path d="m80 144 6 6 11-12"/>
+    <path d="M106 146h16"/>
+  </g>
+
+  <!-- Folha -->
+  <g transform="translate(126 118)">
+    <path d="M0 46C0 22 20 2 50 0c0 26-20 46-50 46Z" fill="#0B7A3E"/>
+    <path d="M8 40C18 28 32 16 46 8" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
