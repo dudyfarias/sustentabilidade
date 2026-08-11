@@ -179,3 +179,35 @@ Descrito em detalhe em [`HANDOFF.md`](./HANDOFF.md).
 ---
 
 _Última atualização: agosto de 2026._
+
+---
+
+## QA visual — topo da Central de Ajuda (11/08/2026)
+
+- **Fonte visual:** `/Users/eduardofariascappia/Downloads/WhatsApp Image 2026-08-11 at 11.22.07 (1).jpeg`
+- **Implementação:** [`qa/faq-implementation-1024.png`](./qa/faq-implementation-1024.png)
+- **Comparação lado a lado:** [`qa/faq-design-comparison.png`](./qa/faq-design-comparison.png)
+- **Viewport comparado:** 1024 × 1200 CSS px, densidade 1×.
+- **Dimensões da fonte:** 1024 × 1536 px; comparação normalizada pela largura e recortada nos 1200 px superiores.
+- **Estado:** página carregada, todas as perguntas recolhidas, categoria “Todos” ativa.
+
+### Evidência e superfícies verificadas
+
+- **Visão completa:** cabeçalho, breadcrumb, hero, busca, filtros e início das perguntas comparados no mesmo quadro.
+- **Tipografia:** hierarquia, peso, quebra do título e destaque verde equivalentes à referência.
+- **Espaçamento:** largura útil corrigida para 894 px; margens, busca e filtros alinhados à composição da fonte.
+- **Cores:** verde institucional, branco, bordas cinza e sombras suaves consistentes.
+- **Imagem:** ornamento botânico dedicado em 1774 × 887 px, sem pixelização e com área branca para o conteúdo.
+- **Texto:** título, descrição, placeholder, filtros e título da seção correspondem à referência.
+- **Interações testadas:** busca (4 resultados para “certificação”), limpar (30 resultados), filtro Critérios (8), menu Mais assuntos e acordeões.
+- **Console:** nenhum erro ou aviso encontrado.
+
+### Histórico da comparação
+
+1. **P2 — largura excessiva:** implementação ocupava cerca de 45 px a mais de cada lado. Corrigido com largura útil de 894 px.
+2. **P2 — estado inicial divergente:** primeira pergunta estava aberta; a referência mostra todas recolhidas. O estado inicial e o botão Limpar agora fecham todos os acordeões.
+3. **P2 — comportamento de Mais assuntos:** menu permanecia aberto após selecionar uma categoria. Corrigido para fechar e preservar o estado visual selecionado.
+
+Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a área acima das perguntas. Os cards de resposta abaixo mantêm deliberadamente o padrão funcional já existente no portal.
+
+**final result: passed**

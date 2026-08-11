@@ -12,6 +12,7 @@ if (faqList) {
   const form = document.querySelector('#faq-form');
   const clearBtn = document.querySelector('#faq-clear');
   const cats = [...document.querySelectorAll('.chip[data-faq-category]')];
+  const moreTopics = document.querySelector('.faq-more');
 
   const state = { q: '', categoria: '' };
   const strip = (text) => text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -55,6 +56,10 @@ if (faqList) {
       cat.classList.add('active');
       const value = cat.dataset.faqCategory;
       state.categoria = value === 'todos' ? '' : value;
+      if (moreTopics) {
+        moreTopics.classList.toggle('selected', Boolean(cat.closest('.faq-more')));
+        moreTopics.open = false;
+      }
       apply();
     });
   });
@@ -65,7 +70,11 @@ if (faqList) {
       state.categoria = '';
       if (searchField) searchField.value = '';
       cats.forEach((c) => c.classList.toggle('active', c.dataset.faqCategory === 'todos'));
-      entries.forEach((entry, i) => { entry.open = i === 0; });
+      if (moreTopics) {
+        moreTopics.classList.remove('selected');
+        moreTopics.open = false;
+      }
+      entries.forEach((entry) => { entry.open = false; });
       apply();
     });
   }
