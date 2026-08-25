@@ -214,6 +214,30 @@ Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a ár
 
 ---
 
+## QA visual — capas da Home e cabeçalho do Manual (25/08/2026)
+
+- **Referência das capas:** `/var/folders/jq/drpbqr_j16g_594_xn6q_qf80000gn/T/TemporaryItems/NSIRD_screencaptureui_0uVIGY/Captura de Tela 2026-08-25 às 17.16.13.png`
+- **Referência do cabeçalho:** `/var/folders/jq/drpbqr_j16g_594_xn6q_qf80000gn/T/TemporaryItems/NSIRD_screencaptureui_mbQn4i/Captura de Tela 2026-08-25 às 17.17.07.png`
+- **Implementação das capas:** [`qa/home-livros-1024.png`](./qa/home-livros-1024.png)
+- **Implementação do cabeçalho:** [`qa/manual-header-1024.png`](./qa/manual-header-1024.png)
+- **Verificação móvel:** [`qa/home-livros-mobile-390.png`](./qa/home-livros-mobile-390.png)
+
+### Resultado
+
+- O card “Manual de Gestão Sustentável do TCESP” agora usa uma miniatura real do livro, não o antigo ícone institucional.
+- A capa de “A Lei de Licitações e os ODS” aumentou de uma caixa de 70 × 66 px para 104 × 96 px.
+- Os dois livros compartilham a mesma área visual, alinhamento e sombra, preservando a linha de títulos.
+- A miniatura do manual foi otimizada para WebP com 18 KB.
+- O cabeçalho do Manual agora contém exatamente Início, Critérios e Sobre, além de busca, notificação, acessibilidade e perfil.
+- O layout móvel mantém largura de 390 px sem overflow horizontal; as capas permanecem em 104 × 96 px.
+- Nenhum erro ou aviso foi encontrado no console.
+
+Não restaram diferenças P0, P1 ou P2 no escopo solicitado.
+
+**final result: passed**
+
+---
+
 ## QA de integração — página do Manual no portal (25/08/2026)
 
 - **Implementação desktop:** [`qa/manual-tcesp-integrated-top-1024.png`](./qa/manual-tcesp-integrated-top-1024.png)

@@ -397,6 +397,19 @@
       text-transform:uppercase;
       font-weight:700;
     }
+    .quick-book{
+      width:118px;
+      height:118px;
+      display:grid;
+      place-items:center;
+      margin:0 auto 10px;
+    }
+    .quick-book img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      filter:drop-shadow(0 5px 7px rgba(17,25,20,.16));
+    }
 
     /* ODS */
     .section-head{
@@ -624,6 +637,8 @@
     /* A capa do livro ocupa a mesma caixa dos ícones, emoldurada como miniatura */
     .book-cover{width:70px;height:66px;padding:0;margin:0 auto 8px;background:none;box-shadow:none;font-size:0;border-radius:0;display:grid;place-items:center}
     .book-cover:before{content:"";height:100%;aspect-ratio:74/92;border-radius:2px;background:url('assets/ref-book-cover.jpg') center/contain no-repeat;box-shadow:0 2px 7px rgba(17,25,20,.24)}
+    .quick-book{width:104px;height:96px;margin:0 auto 8px}
+    .quick-book img{width:100%;height:100%;object-fit:contain}
     /* O card inteiro responde ao clique, não apenas o link */
     .quick-link:after{content:"";position:absolute;inset:0;border-radius:inherit}
     .quick-card:hover .quick-link{text-decoration:underline}
