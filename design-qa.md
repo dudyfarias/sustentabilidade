@@ -214,6 +214,36 @@ Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a ár
 
 ---
 
+## QA de integração — página do Manual no portal (25/08/2026)
+
+- **Implementação desktop:** [`qa/manual-tcesp-integrated-top-1024.png`](./qa/manual-tcesp-integrated-top-1024.png)
+- **Implementação móvel:** [`qa/manual-tcesp-integrated-mobile-390.png`](./qa/manual-tcesp-integrated-mobile-390.png)
+- **Viewports:** 1024 × 1200 e 390 × 844 CSS px.
+- **Estado:** página carregada no topo, tema fechado e Biblioteca marcada como seção atual.
+
+### Integrações verificadas
+
+- Cabeçalho global com marca do Governo do Estado, navegação principal e busca.
+- Marca do cabeçalho retorna à página inicial; breadcrumb retorna à Biblioteca.
+- Rodapé global com 21 acessos para Plataforma, Recursos, Suporte e Governo do Estado.
+- Entradas internas confirmadas na página inicial, na Biblioteca e na seção Sobre.
+- `main.js` e `manual-tcesp.js` carregam juntos sem conflito; o diálogo dos temas continua funcional.
+- PDF local, links oficiais e download foram preservados.
+- Em 390 px, não há overflow horizontal; marca, breadcrumb e rodapé mantêm a conexão com o portal.
+- Nenhum erro ou aviso no console em desktop ou celular.
+
+### Histórico da correção
+
+1. **P1 — página isolada:** o manual não possuía cabeçalho, rodapé ou script compartilhado. O shell institucional completo foi incorporado.
+2. **P1 — conflito de JavaScript:** os scripts compartilhado e específico declaravam o mesmo identificador global. O código do manual foi isolado e renomeado antes da integração.
+3. **P2 — poucos caminhos de entrada:** além da Biblioteca, a página agora também pode ser acessada pela Home e pelas Referências Técnicas da página Sobre.
+
+Não restaram diferenças P0, P1 ou P2 no fluxo de entrada, retorno e navegação da página.
+
+**final result: passed**
+
+---
+
 ## QA visual — Manual de Gestão Sustentável do TCESP (25/08/2026)
 
 - **Fonte visual:** `/Users/eduardofariascappia/Downloads/PHOTO-2026-08-25-13-10-34.jpg`

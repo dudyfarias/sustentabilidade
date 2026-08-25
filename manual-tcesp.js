@@ -1,3 +1,4 @@
+(() => {
 const topics = {
   introducao: ['Introdução e sustentabilidade', 'O manual apresenta o papel indutor do poder público e propõe uma cultura institucional orientada por responsabilidade socioambiental e uso consciente dos recursos.'],
   fundamentacao: ['Fundamentação e referências', 'Reúne a base constitucional, legal e institucional que sustenta a adoção de práticas sustentáveis na Administração Pública.'],
@@ -9,23 +10,24 @@ const topics = {
   resultados: ['Indicadores e divulgação', 'Cada ação combina responsáveis, prazos, metas e indicadores; os resultados devem ser divulgados de forma transparente.']
 };
 
-const dialog = document.querySelector('#manual-topic-dialog');
-const title = document.querySelector('#manual-dialog-title');
-const copy = document.querySelector('#manual-dialog-copy');
-const icon = document.querySelector('#manual-dialog-icon');
+const manualDialog = document.querySelector('#manual-topic-dialog');
+const manualTitle = document.querySelector('#manual-dialog-title');
+const manualCopy = document.querySelector('#manual-dialog-copy');
+const manualIcon = document.querySelector('#manual-dialog-icon');
 
 document.querySelectorAll('[data-topic]').forEach((button) => {
   button.addEventListener('click', () => {
     const content = topics[button.dataset.topic];
-    if (!content || !dialog) return;
-    title.textContent = content[0];
-    copy.textContent = content[1];
-    icon.innerHTML = button.querySelector('.manual-topic-icon').innerHTML;
-    dialog.showModal();
+    if (!content || !manualDialog) return;
+    manualTitle.textContent = content[0];
+    manualCopy.textContent = content[1];
+    manualIcon.innerHTML = button.querySelector('.manual-topic-icon').innerHTML;
+    manualDialog.showModal();
   });
 });
 
-document.querySelector('.manual-dialog-close')?.addEventListener('click', () => dialog.close());
-dialog?.addEventListener('click', (event) => {
-  if (event.target === dialog) dialog.close();
+document.querySelector('.manual-dialog-close')?.addEventListener('click', () => manualDialog.close());
+manualDialog?.addEventListener('click', (event) => {
+  if (event.target === manualDialog) manualDialog.close();
 });
+})();
