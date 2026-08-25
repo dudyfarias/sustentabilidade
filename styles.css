@@ -1257,5 +1257,53 @@
 .manual-documents{display:flex;flex-direction:column}.manual-documents h2{margin-bottom:7px}.manual-documents>a{display:grid;grid-template-columns:30px 1fr 24px;gap:9px;align-items:center;padding:9px 10px;border:1px solid #e3e6e3;border-radius:8px;color:#171b19}.manual-documents>a+a{margin-top:6px}.manual-documents>a:hover{border-color:#86b99b;background:#f7fbf8}.manual-documents>a>i:first-child{color:#bd2431;font-size:20px}.manual-documents>a>i:last-child{color:#087a3e}.manual-documents>a span{font-size:9px;color:#68706c}.manual-documents>a strong{display:block;margin-bottom:2px;color:#171b19;font-size:10.5px}
 .manual-about{display:grid;grid-template-columns:48px 1fr auto;gap:15px;align-items:center;margin-top:14px;padding:16px 20px;border:1px solid #dfe5df;border-radius:11px;background:linear-gradient(90deg,#f1f6f2,#fbfcfb)}.manual-about>i{display:grid;place-items:center;width:43px;height:43px;border:2px solid #087a3e;border-radius:50%;color:#087a3e;font-size:21px}.manual-about h2{margin:0 0 2px;font-size:13px}.manual-about p{margin:0;font-size:9.5px;line-height:1.55;color:#4d5551}.manual-about a{display:inline-flex;align-items:center;gap:9px;padding:11px 17px;border:1px solid #87aa93;border-radius:7px;color:#075d31;font-size:10.5px;font-weight:700}.manual-about a:hover{background:#eaf4ed}
 .manual-topic-dialog{width:min(500px,calc(100% - 32px));padding:28px;border:0;border-radius:16px;box-shadow:0 24px 70px rgba(0,35,21,.28)}.manual-topic-dialog::backdrop{background:rgba(0,31,20,.64);backdrop-filter:blur(3px)}.manual-topic-dialog .manual-topic-icon{margin-bottom:15px}.manual-topic-dialog h2{margin:0;font-size:22px}.manual-topic-dialog p{margin:12px 0 20px;font-size:13px;line-height:1.75;color:#4d5551}.manual-topic-dialog>a{display:inline-flex;align-items:center;gap:8px;color:#087a3e;font-size:12px;font-weight:800}.manual-dialog-close{position:absolute;top:14px;right:14px;display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:50%;background:#eef3ef;color:#37413b;cursor:pointer}
+@media(min-width:901px){.manual-tcesp-page:not(.pge-page) .manual-hero{background:linear-gradient(180deg,#102820 0%,#061f17 100%)}.manual-tcesp-page:not(.pge-page) .manual-hero-image{background-size:auto 125%;background-position:right center}}
 @media(max-width:900px){.manual-hero-image{background-position:60% center}.manual-hero:after{background:linear-gradient(90deg,rgba(4,51,37,.96) 0,rgba(4,51,37,.86) 50%,rgba(4,51,37,.28) 100%)}.manual-hero-copy{width:58%}.manual-topic-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.manual-hero{min-height:auto}.manual-hero-image{background-position:69% top;opacity:.32}.manual-hero:after{background:linear-gradient(180deg,rgba(4,51,37,.34),#073d2d 50%)}.manual-hero-inner{min-height:auto;padding:20px 20px 26px}.manual-breadcrumb{font-size:9px;overflow:hidden}.manual-breadcrumb span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.manual-hero-copy{width:100%;padding-top:190px}.manual-kicker{font-size:22px}.manual-hero h1{font-size:45px}.manual-intro{font-size:12px}.manual-actions{align-items:stretch;flex-direction:column}.manual-btn{width:100%}.manual-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.manual-meta>div,.manual-meta>div:first-child{min-width:0;padding:0 0 0 12px;border-left:1px solid rgba(255,255,255,.2)}.manual-content{padding:20px}.manual-section-heading h2{font-size:19px}.manual-topic-grid{grid-template-columns:1fr}.manual-topic{min-height:160px}.manual-lower-grid{grid-template-columns:1fr}.manual-about{grid-template-columns:44px 1fr}.manual-about a{grid-column:1/3;justify-content:center}.manual-topic-dialog{padding:24px}}
+
+/* Página da Cartilha de Contratações Sustentáveis — PGE-SP */
+.pge-page{background:#f7f8f6}
+.pge-page .pge-hero{background:#304b42}
+.pge-page .manual-hero-image{background-image:url('assets/pge/hero-cartilha-pge.webp');background-position:center center}
+.pge-page .manual-hero:after{background:linear-gradient(90deg,rgba(25,54,45,.52) 0,rgba(25,54,45,.21) 45%,rgba(25,54,45,0) 67%)}
+.pge-page .manual-hero-copy{padding-top:32px}
+.pge-page .manual-hero h1{margin:0 0 8px;font-size:47px;line-height:.94;letter-spacing:-.045em}
+.pge-page .pge-org{display:block;margin:0 0 9px;color:#86b34e;font-size:15px;font-weight:800}
+.pge-page .manual-title-rule{margin:0 0 12px;background:#86b34e}
+.pge-page .manual-intro{max-width:350px;margin-bottom:16px}
+.pge-page .manual-btn-primary{border-color:#76a743;background:#73a642}
+.pge-page .manual-btn-primary:hover{background:#80b74a}
+.pge-page .manual-meta{margin-top:32px}
+.pge-page .manual-meta dt i,.pge-page .manual-topic-icon,.pge-page .topic-arrow,.pge-page .manual-highlights h2 i,.pge-page .manual-documents h2 i,.pge-page .manual-documents>a>i:last-child{color:#246f39}
+.pge-page .manual-meta dt i{color:#86b34e}
+.pge-page .manual-topic-icon,.pge-page .manual-highlights li>i{background:#edf3ed;color:#246f39}
+.pge-page .manual-section-heading span{background:#4f8d47}
+.pge-page .manual-topic:hover{border-color:#94ba9a}
+.pge-page .manual-topic{min-height:172px}
+.pge-page .manual-topic p{padding-right:24px;padding-bottom:10px}
+.pge-page .pge-lower-grid{grid-template-columns:.9fr 1.1fr}
+.pge-document-stack{display:grid;grid-template-rows:auto 1fr;gap:12px}
+.pge-document-stack .manual-documents{min-height:0}
+.pge-about-card{display:grid;grid-template-columns:46px 1fr;gap:12px;align-items:center;padding:14px 16px;border:1px solid #dfe5df;border-radius:11px;background:linear-gradient(90deg,#f1f6f2,#fbfcfb)}
+.pge-about-card>i{display:grid;place-items:center;width:41px;height:41px;border:2px solid #246f39;border-radius:50%;color:#246f39;font-size:19px}
+.pge-about-card h2{margin:0 0 2px;font-size:13px}
+.pge-about-card p{margin:0;font-size:9.5px;line-height:1.55;color:#4d5551}
+
+@media(min-width:901px){
+  .pge-page .manual-hero-inner,
+  .pge-page .manual-content{width:min(930px,calc(100% - 40px))}
+}
+
+@media(max-width:900px){
+  .pge-page .manual-hero-image{background-position:58% center}
+  .pge-page .manual-hero:after{background:linear-gradient(90deg,rgba(32,59,51,.96) 0,rgba(32,59,51,.86) 52%,rgba(32,59,51,.2) 100%)}
+  .pge-page .manual-hero-copy{width:58%}
+}
+
+@media(max-width:620px){
+  .pge-page .manual-hero-image{background-position:70% top;opacity:.72}
+  .pge-page .manual-hero:after{background:linear-gradient(180deg,rgba(28,57,48,.12) 0,rgba(35,62,54,.4) 28%,#304b42 49%)}
+  .pge-page .manual-hero-copy{width:100%;padding-top:205px}
+  .pge-page .manual-hero h1{font-size:42px}
+  .pge-page .pge-lower-grid{grid-template-columns:1fr}
+}

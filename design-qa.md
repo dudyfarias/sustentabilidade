@@ -3,9 +3,9 @@
 Protótipo funcional em HTML semântico, CSS e JavaScript, sem dependências de build.
 Este documento registra o estado atual da implementação e as verificações feitas.
 
-Os dados exibidos são **demonstrativos por decisão de escopo**: esta entrega é a camada
-visual, destinada ao time que implementará o backend. O contrato de dados de cada tela
-está descrito em [`HANDOFF.md`](./HANDOFF.md).
+Os catálogos exibidos são **demonstrativos por decisão de escopo**: esta entrega é a camada
+visual, destinada ao time que implementará o backend. As publicações anexadas do TCESP e
+da PGE-SP são documentos oficiais. O contrato de dados está em [`HANDOFF.md`](./HANDOFF.md).
 
 ---
 
@@ -17,7 +17,7 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 | Critérios | `criterios.html` | `criterios.js` | Catálogo com busca, 5 filtros, chips de categoria, 6 critérios e paginação |
 | Contratações | `contratacoes.html` | `contratacoes.js` | KPIs, filtros por objeto e situação, 6 contratações |
 | Glossário | `glossario.html` | `glossario.js` | 60 termos agrupados por letra, com sigla, categoria, remissões e links |
-| Biblioteca | `biblioteca.html` | `biblioteca.js` | Documento em destaque, 13 documentos em 5 tipos e legislação de referência |
+| Biblioteca | `biblioteca.html` | `biblioteca.js` | Documento em destaque, 15 documentos em 5 tipos e legislação de referência |
 | Transparência | `transparencia.html` | — | KPIs, 3 conjuntos de dados abertos, 3 relatórios e API pública |
 | Sobre | `sobre.html` | — | Objetivos, referências institucionais e canais de contato |
 | ODS | `ods.html` | `main.js` | 17 objetivos agrupados nos 5 eixos da Agenda 2030 |
@@ -25,6 +25,8 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 | Termos de Uso | `termos.html` | — | 12 seções sobre condições de uso da plataforma |
 | Política de Privacidade | `privacidade.html` | — | 11 seções conforme a LGPD |
 | Acessibilidade | `acessibilidade.html` | — | 8 seções com recursos e limitações conhecidas |
+| Manual de Gestão Sustentável do TCESP | `manual-gestao-sustentavel-tcesp.html` | `manual-tcesp.js` | Publicação oficial, oito temas e documentos relacionados |
+| Cartilha de Contratações Sustentáveis da PGE-SP | `cartilha-contratacoes-sustentaveis-pge.html` | `cartilha-pge.js` | Publicação oficial, oito temas e download do PDF |
 | Página não encontrada | `404.html` | `main.js` | Atalhos para as áreas principais e canal da Ouvidoria |
 
 ---
@@ -49,7 +51,7 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 - **Vermelho institucional** `#ED1C24` reservado ao indicador do item ativo da navegação.
 - **Navegação enxuta de 3 itens**: Início, Critérios e Sobre.
   As demais áreas são alcançadas pelo rodapé e pela navegação rápida da página
-  inicial, onde TCE, PGE e Selo Verde exibem selo "Em breve" e abrem diálogo.
+  inicial. TCESP e PGE-SP possuem páginas próprias; apenas Selo Verde permanece "Em breve".
 - **Rodapé de 5 colunas** com redes sociais e assinatura institucional.
 - **Ouvidoria** e **Fale conosco** apontam para os canais oficiais do Estado
   (`fala.sp.gov.br` e `compras.sp.gov.br/fale-conosco`), abertos em nova aba.
@@ -60,7 +62,7 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 ## Indexação e compartilhamento
 
 - `robots.txt` liberando indexação e apontando para o sitemap.
-- `sitemap.xml` com as doze URLs canônicas, em formato limpo (sem `.html`).
+- `sitemap.xml` com as 14 URLs canônicas, em formato limpo (sem `.html`).
 - `canonical` em todas as páginas, coerente com `cleanUrls` da Vercel.
 - Open Graph e Twitter Card completos, com imagem própria de 1200×630.
 - Favicon em `.ico`, `.svg`, `apple-touch-icon` e ícones de 192 e 512 px.
@@ -74,7 +76,7 @@ está descrito em [`HANDOFF.md`](./HANDOFF.md).
 Cada item abaixo foi executado no navegador contra a implementação.
 
 **Navegação**
-- As 12 páginas e a 404 respondem HTTP 200.
+- As 14 páginas e a 404 respondem HTTP 200.
 - `robots.txt`, `sitemap.xml`, `favicon.ico`, `og-image.png` e `site.webmanifest` são servidos corretamente.
 - O `sitemap.xml` é XML válido e o `site.webmanifest` é JSON válido.
 - Nenhum link interno aponta para arquivo inexistente.
@@ -110,7 +112,7 @@ Cada item abaixo foi executado no navegador contra a implementação.
 - O documento em destaque some assim que há busca ou filtro, e volta ao limpar.
 - A busca alcança título, descrição, temas e formato: "XLSX" encontra a planilha.
 - "Ler resumo" abre diálogo com o texto do próprio card, sem mapa fixo no JavaScript.
-- Ordenação por título percorre os 13 documentos em ordem alfabética.
+- Ordenação por título percorre os 15 documentos em ordem alfabética.
 - Os cinco links de legislação apontam para a íntegra publicada no Planalto,
   todos verificados com resposta HTTP 200.
 
@@ -129,13 +131,13 @@ Cada item abaixo foi executado no navegador contra a implementação.
 **Navegação rápida da página inicial**
 - Os seis cards compartilham a mesma caixa de arte, a mesma linha de base de
   título, de texto e de link: uma única medida para cada, em vez de três ritmos.
-- TCE e PGE deixaram de dividir o mesmo ícone.
+- TCESP e PGE-SP usam livros próprios, com acesso direto às páginas das publicações.
 - O card inteiro responde ao clique, e não apenas o link no rodapé do card.
 - Os downloads de "Biblioteca em destaque" abrem diálogo — antes eram inertes.
 
 **Geral**
 - Sem erros no console em nenhuma página.
-- Nove páginas verificadas a 1024 px e a 390 px: nenhuma imagem quebrada,
+- Páginas principais verificadas a 1024 px e a 390 px: nenhuma imagem quebrada,
   nenhum erro e nenhuma sobra horizontal.
 - Sem overflow horizontal em 1024 px nem em 390 px.
 - A faixa de ODS rola horizontalmente dentro do próprio contêiner em telas estreitas,
@@ -164,7 +166,7 @@ Descrito em detalhe em [`HANDOFF.md`](./HANDOFF.md).
 - Substituir os dados demonstrativos por integração com as bases oficiais.
 - Publicar os arquivos reais da biblioteca e dos conjuntos de dados abertos.
 - Implementar a API pública descrita na página de Transparência.
-- Liberar as áreas de TCE, PGE e Produtos com Selo Verde, hoje sinalizadas como "Em breve".
+- Liberar a área de Produtos com Selo Verde, hoje sinalizada como "Em breve".
 - Substituir os recortes editoriais por arquivos-fonte quando o time de design os fornecer.
 
 ---
@@ -209,6 +211,59 @@ _Última atualização: agosto de 2026._
 3. **P2 — comportamento de Mais assuntos:** menu permanecia aberto após selecionar uma categoria. Corrigido para fechar e preservar o estado visual selecionado.
 
 Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a área acima das perguntas. Os cards de resposta abaixo mantêm deliberadamente o padrão funcional já existente no portal.
+
+**final result: passed**
+
+---
+
+## QA visual — Cartilha de Contratações Sustentáveis da PGE-SP (25/08/2026)
+
+- **Fonte visual:** `/Users/eduardofariascappia/Downloads/PHOTO-2026-08-25-17-19-45.jpg`
+- **Conteúdo oficial:** `/Users/eduardofariascappia/Downloads/Cartilha_Contratacoes_Sustentaveis_PGE.pdf`
+- **Implementação desktop:** [`qa/pge-implementation-1024-final-frame.png`](./qa/pge-implementation-1024-final-frame.png)
+- **Comparação lado a lado:** [`qa/pge-comparison.png`](./qa/pge-comparison.png)
+- **Implementação móvel:** [`qa/pge-mobile-390-final.png`](./qa/pge-mobile-390-final.png)
+- **Card na página inicial:** [`qa/pge-home-card-1024.png`](./qa/pge-home-card-1024.png)
+- **Viewports:** 1024 × 900 e 390 × 844 CSS px.
+
+### Evidência e superfícies verificadas
+
+- Hero próprio em alta definição com livro 3D, pedestal, círculos e folhagem; a composição mantém o lado esquerdo livre para o conteúdo HTML.
+- Cabeçalho e rodapé seguem o padrão global do portal.
+- Título, descrição, oito temas, destaques e documento disponível reproduzem a ordem e a hierarquia da referência.
+- Os dados foram conferidos no PDF: PGE-SP, 1ª edição de 2025, 88 páginas e arquivo de 4,23 MB. Dados ilustrativos sem respaldo no documento não foram usados.
+- Cada um dos oito temas abre e fecha um diálogo funcional com conteúdo correspondente à cartilha.
+- Leitura e download apontam para o PDF local oficial.
+- A página possui entradas internas pela Home, Biblioteca e seção Sobre.
+- O card rápido da PGE usa livro 3D isolado, com transparência real, no mesmo padrão dos demais livros.
+- Hero otimizado para WebP com 63 KB e miniatura do livro com 10 KB.
+- Em 390 px, CTAs ocupam toda a largura, metadados formam grade 2 × 2 e não existe overflow horizontal.
+- Nenhum erro ou aviso foi encontrado no console.
+
+Não restaram diferenças P0, P1 ou P2 no layout, conteúdo e interações solicitadas.
+
+**final result: passed**
+
+---
+
+## QA de regressão — livro completo do Manual do TCESP em 100% (25/08/2026)
+
+- **Relato visual:** `/var/folders/jq/drpbqr_j16g_594_xn6q_qf80000gn/T/TemporaryItems/NSIRD_screencaptureui_tQHOKp/Captura de Tela 2026-08-25 às 17.53.55.png`
+- **Referência com o livro inteiro:** `/Users/eduardofariascappia/Downloads/Manual de Gestão Sustentável do TCESP.png`
+- **Implementação em tela larga:** [`qa/manual-tcesp-book-full-1470.png`](./qa/manual-tcesp-book-full-1470.png)
+- **Implementação em 1024 px:** [`qa/manual-tcesp-book-full-1024.png`](./qa/manual-tcesp-book-full-1024.png)
+- **Comparação lado a lado:** [`qa/manual-tcesp-book-visibility-comparison.png`](./qa/manual-tcesp-book-visibility-comparison.png)
+- **Regressão móvel:** [`qa/manual-tcesp-book-mobile-390.png`](./qa/manual-tcesp-book-mobile-390.png)
+
+### Resultado
+
+- A causa era o uso de `background-size: cover`: em telas largas, a escala pela largura ultrapassava a altura do hero e cortava topo e base do livro.
+- Em desktop, a arte agora usa altura proporcional de 125% e alinhamento à direita. O livro fica maior, mas totalmente visível, inclusive em 1470 px com zoom de 100%.
+- Em 1024 px, o livro continua inteiro e não invade a coluna de texto.
+- A regra é restrita ao Manual do TCESP acima de 900 px; a página da PGE e a composição móvel permanecem independentes.
+- Não há overflow horizontal nem erros ou avisos no console.
+
+Não restaram diferenças P0, P1 ou P2 na visibilidade da capa em 100%.
 
 **final result: passed**
 

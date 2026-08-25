@@ -19,14 +19,6 @@ const DIALOGS = {
     title: 'Sobre a plataforma',
     copy: 'A plataforma apoia gestores na aplicação de critérios sustentáveis em contratações públicas, reunindo indicadores, documentos e referências da Agenda 2030.'
   },
-  tce: {
-    title: 'TCE — Em breve',
-    copy: 'Esta área reunirá orientações, pareceres e entendimentos do Tribunal de Contas do Estado de São Paulo sobre contratações sustentáveis. O conteúdo será publicado em breve.'
-  },
-  pge: {
-    title: 'PGE — Em breve',
-    copy: 'Esta área reunirá orientações, pareceres e entendimentos da Procuradoria Geral do Estado de São Paulo sobre contratações sustentáveis. O conteúdo será publicado em breve.'
-  },
   selo: {
     title: 'Produtos com Selo Verde — Em breve',
     copy: 'A consulta a produtos certificados que atendem a critérios de sustentabilidade será disponibilizada em breve, com filtros por categoria e certificação.'
@@ -104,5 +96,4 @@ if (searchInput) {
 document.querySelectorAll('.faq-item').forEach((item) => item.addEventListener('click', () => {
   showDialog(item.textContent.trim(), item.dataset.answer);
 }));
-
 

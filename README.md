@@ -18,7 +18,7 @@ Importe este repositório na Vercel. O projeto é estático e a configuração e
 
 ## Escopo
 
-Doze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
+Quatorze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 
 | Página | Arquivo |
 | --- | --- |
@@ -34,8 +34,10 @@ Doze páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 | Termos de Uso | `termos.html` |
 | Política de Privacidade | `privacidade.html` |
 | Acessibilidade | `acessibilidade.html` |
+| Manual de Gestão Sustentável do TCESP | `manual-gestao-sustentavel-tcesp.html` |
+| Cartilha de Contratações Sustentáveis da PGE-SP | `cartilha-contratacoes-sustentaveis-pge.html` |
 
-- Navegação institucional de 9 itens, com TCE e PGE sinalizados como "Em breve"
+- Navegação institucional com publicações técnicas do TCESP e da PGE-SP; Produtos com Selo Verde permanece sinalizado como "Em breve"
 - Busca, filtros combináveis, ordenação e estados vazios em todos os catálogos
 - Busca insensível a acentuação em todas as páginas
 - Cada um dos 17 ODS possui card e link individual para a página oficial da ONU Brasil

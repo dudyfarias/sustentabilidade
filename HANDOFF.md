@@ -1,8 +1,8 @@
 # Handoff para o time de backend
 
 Este documento descreve o que existe no protótipo, o modelo de dados implícito em cada
-tela e onde exatamente conectar a API. O front-end está pronto: **nenhum dado é real**,
-todos são estáticos e servem como contrato visual.
+tela e onde exatamente conectar a API. O front-end está pronto: os catálogos ainda são
+estáticos e servem como contrato visual; as publicações anexadas do TCESP e da PGE-SP são oficiais.
 
 ---
 
@@ -17,7 +17,7 @@ python3 -m http.server 4173
 
 | Item | Situação |
 | --- | --- |
-| Telas | 12 páginas concluídas |
+| Telas | 14 páginas concluídas |
 | Estilo | `styles.css` único, compartilhado por todas as páginas |
 | Comportamento | `main.js` global + um script por página de catálogo |
 | Dados | **Estáticos no HTML** — a substituir pela API |
@@ -37,6 +37,8 @@ python3 -m http.server 4173
 | `/ods` | `ods.html` | `main.js` | Parcial — contagem de critérios por ODS |
 | `/glossario` | `glossario.html` | `glossario.js` | **Sim** |
 | `/biblioteca` | `biblioteca.html` | `biblioteca.js` | **Sim** |
+| `/manual-gestao-sustentavel-tcesp` | `manual-gestao-sustentavel-tcesp.html` | `manual-tcesp.js` | Não — publicação oficial local |
+| `/cartilha-contratacoes-sustentaveis-pge` | `cartilha-contratacoes-sustentaveis-pge.html` | `cartilha-pge.js` | Não — publicação oficial local |
 | `/transparencia` | `transparencia.html` | `main.js` | **Sim** — downloads e indicadores |
 | `/faq` | `faq.html` | `faq.js` | Opcional — conteúdo pode seguir estático |
 | `/sobre` | `sobre.html` | `main.js` | Não |
@@ -125,7 +127,7 @@ Origem: `glossario.html`, `<article class="termo-card">`, agrupados por letra em
 
 ### 3.4 Documento da biblioteca
 
-Origem: `biblioteca.html`, `<article class="doc-card">`. São 13 documentos.
+Origem: `biblioteca.html`, `<article class="doc-card">`. São 15 documentos.
 
 | Campo | Tipo | Atributo | Domínio |
 | --- | --- | --- | --- |
@@ -139,7 +141,7 @@ Origem: `biblioteca.html`, `<article class="doc-card">`. São 13 documentos.
 | `tamanho` | string | `.doc-meta` | `2,4 MB` |
 | `ano` | int | `.doc-meta` | — |
 | `sinopse` | string | `data-doc-sinopse` | texto do diálogo "Ler resumo" |
-| `url_arquivo` | string | — | **não existe ainda**; hoje abre diálogo informativo |
+| `url_arquivo` | string | `a.doc-btn[href]` | presente nos documentos oficiais; os itens demonstrativos ainda abrem diálogo |
 | `url_externa` | string | `a.doc-btn[href]` | só em `publicacao`; substitui as duas ações |
 
 O resumo é lido do próprio card (`data-doc-sinopse`), não de um mapa no
@@ -247,7 +249,7 @@ Todos usam `data-dialog` e estão mapeados em `main.js`, no objeto `DIALOGS`.
 | `dados` | Transparência | Gerar CSV/JSON/XLSX do conjunto |
 | `dicionario` | Transparência | Abrir o dicionário de dados |
 | `contato` | Várias | Formulário ou `mailto:` |
-| `tce`, `pge`, `selo` | Menu e home | Liberar as áreas quando existirem |
+| `selo` | Menu e home | Liberar a área quando o catálogo existir |
 
 ---
 
@@ -287,21 +289,21 @@ O protótipo já implementa três estados por catálogo. Mantenha-os ao integrar
 | --- | --- |
 | Revisão jurídica das minutas de Termos, Privacidade e Ouvidoria | Área jurídica |
 | Designação formal do Encarregado de dados (DPO) | Governança |
-| Conteúdo real de TCE, PGE e Produtos com Selo Verde | Áreas técnicas |
+| Conteúdo real de Produtos com Selo Verde | Áreas técnicas |
 | Arquivos PDF da Biblioteca e conjuntos de dados abertos | Comunicação e dados |
 | Auditoria de acessibilidade e avaliador oficial do eMAG | Governança digital |
 | Domínio definitivo | Infraestrutura |
 
 > Ao definir o domínio, atualize `sitemap.xml`, `robots.txt` e as tags `canonical`,
-> `og:url` e `twitter:*` das 13 páginas. Hoje todas apontam para
+> `og:url` e `twitter:*` das 14 páginas. Hoje todas apontam para
 > `https://sustentabilidade-neon.vercel.app`.
 
 ---
 
 ## 9. Verificações já realizadas
 
-- As 12 páginas e a 404 respondem HTTP 200.
-- Os oito `data-dialog` do HTML correspondem 1:1 às entradas de `main.js`: nenhum
+- As 14 páginas e a 404 respondem HTTP 200.
+- Os seis `data-dialog` do HTML correspondem 1:1 às entradas de `main.js`: nenhum
   gatilho órfão e nenhuma entrada ociosa.
 - Nenhum link interno aponta para arquivo inexistente e não há `href="#"` no site.
 - Todo `data-dialog` do HTML tem entrada correspondente em `main.js`.
