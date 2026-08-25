@@ -211,3 +211,39 @@ _Última atualização: agosto de 2026._
 Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a área acima das perguntas. Os cards de resposta abaixo mantêm deliberadamente o padrão funcional já existente no portal.
 
 **final result: passed**
+
+---
+
+## QA visual — Manual de Gestão Sustentável do TCESP (25/08/2026)
+
+- **Fonte visual:** `/Users/eduardofariascappia/Downloads/PHOTO-2026-08-25-13-10-34.jpg`
+- **Conteúdo oficial:** `/Users/eduardofariascappia/Downloads/Manual-Sustentabilidade-TCESP.pdf`
+- **Implementação:** [`qa/manual-tcesp-implementation-1024.png`](./qa/manual-tcesp-implementation-1024.png)
+- **Comparação lado a lado:** [`qa/manual-tcesp-comparison-pass1.png`](./qa/manual-tcesp-comparison-pass1.png)
+- **Versão móvel:** [`qa/manual-tcesp-mobile-390.png`](./qa/manual-tcesp-mobile-390.png)
+- **Viewport desktop:** 1024 × 1250 CSS px; captura raster normalizada para 1024 px de largura.
+- **Viewport móvel:** 390 × 844 CSS px, densidade do navegador 2×.
+- **Dimensões da fonte:** 1024 × 1249 px.
+- **Estado:** página carregada, nenhum diálogo aberto e primeiro tema visível.
+
+### Evidência e superfícies verificadas
+
+- **Visão completa:** hero verde, livro, trilha de navegação, ações, metadados, oito temas, destaques, documentos e faixa sobre o TCESP aparecem na mesma ordem e proporção da referência.
+- **Tipografia:** título em duas linhas, pesos, contraste e hierarquia correspondem ao alvo; textos pequenos permanecem legíveis.
+- **Espaçamento:** grade de quatro colunas no desktop e uma coluna no celular; margens e ritmo vertical preservam a composição compacta da referência.
+- **Cores:** verde profundo, verde oliva, fundos brancos, bordas suaves e sombras discretas reproduzem os tokens visuais da fonte.
+- **Imagem:** hero próprio em alta definição (1674 × 941 px), sem recorte do livro e sem pixelização; a capa mantém a identidade visual do manual.
+- **Conteúdo:** ano, número de páginas e tamanho do arquivo foram corrigidos com base no PDF real enviado pelo usuário.
+- **Interações testadas:** entrada pela Biblioteca, abertura e fechamento dos temas, leitura do PDF, download do PDF e links oficiais do TCESP.
+- **Responsividade:** 390 px sem overflow horizontal; botões ocupam a largura disponível e os metadados formam grade 2 × 2.
+- **Console:** nenhum erro ou aviso encontrado.
+
+### Histórico da comparação
+
+1. **P2 — dados demonstrativos divergentes:** a referência sugeria versão e atualização que não constam no arquivo oficial. Corrigido para 41 páginas, publicação em fevereiro de 2019 e arquivo de 2,0 MB.
+2. **P2 — ativo visual insuficiente:** a captura original não suportava ampliação do livro. Substituída por uma cena de hero dedicada em alta definição, mantendo livro, pedestal, círculos e folhagem.
+3. **P2 — experiência móvel não definida na fonte:** implementada adaptação com imagem suavizada, conteúdo linear, CTAs empilhados e grade de metadados sem rolagem lateral.
+
+Não restaram diferenças P0, P1 ou P2 no layout e nas interações solicitadas. A redação dos oito temas foi ajustada para refletir os capítulos e eixos reais do manual, em vez de copiar títulos ilustrativos da imagem.
+
+**final result: passed**
