@@ -214,6 +214,18 @@ Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a ár
 
 ---
 
+## QA visual — livros sem fundo retangular (25/08/2026)
+
+- **Fonte visual:** `/var/folders/jq/drpbqr_j16g_594_xn6q_qf80000gn/T/TemporaryItems/NSIRD_screencaptureui_N4h9C3/Captura de Tela 2026-08-25 às 17.28.18.png`
+- **Implementação:** [`qa/home-livros-sem-fundo-1024.png`](./qa/home-livros-sem-fundo-1024.png)
+- **Viewport:** 1024 × 900 CSS px.
+
+O fundo branco das miniaturas agora se integra ao fundo dos cards por composição de cor, e a sombra retangular foi removida. Permanecem visíveis apenas os livros e suas sombras naturais. Nenhum erro ou aviso foi encontrado no console.
+
+**final result: passed**
+
+---
+
 ## QA visual — capas da Home e cabeçalho do Manual (25/08/2026)
 
 - **Referência das capas:** `/var/folders/jq/drpbqr_j16g_594_xn6q_qf80000gn/T/TemporaryItems/NSIRD_screencaptureui_0uVIGY/Captura de Tela 2026-08-25 às 17.16.13.png`
