@@ -216,6 +216,37 @@ Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a ár
 
 ---
 
+## QA visual — livro completo na página da PGE em 100% (25/08/2026)
+
+- **Fonte visual do problema:** `/var/folders/jq/drpbqr_j16g_594_xn6q_qf80000gn/T/TemporaryItems/NSIRD_screencaptureui_bHZfAU/Captura de Tela 2026-08-25 às 18.12.22.png`
+- **Implementação corrigida:** [`qa/pge-book-full-1280.png`](./qa/pge-book-full-1280.png)
+- **Comparação antes/depois:** [`qa/pge-book-full-comparison.png`](./qa/pge-book-full-comparison.png)
+- **Viewport da implementação:** 1280 × 720 CSS px, zoom de 100%, DPR 2; captura normalizada pelo navegador para 1280 × 720 px.
+- **Fonte normalizada:** captura original de 2938 × 1854 px; a área do portal foi recortada e redimensionada para 1280 × 720 px na comparação.
+- **Estado:** página no topo, sem diálogo aberto.
+
+### Histórico da correção
+
+1. **P1 — capa cortada no topo e na base:** a imagem 1920 × 1080 herdava `background-size: cover`. Em uma hero larga, a escala pela largura ampliava a arte para aproximadamente 150% da altura disponível e o `overflow: hidden` removia partes do livro.
+2. **Correção aplicada:** em desktop, somente na página da PGE, a imagem agora usa `background-size: auto 125%` e `background-position: 72% center`. A escala passa a ser controlada pela altura, mantendo a capa inteira e preservando o centro visual da composição.
+3. **Evidência pós-correção:** em 1280 px, topo, lombada, base e sombra do livro ficam visíveis. Pela geometria do próprio asset, a capa também permanece inteira na largura de aproximadamente 1470 px mostrada no relato.
+
+### Superfícies verificadas
+
+- **Tipografia:** sem alterações; família, pesos, quebras e hierarquia permanecem iguais.
+- **Espaçamento e layout:** texto, ações, metadados e início da grade mantêm suas posições; não há overflow horizontal (`1280 / 1280 px`).
+- **Cores:** fundo verde e contraste do hero permanecem coerentes; a extensão sólida nas laterais usa o fundo nativo da seção.
+- **Imagem:** o asset WebP de alta definição permanece sem ampliação destrutiva, com a capa completa e nítida.
+- **Conteúdo:** títulos, dados da cartilha, links e oito temas permanecem inalterados.
+- **Responsividade:** a nova regra vale somente acima de 900 px; tablet e celular continuam usando o enquadramento móvel existente.
+- **Console:** nenhum erro ou aviso encontrado.
+
+Não restaram diferenças P0, P1 ou P2 no enquadramento solicitado. A comparação focada no hero foi suficiente porque a alteração não toca as demais seções nem suas interações.
+
+**final result: passed**
+
+---
+
 ## QA visual — Cartilha de Contratações Sustentáveis da PGE-SP (25/08/2026)
 
 - **Fonte visual:** `/Users/eduardofariascappia/Downloads/PHOTO-2026-08-25-17-19-45.jpg`

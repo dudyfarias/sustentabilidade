@@ -1292,6 +1292,10 @@
 @media(min-width:901px){
   .pge-page .manual-hero-inner,
   .pge-page .manual-content{width:min(930px,calc(100% - 40px))}
+  .pge-page .manual-hero-image{
+    background-size:auto 125%;
+    background-position:72% center;
+  }
 }
 
 @media(max-width:900px){
