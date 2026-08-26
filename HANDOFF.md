@@ -2,7 +2,7 @@
 
 Este documento descreve o que existe no protótipo, o modelo de dados implícito em cada
 tela e onde exatamente conectar a API. O front-end está pronto: os catálogos ainda são
-estáticos e servem como contrato visual; as publicações anexadas do TCESP, da PGE-SP e da AGU são oficiais.
+estáticos e servem como contrato visual; as publicações anexadas do TCESP, da PGE-SP e da AGU são oficiais. A obra A Lei de Licitações e os ODS é acessada no visualizador oficial indicado pelos autores.
 
 ---
 
@@ -17,7 +17,7 @@ python3 -m http.server 4173
 
 | Item | Situação |
 | --- | --- |
-| Telas | 15 páginas concluídas |
+| Telas | 16 páginas concluídas |
 | Estilo | `styles.css` único, compartilhado por todas as páginas |
 | Comportamento | `main.js` global + um script por página de catálogo |
 | Dados | **Estáticos no HTML** — a substituir pela API |
@@ -40,6 +40,7 @@ python3 -m http.server 4173
 | `/manual-gestao-sustentavel-tcesp` | `manual-gestao-sustentavel-tcesp.html` | `manual-tcesp.js` | Não — publicação oficial local |
 | `/cartilha-contratacoes-sustentaveis-pge` | `cartilha-contratacoes-sustentaveis-pge.html` | `cartilha-pge.js` | Não — publicação oficial local |
 | `/guia-nacional-contratacoes-sustentaveis-agu` | `guia-nacional-contratacoes-sustentaveis-agu.html` | `guia-agu.js` | Não — publicação oficial local |
+| `/lei-licitacoes-ods` | `lei-licitacoes-ods.html` | `lei-licitacoes-ods.js` | Não — leitura oficial externa no FlipHTML5 |
 | `/transparencia` | `transparencia.html` | `main.js` | **Sim** — downloads e indicadores |
 | `/faq` | `faq.html` | `faq.js` | Opcional — conteúdo pode seguir estático |
 | `/sobre` | `sobre.html` | `main.js` | Não |
@@ -296,14 +297,14 @@ O protótipo já implementa três estados por catálogo. Mantenha-os ao integrar
 | Domínio definitivo | Infraestrutura |
 
 > Ao definir o domínio, atualize `sitemap.xml`, `robots.txt` e as tags `canonical`,
-> `og:url` e `twitter:*` das 15 páginas. Hoje todas apontam para
+> `og:url` e `twitter:*` das 16 páginas. Hoje todas apontam para
 > `https://sustentabilidade-neon.vercel.app`.
 
 ---
 
 ## 9. Verificações já realizadas
 
-- As 15 páginas e a 404 respondem HTTP 200.
+- As 16 páginas e a 404 respondem HTTP 200.
 - Os seis `data-dialog` do HTML correspondem 1:1 às entradas de `main.js`: nenhum
   gatilho órfão e nenhuma entrada ociosa.
 - Nenhum link interno aponta para arquivo inexistente e não há `href="#"` no site.

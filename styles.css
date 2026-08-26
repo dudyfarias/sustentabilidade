@@ -1257,7 +1257,7 @@
 .manual-documents{display:flex;flex-direction:column}.manual-documents h2{margin-bottom:7px}.manual-documents>a{display:grid;grid-template-columns:30px 1fr 24px;gap:9px;align-items:center;padding:9px 10px;border:1px solid #e3e6e3;border-radius:8px;color:#171b19}.manual-documents>a+a{margin-top:6px}.manual-documents>a:hover{border-color:#86b99b;background:#f7fbf8}.manual-documents>a>i:first-child{color:#bd2431;font-size:20px}.manual-documents>a>i:last-child{color:#087a3e}.manual-documents>a span{font-size:9px;color:#68706c}.manual-documents>a strong{display:block;margin-bottom:2px;color:#171b19;font-size:10.5px}
 .manual-about{display:grid;grid-template-columns:48px 1fr auto;gap:15px;align-items:center;margin-top:14px;padding:16px 20px;border:1px solid #dfe5df;border-radius:11px;background:linear-gradient(90deg,#f1f6f2,#fbfcfb)}.manual-about>i{display:grid;place-items:center;width:43px;height:43px;border:2px solid #087a3e;border-radius:50%;color:#087a3e;font-size:21px}.manual-about h2{margin:0 0 2px;font-size:13px}.manual-about p{margin:0;font-size:9.5px;line-height:1.55;color:#4d5551}.manual-about a{display:inline-flex;align-items:center;gap:9px;padding:11px 17px;border:1px solid #87aa93;border-radius:7px;color:#075d31;font-size:10.5px;font-weight:700}.manual-about a:hover{background:#eaf4ed}
 .manual-topic-dialog{width:min(500px,calc(100% - 32px));padding:28px;border:0;border-radius:16px;box-shadow:0 24px 70px rgba(0,35,21,.28)}.manual-topic-dialog::backdrop{background:rgba(0,31,20,.64);backdrop-filter:blur(3px)}.manual-topic-dialog .manual-topic-icon{margin-bottom:15px}.manual-topic-dialog h2{margin:0;font-size:22px}.manual-topic-dialog p{margin:12px 0 20px;font-size:13px;line-height:1.75;color:#4d5551}.manual-topic-dialog>a{display:inline-flex;align-items:center;gap:8px;color:#087a3e;font-size:12px;font-weight:800}.manual-dialog-close{position:absolute;top:14px;right:14px;display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:50%;background:#eef3ef;color:#37413b;cursor:pointer}
-@media(min-width:901px){.manual-tcesp-page:not(.pge-page):not(.agu-page) .manual-hero{background:linear-gradient(180deg,#102820 0%,#061f17 100%)}.manual-tcesp-page:not(.pge-page):not(.agu-page) .manual-hero-image{background-size:auto 125%;background-position:right center}}
+@media(min-width:901px){.manual-tcesp-page:not(.pge-page):not(.agu-page):not(.lei-ods-page) .manual-hero{background:linear-gradient(180deg,#102820 0%,#061f17 100%)}.manual-tcesp-page:not(.pge-page):not(.agu-page):not(.lei-ods-page) .manual-hero-image{background-size:auto 125%;background-position:right center}}
 @media(max-width:900px){.manual-hero-image{background-position:60% center}.manual-hero:after{background:linear-gradient(90deg,rgba(4,51,37,.96) 0,rgba(4,51,37,.86) 50%,rgba(4,51,37,.28) 100%)}.manual-hero-copy{width:58%}.manual-topic-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.manual-hero{min-height:auto}.manual-hero-image{background-position:69% top;opacity:.32}.manual-hero:after{background:linear-gradient(180deg,rgba(4,51,37,.34),#073d2d 50%)}.manual-hero-inner{min-height:auto;padding:20px 20px 26px}.manual-breadcrumb{font-size:9px;overflow:hidden}.manual-breadcrumb span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.manual-hero-copy{width:100%;padding-top:190px}.manual-kicker{font-size:22px}.manual-hero h1{font-size:45px}.manual-intro{font-size:12px}.manual-actions{align-items:stretch;flex-direction:column}.manual-btn{width:100%}.manual-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.manual-meta>div,.manual-meta>div:first-child{min-width:0;padding:0 0 0 12px;border-left:1px solid rgba(255,255,255,.2)}.manual-content{padding:20px}.manual-section-heading h2{font-size:19px}.manual-topic-grid{grid-template-columns:1fr}.manual-topic{min-height:160px}.manual-lower-grid{grid-template-columns:1fr}.manual-about{grid-template-columns:44px 1fr}.manual-about a{grid-column:1/3;justify-content:center}.manual-topic-dialog{padding:24px}}
 
@@ -1500,7 +1500,7 @@
 }
 
 /* Livros integrados ao cenário: uma única câmera, escala, luz e sombra. */
-.manual-tcesp-page:not(.pge-page):not(.agu-page) .manual-hero-image{
+.manual-tcesp-page:not(.pge-page):not(.agu-page):not(.lei-ods-page) .manual-hero-image{
   background-image:url('assets/publications/hero-tcesp-integrated.webp');
   background-position:center center;
   background-size:auto 100%;
@@ -1511,6 +1511,50 @@
 .manual-tcesp-page.agu-page .manual-hero-image{
   background-image:url('assets/publications/hero-agu-integrated.webp');
 }
+.manual-tcesp-page.lei-ods-page .manual-hero-image{
+  background-image:url('assets/publications/hero-lei-ods-integrated.webp');
+}
+
+/* A Lei de Licitações e os ODS */
+.lei-ods-page{background:#f7f8f6}
+.lei-ods-page .manual-hero:after{
+  display:block;
+  background:linear-gradient(90deg,rgba(20,44,34,.52) 0%,rgba(20,44,34,.44) 43%,rgba(20,44,34,.14) 57%,rgba(20,44,34,0) 67%);
+}
+.lei-ods-page .manual-hero-copy{padding-top:32px}
+.lei-ods-page .manual-hero h1{margin:0 0 8px;font-size:47px;line-height:.94;letter-spacing:-.045em}
+.lei-ods-page .lei-ods-org{display:block;margin:0 0 9px;color:var(--book-hero-accent);font-size:15px;font-weight:800}
+.lei-ods-page .lei-ods-org span{display:inline;margin:0 5px;color:var(--book-hero-accent);font-size:inherit}
+.lei-ods-page .manual-intro{max-width:390px;margin-bottom:16px}
+.lei-ods-page .manual-meta{margin-top:25px}
+.lei-ods-page .manual-topic{min-height:172px}
+.lei-ods-page .manual-topic p{padding-right:24px;padding-bottom:10px}
+.lei-ods-page .manual-section-heading span{background:#4f8d47}
+.lei-ods-topic-note{max-width:570px;margin:7px auto 0;color:#5a625d;font-size:9.5px;line-height:1.5}
+.lei-ods-page .manual-topic:hover{border-color:#94ba9a}
+.lei-ods-page .manual-topic:focus-visible{outline-color:#087a3e}
+.lei-ods-page .manual-hero .manual-btn:focus-visible{outline-color:#fff}
+.lei-ods-page .manual-topic-icon,
+.lei-ods-page .topic-arrow,
+.lei-ods-page .manual-highlights h2 i{color:#246f39}
+.lei-ods-page .manual-topic-icon{background:#edf3ed}
+.lei-ods-page .lei-ods-lower-grid{grid-template-columns:.9fr 1.1fr}
+.lei-ods-about-publication{display:flex;flex-direction:column;min-height:208px;padding:19px}
+.lei-ods-about-publication p{margin:0;font-size:10.5px;line-height:1.75;color:#4d5551}
+.lei-ods-authors{min-height:208px;padding:19px;border:1px solid #dfe3df;border-radius:11px;background:#fff}
+.lei-ods-authors>h2{display:flex;align-items:center;gap:10px;margin:0 0 13px;font-size:15px}
+.lei-ods-authors>h2 i{color:#246f39}
+.lei-ods-author{display:grid;grid-template-columns:43px 1fr;gap:11px;align-items:center}
+.lei-ods-author+.lei-ods-author{margin-top:11px;padding-top:11px;border-top:1px solid #edf0ed}
+.lei-ods-author>span{display:grid;place-items:center;width:41px;height:41px;border-radius:50%;background:#edf3ed;color:#246f39;font-size:17px}
+.lei-ods-author h3{margin:0 0 2px;font-size:11px}
+.lei-ods-author p{margin:0;font-size:9.5px;line-height:1.5;color:#555c58}
+.lei-ods-inline-link{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;margin-top:auto;padding-top:12px;color:#087a3e;font-size:10.5px;font-weight:800}
+.lei-ods-inline-link:hover{text-decoration:underline}
+@media(min-width:901px){
+  .lei-ods-page .manual-hero-inner,
+  .lei-ods-page .manual-content{width:min(930px,calc(100% - 40px))}
+}
 @media(max-width:620px){
   .manual-tcesp-page .manual-hero-image,
   .manual-tcesp-page.pge-page .manual-hero-image,
@@ -1518,6 +1562,9 @@
   .manual-tcesp-page .manual-hero-copy,
   .manual-tcesp-page.pge-page .manual-hero-copy,
   .manual-tcesp-page.agu-page .manual-hero-copy{padding-top:300px}
+  .lei-ods-page .manual-hero:after{background:linear-gradient(180deg,rgba(20,44,34,0) 0%,rgba(20,44,34,.08) 37%,rgba(20,44,34,.56) 48%,rgba(20,44,34,.56) 100%)}
+  .lei-ods-page .manual-hero h1{font-size:42px}
+  .lei-ods-page .lei-ods-lower-grid{grid-template-columns:1fr}
 }
 
 /* Navegação rápida: palco, escala óptica e linha de base únicos. */

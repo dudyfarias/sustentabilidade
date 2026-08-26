@@ -28,6 +28,7 @@ da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HAND
 | Manual de Gestão Sustentável do TCESP | `manual-gestao-sustentavel-tcesp.html` | `manual-tcesp.js` | Publicação oficial, oito temas e documentos relacionados |
 | Cartilha de Contratações Sustentáveis da PGE-SP | `cartilha-contratacoes-sustentaveis-pge.html` | `cartilha-pge.js` | Publicação oficial, oito temas e download do PDF |
 | Guia Nacional de Contratações Sustentáveis da AGU | `guia-nacional-contratacoes-sustentaveis-agu.html` | `guia-agu.js` | 8ª edição oficial de 2025, oito temas e acesso ao PDF |
+| A Lei de Licitações e os ODS | `lei-licitacoes-ods.html` | `lei-licitacoes-ods.js` | Publicação digital, oito temas e leitura oficial externa |
 | Página não encontrada | `404.html` | `main.js` | Atalhos para as áreas principais e canal da Ouvidoria |
 
 ---
@@ -52,7 +53,7 @@ da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HAND
 - **Vermelho institucional** `#ED1C24` reservado ao indicador do item ativo da navegação.
 - **Navegação enxuta de 3 itens**: Início, Critérios e Sobre.
   As demais áreas são alcançadas pelo rodapé e pela navegação rápida da página
-  inicial. TCESP, PGE-SP e AGU possuem páginas próprias; apenas Selo Verde permanece "Em breve".
+  inicial. TCESP, PGE-SP, AGU e A Lei de Licitações e os ODS possuem páginas próprias; apenas Selo Verde permanece "Em breve".
 - **Rodapé de 5 colunas** com redes sociais e assinatura institucional.
 - **Ouvidoria** e **Fale conosco** apontam para os canais oficiais do Estado
   (`fala.sp.gov.br` e `compras.sp.gov.br/fale-conosco`), abertos em nova aba.
@@ -63,7 +64,7 @@ da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HAND
 ## Indexação e compartilhamento
 
 - `robots.txt` liberando indexação e apontando para o sitemap.
-- `sitemap.xml` com as 15 URLs canônicas, em formato limpo (sem `.html`).
+- `sitemap.xml` com as 16 URLs canônicas, em formato limpo (sem `.html`).
 - `canonical` em todas as páginas, coerente com `cleanUrls` da Vercel.
 - Open Graph e Twitter Card completos, com imagem própria de 1200×630.
 - Favicon em `.ico`, `.svg`, `apple-touch-icon` e ícones de 192 e 512 px.
@@ -77,7 +78,7 @@ da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HAND
 Cada item abaixo foi executado no navegador contra a implementação.
 
 **Navegação**
-- As 15 páginas e a 404 respondem HTTP 200.
+- As 16 páginas e a 404 respondem HTTP 200.
 - `robots.txt`, `sitemap.xml`, `favicon.ico`, `og-image.png` e `site.webmanifest` são servidos corretamente.
 - O `sitemap.xml` é XML válido e o `site.webmanifest` é JSON válido.
 - Nenhum link interno aponta para arquivo inexistente.
@@ -214,6 +215,36 @@ _Última atualização: agosto de 2026._
 Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a área acima das perguntas. Os cards de resposta abaixo mantêm deliberadamente o padrão funcional já existente no portal.
 
 **final result: passed**
+
+---
+
+## QA visual — A Lei de Licitações e os ODS (26/08/2026)
+
+- **Referência de layout:** `/Users/eduardofariascappia/Downloads/PHOTO-2026-08-25-18-49-37.jpg`
+- **Capa oficial usada como fonte:** `https://online.fliphtml5.com/kpxxz/qqct/files/shot.jpg?v=5`
+- **Implementação em 1280 × 720:** [`qa/lei-ods-desktop.jpg`](./qa/lei-ods-desktop.jpg)
+- **Implementação em 1024 × 1173:** [`qa/lei-ods-1024x1173.jpg`](./qa/lei-ods-1024x1173.jpg)
+- **Comparação pareada:** [`qa/lei-ods-comparison.jpg`](./qa/lei-ods-comparison.jpg)
+- **Verificação móvel em 390 × 844:** [`qa/lei-ods-mobile.jpg`](./qa/lei-ods-mobile.jpg)
+
+### Resultado
+
+- A nova página usa o mesmo cabeçalho, rodapé, container de 930 px, hero de 520 px, grade temática 4 × 2 e blocos inferiores das demais publicações do portal.
+- O livro aparece inteiro em zoom de 100%, integrado a uma única cena raster em verde-sálvia com pedestal, círculos, folhagem, luz e sombra de contato.
+- A capa verde-azulada é a capa efetivamente publicada no FlipHTML5. Os dados ilustrativos divergentes do mock — capa branca, ano 2022, 1ª edição, Fórum e PDF de 6,1 MB — não foram usados.
+- Os dados exibidos foram limitados ao que pôde ser verificado: autores Cristina Castro-Lucas e Renato Fenili, publicação em 2024, 331 páginas e leitura digital.
+- Como o publicador desabilitou o download no FlipHTML5, a página oferece leitura online e acesso à plataforma dos autores, sem prometer PDF.
+- Os oito temas relacionados abrem e fecham diálogos correspondentes; a página identifica explicitamente esse conteúdo como uma síntese orientativa do portal, sem apresentá-lo como sumário oficial da obra.
+- O card da navegação rápida usa o novo livro 3D, mantém o palco visual de 104 px e abre a rota interna da publicação.
+- Home, Biblioteca, Sobre, sitemap e os rodapés das páginas públicas apontam para a nova rota interna.
+- Em 390 px, não há overflow horizontal; CTAs ocupam a largura disponível e os metadados formam grade 2 × 2.
+- Nenhum erro ou aviso foi encontrado no console.
+
+Não restaram diferenças P0, P1 ou P2 no escopo solicitado. As diferenças em relação ao mock são intencionais e factuais: capa e metadados reais substituem os elementos ilustrativos da referência.
+
+**final result: passed**
+
+---
 
 ## QA visual — Guia Nacional de Contratações Sustentáveis da AGU (25/08/2026)
 
