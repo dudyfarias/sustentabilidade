@@ -4,8 +4,8 @@ Protótipo funcional em HTML semântico, CSS e JavaScript, sem dependências de 
 Este documento registra o estado atual da implementação e as verificações feitas.
 
 Os catálogos exibidos são **demonstrativos por decisão de escopo**: esta entrega é a camada
-visual, destinada ao time que implementará o backend. As publicações anexadas do TCESP e
-da PGE-SP são documentos oficiais. O contrato de dados está em [`HANDOFF.md`](./HANDOFF.md).
+visual, destinada ao time que implementará o backend. As publicações anexadas do TCESP,
+da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HANDOFF.md`](./HANDOFF.md).
 
 ---
 
@@ -13,11 +13,11 @@ da PGE-SP são documentos oficiais. O contrato de dados está em [`HANDOFF.md`](
 
 | Página | Arquivo | Script | Conteúdo |
 | --- | --- | --- | --- |
-| Início | `index.html` | `main.js` | Hero, busca, navegação rápida (6 cards alinhados), ODS, destaques e chamada final |
+| Início | `index.html` | `main.js` | Hero, busca, navegação rápida (7 cards alinhados), ODS, destaques e chamada final |
 | Critérios | `criterios.html` | `criterios.js` | Catálogo com busca, 5 filtros, chips de categoria, 6 critérios e paginação |
 | Contratações | `contratacoes.html` | `contratacoes.js` | KPIs, filtros por objeto e situação, 6 contratações |
 | Glossário | `glossario.html` | `glossario.js` | 60 termos agrupados por letra, com sigla, categoria, remissões e links |
-| Biblioteca | `biblioteca.html` | `biblioteca.js` | Documento em destaque, 15 documentos em 5 tipos e legislação de referência |
+| Biblioteca | `biblioteca.html` | `biblioteca.js` | Documento em destaque, 16 documentos em 5 tipos e legislação de referência |
 | Transparência | `transparencia.html` | — | KPIs, 3 conjuntos de dados abertos, 3 relatórios e API pública |
 | Sobre | `sobre.html` | — | Objetivos, referências institucionais e canais de contato |
 | ODS | `ods.html` | `main.js` | 17 objetivos agrupados nos 5 eixos da Agenda 2030 |
@@ -27,6 +27,7 @@ da PGE-SP são documentos oficiais. O contrato de dados está em [`HANDOFF.md`](
 | Acessibilidade | `acessibilidade.html` | — | 8 seções com recursos e limitações conhecidas |
 | Manual de Gestão Sustentável do TCESP | `manual-gestao-sustentavel-tcesp.html` | `manual-tcesp.js` | Publicação oficial, oito temas e documentos relacionados |
 | Cartilha de Contratações Sustentáveis da PGE-SP | `cartilha-contratacoes-sustentaveis-pge.html` | `cartilha-pge.js` | Publicação oficial, oito temas e download do PDF |
+| Guia Nacional de Contratações Sustentáveis da AGU | `guia-nacional-contratacoes-sustentaveis-agu.html` | `guia-agu.js` | 8ª edição oficial de 2025, oito temas e acesso ao PDF |
 | Página não encontrada | `404.html` | `main.js` | Atalhos para as áreas principais e canal da Ouvidoria |
 
 ---
@@ -51,7 +52,7 @@ da PGE-SP são documentos oficiais. O contrato de dados está em [`HANDOFF.md`](
 - **Vermelho institucional** `#ED1C24` reservado ao indicador do item ativo da navegação.
 - **Navegação enxuta de 3 itens**: Início, Critérios e Sobre.
   As demais áreas são alcançadas pelo rodapé e pela navegação rápida da página
-  inicial. TCESP e PGE-SP possuem páginas próprias; apenas Selo Verde permanece "Em breve".
+  inicial. TCESP, PGE-SP e AGU possuem páginas próprias; apenas Selo Verde permanece "Em breve".
 - **Rodapé de 5 colunas** com redes sociais e assinatura institucional.
 - **Ouvidoria** e **Fale conosco** apontam para os canais oficiais do Estado
   (`fala.sp.gov.br` e `compras.sp.gov.br/fale-conosco`), abertos em nova aba.
@@ -62,7 +63,7 @@ da PGE-SP são documentos oficiais. O contrato de dados está em [`HANDOFF.md`](
 ## Indexação e compartilhamento
 
 - `robots.txt` liberando indexação e apontando para o sitemap.
-- `sitemap.xml` com as 14 URLs canônicas, em formato limpo (sem `.html`).
+- `sitemap.xml` com as 15 URLs canônicas, em formato limpo (sem `.html`).
 - `canonical` em todas as páginas, coerente com `cleanUrls` da Vercel.
 - Open Graph e Twitter Card completos, com imagem própria de 1200×630.
 - Favicon em `.ico`, `.svg`, `apple-touch-icon` e ícones de 192 e 512 px.
@@ -76,7 +77,7 @@ da PGE-SP são documentos oficiais. O contrato de dados está em [`HANDOFF.md`](
 Cada item abaixo foi executado no navegador contra a implementação.
 
 **Navegação**
-- As 14 páginas e a 404 respondem HTTP 200.
+- As 15 páginas e a 404 respondem HTTP 200.
 - `robots.txt`, `sitemap.xml`, `favicon.ico`, `og-image.png` e `site.webmanifest` são servidos corretamente.
 - O `sitemap.xml` é XML válido e o `site.webmanifest` é JSON válido.
 - Nenhum link interno aponta para arquivo inexistente.
@@ -112,7 +113,7 @@ Cada item abaixo foi executado no navegador contra a implementação.
 - O documento em destaque some assim que há busca ou filtro, e volta ao limpar.
 - A busca alcança título, descrição, temas e formato: "XLSX" encontra a planilha.
 - "Ler resumo" abre diálogo com o texto do próprio card, sem mapa fixo no JavaScript.
-- Ordenação por título percorre os 15 documentos em ordem alfabética.
+- Ordenação por título percorre os 16 documentos em ordem alfabética.
 - Os cinco links de legislação apontam para a íntegra publicada no Planalto,
   todos verificados com resposta HTTP 200.
 
@@ -129,9 +130,9 @@ Cada item abaixo foi executado no navegador contra a implementação.
 - A busca ignora acentuação e expande automaticamente as perguntas encontradas.
 
 **Navegação rápida da página inicial**
-- Os seis cards compartilham a mesma caixa de arte, a mesma linha de base de
+- Os sete cards compartilham a mesma caixa de arte, a mesma linha de base de
   título, de texto e de link: uma única medida para cada, em vez de três ritmos.
-- TCESP e PGE-SP usam livros próprios, com acesso direto às páginas das publicações.
+- TCESP, PGE-SP e AGU usam livros próprios, com acesso direto às páginas das publicações.
 - O card inteiro responde ao clique, e não apenas o link no rodapé do card.
 - Os downloads de "Biblioteca em destaque" abrem diálogo — antes eram inertes.
 
@@ -211,6 +212,33 @@ _Última atualização: agosto de 2026._
 3. **P2 — comportamento de Mais assuntos:** menu permanecia aberto após selecionar uma categoria. Corrigido para fechar e preservar o estado visual selecionado.
 
 Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a área acima das perguntas. Os cards de resposta abaixo mantêm deliberadamente o padrão funcional já existente no portal.
+
+**final result: passed**
+
+## QA visual — Guia Nacional de Contratações Sustentáveis da AGU (25/08/2026)
+
+- **Fonte visual:** `/Users/eduardofariascappia/Downloads/PHOTO-2026-08-25-17-43-58.jpg`
+- **Conteúdo oficial:** `/Users/eduardofariascappia/Downloads/guia-nacional-de-contratacoes-sustentaveis_2025.pdf`
+- **Implementação desktop:** [`qa/agu-implementation-1280-top.png`](./qa/agu-implementation-1280-top.png)
+- **Comparação lado a lado:** [`qa/agu-comparison.png`](./qa/agu-comparison.png)
+- **Card na página inicial:** [`qa/agu-home-card-detail-1280.png`](./qa/agu-home-card-detail-1280.png)
+- **Viewport:** 1280 × 720 CSS px, navegador em 100%.
+- **Estado:** página carregada no topo, livro completo e nenhum diálogo aberto.
+
+### Evidência e superfícies verificadas
+
+- **Fonte de verdade:** título, 8ª edição revista, atualizada e ampliada, outubro de 2025, 266 páginas e arquivo de 2,85 MB foram conferidos diretamente no PDF mais novo enviado pelo usuário.
+- **Composição:** o hero usa uma cena raster integrada em verde-sálvia, com círculos discretos, pedestal, folhagem, livro 3D, iluminação e sombra de contato pertencendo à mesma imagem.
+- **Livro completo em 100%:** capa, lombada, bloco de páginas, topo e base permanecem visíveis dentro da cena em zoom de 100%, sem sobreposição HTML e sem efeito de imagem colada.
+- **Cabeçalho e rodapé:** ambos reutilizam o padrão institucional do portal, com Início, Critérios, Sobre, busca, acessibilidade, perfil e os grupos globais do rodapé.
+- **Conteúdo:** oito cards seguem os capítulos reais do guia, incluindo direitos humanos, integridade, ETP, logística reversa, engenharia, CICS e as 43 tabelas por objeto.
+- **Interações:** os oito cards abriram o diálogo correto, com link direto à página inicial correspondente no PDF; abertura e fechamento foram testados individualmente.
+- **Integração:** entradas internas confirmadas na Home, na Biblioteca e na seção Sobre. A Biblioteca exibe 16 documentos e inclui o guia nos filtros.
+- **Navegação rápida:** a Home agora contém sete cards alinhados; o novo card mostra o livro 3D de 2025, badge “Novo”, descrição e acesso interno funcional.
+- **Responsividade:** o desktop mantém o livro inteiro em 100%; em faixas menores, a cena integrada reposiciona o livro acima do conteúdo sem cortar capa, lombada ou base.
+- **Console:** nenhum erro ou aviso encontrado na página, na Biblioteca ou na seção Sobre.
+
+Não restaram diferenças P0, P1 ou P2 no layout, nos dados oficiais, no enquadramento do livro e nas interações solicitadas.
 
 **final result: passed**
 
@@ -397,5 +425,78 @@ Não restaram diferenças P0, P1 ou P2 no fluxo de entrada, retorno e navegaçã
 3. **P2 — experiência móvel não definida na fonte:** implementada adaptação com imagem suavizada, conteúdo linear, CTAs empilhados e grade de metadados sem rolagem lateral.
 
 Não restaram diferenças P0, P1 ou P2 no layout e nas interações solicitadas. A redação dos oito temas foi ajustada para refletir os capítulos e eixos reais do manual, em vez de copiar títulos ilustrativos da imagem.
+
+**final result: passed**
+
+---
+
+## QA visual — heróis unificados em verde-sálvia e livros 3D (25/08/2026)
+
+- **Fonte visual:** `/Users/eduardofariascappia/Downloads/PHOTO-2026-08-25-19-01-08.jpg`
+- **AGU em 100%:** [`qa/publication-agu-sage-1280.png`](./qa/publication-agu-sage-1280.png)
+- **PGE em 100%:** [`qa/publication-pge-sage-1280.png`](./qa/publication-pge-sage-1280.png)
+- **TCESP em 100%:** [`qa/publication-tcesp-sage-1280.png`](./qa/publication-tcesp-sage-1280.png)
+- **Comparação direta com a referência:** [`qa/publication-sage-comparison.png`](./qa/publication-sage-comparison.png)
+- **Viewport verificado:** 1280 × 720 CSS px, zoom de 100%.
+
+### Superfícies de fidelidade verificadas
+
+- **Composição:** as três páginas usam a mesma cena com fundo verde-sálvia, círculos discretos, pedestal claro e folhagem na borda direita; a coluna esquerda permanece livre para o conteúdo HTML.
+- **Livros:** AGU, PGE e TCESP aparecem como volumes 3D completos, com capa, lombada e bloco de páginas visíveis. Nenhum topo, base ou lateral é cortado no viewport verificado.
+- **Cor:** o token compartilhado `#7c887a` reproduz a família verde-sálvia da referência e evita variações de fundo entre as publicações.
+- **Hierarquia e legibilidade:** título, órgão, descrição, ações e metadados mantêm contraste branco/verde-claro e não colidem com os livros.
+- **Funcionalidade:** o primeiro tema de cada uma das três publicações abre e fecha seu diálogo com conteúdo real. Não houve erro ou aviso no console.
+
+Não restaram diferenças P0, P1 ou P2 no escopo solicitado para os heróis das publicações técnicas.
+
+**final result: passed**
+
+---
+
+## QA de regressão — livros integrados aos cenários (25/08/2026)
+
+- **Problema reportado:** os três livros pareciam imagens separadas, flutuando sobre o mesmo fundo, com diferenças de escala, perspectiva e sombra.
+- **Referências do problema:** capturas do usuário de PGE, AGU e TCESP às 19h47–19h48.
+- **PGE corrigido em 100%:** [`qa/publication-integrated-pge-1280.png`](./qa/publication-integrated-pge-1280.png)
+- **AGU corrigido em 100%:** [`qa/publication-integrated-agu-1280.png`](./qa/publication-integrated-agu-1280.png)
+- **TCESP corrigido em 100%:** [`qa/publication-integrated-tcesp-1280.png`](./qa/publication-integrated-tcesp-1280.png)
+- **Viewport verificado:** 1280 × 720 CSS px, zoom de 100%.
+
+### Correção e resultado
+
+- Cada herói agora é uma composição raster única: fundo, folhagem, círculos, pedestal, livro, iluminação e sombra de contato pertencem à mesma cena.
+- Os três livros compartilham câmera quase frontal, altura visual equivalente e a mesma posição sobre o pedestal.
+- Nenhuma capa, lombada, topo ou base é cortada no viewport verificado.
+- A sombra de contato elimina o efeito de livro colado ou flutuando; não há mais sobreposição HTML separada para o livro.
+- A inspeção pareada das três capturas anteriores com as três novas capturas não encontrou costuras, caixas brancas ou colisões com o conteúdo.
+- O primeiro cartão temático de AGU, PGE e TCESP abre e fecha o diálogo correto; os três consoles permaneceram sem erros ou avisos.
+
+Não restaram diferenças P0, P1 ou P2 no padrão visual e funcional dos três heróis.
+
+**final result: passed**
+
+---
+
+## QA visual — navegação rápida padronizada (25/08/2026)
+
+- **Fonte visual:** `/var/folders/jq/drpbqr_j16g_594_xn6q_qf80000gn/T/TemporaryItems/NSIRD_screencaptureui_oT3J5O/Captura de Tela 2026-08-25 às 20.19.48.png`
+- **Implementação completa:** [`qa/quick-access-standardized-pass2-1280.png`](./qa/quick-access-standardized-pass2-1280.png)
+- **Recorte comparado:** [`qa/quick-access-standardized-crop-1280.jpg`](./qa/quick-access-standardized-crop-1280.jpg)
+- **Viewport verificado:** 1280 × 720 CSS px, zoom de 100%.
+- **Dimensões da fonte:** 2048 × 658 px; comparação concentrada na seção de navegação rápida.
+- **Estado:** página inicial carregada, navegação rápida visível e nenhum diálogo aberto.
+
+### Correções e superfícies verificadas
+
+- **P1 — escalas e linhas de base divergentes:** ícones e capas ocupavam áreas diferentes e os títulos começavam em alturas irregulares. Todos os cartões agora usam um palco de mídia de 104 px e um palco de título de 60 px.
+- **P1 — capa da AGU sem padrão:** a imagem plana ultrapassava o espaço visual do cartão e se sobrepunha ao título. Foi substituída pelo livro 3D completo, contido no mesmo palco dos demais livros.
+- **P2 — ativos rasterizados frágeis:** ODS e glossário usavam imagens com pouca definição e o selo verde apresentava artefatos. ODS e glossário agora usam SVG, e o selo foi substituído por um ativo limpo em alta resolução.
+- **Escala óptica:** selos, ícones e livros recebem dimensões próprias dentro do mesmo palco, preservando peso visual equivalente sem distorção ou corte.
+- **Alinhamento medido:** os sete palcos começam em `y = 584 px` e medem `104 px`; os sete títulos começam em `y = 698 px` e medem `60 px`.
+- **Responsividade:** a grade mantém sete colunas em telas largas, duas colunas em tablets e uma coluna em celulares, sem overflow horizontal.
+- **Interações:** os sete destinos foram verificados; o cartão de Selo Verde abre e fecha o diálogo correto.
+- **Console:** nenhum erro ou aviso encontrado.
+
+Não restaram diferenças P0, P1 ou P2 no tamanho, alinhamento, nitidez e comportamento dos acessos rápidos.
 
 **final result: passed**

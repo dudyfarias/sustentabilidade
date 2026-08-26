@@ -628,11 +628,11 @@
     .map-visual{min-height:320px;background:none;border-radius:0}.map-visual>*{display:none}
     .global-search-wrap{padding:6px 0}.global-search{min-height:57px;border-radius:8px;padding:7px 12px 7px 17px}.global-search input{font-size:12px}.filter-button{height:38px;border-radius:6px;font-size:11px}
     .section-card{margin-top:7px;padding:13px;border-radius:10px}.section-label{font-size:11px;margin:0 0 8px}
-    .quick-grid{grid-template-columns:repeat(6,1fr);gap:10px}.quick-card{min-height:274px;border-radius:8px;padding:16px 10px 12px}
+    .quick-grid{grid-template-columns:repeat(7,1fr);gap:10px}.quick-card{min-height:282px;border-radius:8px;padding:16px 9px 12px}
     .quick-icon{width:70px;height:66px;margin-bottom:8px;display:grid;place-items:center}
     .quick-icon img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
-    /* Duas linhas reservadas para o título: alinha arte, texto e link nos seis cards */
-    .quick-card h3{font-size:12.5px;line-height:1.3;min-height:33px;display:flex;align-items:center;justify-content:center}
+    /* Título com altura estável: alinha arte, texto e link nos sete cards */
+    .quick-card h3{font-size:11.5px;line-height:1.3;min-height:43px;display:flex;align-items:center;justify-content:center}
     .quick-card p{font-size:9.5px;line-height:1.7;margin:10px 0 12px}.quick-link{font-size:9.5px}.badge{font-size:7.5px;padding:3px 7px;right:8px}
     /* A capa do livro ocupa a mesma caixa dos ícones, emoldurada como miniatura */
     .book-cover{width:70px;height:66px;padding:0;margin:0 auto 8px;background:none;box-shadow:none;font-size:0;border-radius:0;display:grid;place-items:center}
@@ -1257,7 +1257,7 @@
 .manual-documents{display:flex;flex-direction:column}.manual-documents h2{margin-bottom:7px}.manual-documents>a{display:grid;grid-template-columns:30px 1fr 24px;gap:9px;align-items:center;padding:9px 10px;border:1px solid #e3e6e3;border-radius:8px;color:#171b19}.manual-documents>a+a{margin-top:6px}.manual-documents>a:hover{border-color:#86b99b;background:#f7fbf8}.manual-documents>a>i:first-child{color:#bd2431;font-size:20px}.manual-documents>a>i:last-child{color:#087a3e}.manual-documents>a span{font-size:9px;color:#68706c}.manual-documents>a strong{display:block;margin-bottom:2px;color:#171b19;font-size:10.5px}
 .manual-about{display:grid;grid-template-columns:48px 1fr auto;gap:15px;align-items:center;margin-top:14px;padding:16px 20px;border:1px solid #dfe5df;border-radius:11px;background:linear-gradient(90deg,#f1f6f2,#fbfcfb)}.manual-about>i{display:grid;place-items:center;width:43px;height:43px;border:2px solid #087a3e;border-radius:50%;color:#087a3e;font-size:21px}.manual-about h2{margin:0 0 2px;font-size:13px}.manual-about p{margin:0;font-size:9.5px;line-height:1.55;color:#4d5551}.manual-about a{display:inline-flex;align-items:center;gap:9px;padding:11px 17px;border:1px solid #87aa93;border-radius:7px;color:#075d31;font-size:10.5px;font-weight:700}.manual-about a:hover{background:#eaf4ed}
 .manual-topic-dialog{width:min(500px,calc(100% - 32px));padding:28px;border:0;border-radius:16px;box-shadow:0 24px 70px rgba(0,35,21,.28)}.manual-topic-dialog::backdrop{background:rgba(0,31,20,.64);backdrop-filter:blur(3px)}.manual-topic-dialog .manual-topic-icon{margin-bottom:15px}.manual-topic-dialog h2{margin:0;font-size:22px}.manual-topic-dialog p{margin:12px 0 20px;font-size:13px;line-height:1.75;color:#4d5551}.manual-topic-dialog>a{display:inline-flex;align-items:center;gap:8px;color:#087a3e;font-size:12px;font-weight:800}.manual-dialog-close{position:absolute;top:14px;right:14px;display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:50%;background:#eef3ef;color:#37413b;cursor:pointer}
-@media(min-width:901px){.manual-tcesp-page:not(.pge-page) .manual-hero{background:linear-gradient(180deg,#102820 0%,#061f17 100%)}.manual-tcesp-page:not(.pge-page) .manual-hero-image{background-size:auto 125%;background-position:right center}}
+@media(min-width:901px){.manual-tcesp-page:not(.pge-page):not(.agu-page) .manual-hero{background:linear-gradient(180deg,#102820 0%,#061f17 100%)}.manual-tcesp-page:not(.pge-page):not(.agu-page) .manual-hero-image{background-size:auto 125%;background-position:right center}}
 @media(max-width:900px){.manual-hero-image{background-position:60% center}.manual-hero:after{background:linear-gradient(90deg,rgba(4,51,37,.96) 0,rgba(4,51,37,.86) 50%,rgba(4,51,37,.28) 100%)}.manual-hero-copy{width:58%}.manual-topic-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.manual-hero{min-height:auto}.manual-hero-image{background-position:69% top;opacity:.32}.manual-hero:after{background:linear-gradient(180deg,rgba(4,51,37,.34),#073d2d 50%)}.manual-hero-inner{min-height:auto;padding:20px 20px 26px}.manual-breadcrumb{font-size:9px;overflow:hidden}.manual-breadcrumb span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.manual-hero-copy{width:100%;padding-top:190px}.manual-kicker{font-size:22px}.manual-hero h1{font-size:45px}.manual-intro{font-size:12px}.manual-actions{align-items:stretch;flex-direction:column}.manual-btn{width:100%}.manual-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.manual-meta>div,.manual-meta>div:first-child{min-width:0;padding:0 0 0 12px;border-left:1px solid rgba(255,255,255,.2)}.manual-content{padding:20px}.manual-section-heading h2{font-size:19px}.manual-topic-grid{grid-template-columns:1fr}.manual-topic{min-height:160px}.manual-lower-grid{grid-template-columns:1fr}.manual-about{grid-template-columns:44px 1fr}.manual-about a{grid-column:1/3;justify-content:center}.manual-topic-dialog{padding:24px}}
 
@@ -1310,4 +1310,266 @@
   .pge-page .manual-hero-copy{width:100%;padding-top:205px}
   .pge-page .manual-hero h1{font-size:42px}
   .pge-page .pge-lower-grid{grid-template-columns:1fr}
+}
+
+/* Guia Nacional de Contratações Sustentáveis — AGU */
+.agu-page{background:#f8f9f6}
+.agu-page .agu-hero{min-height:520px;background:#f7f6f1;color:#18211b}
+.agu-page .manual-hero-image{background:#f7f6f1 url('assets/agu/hero-agu-background.webp') right center/auto 100% no-repeat}
+.agu-page .manual-hero:after{display:none}
+.agu-page .manual-hero-inner{min-height:520px;padding-top:24px;padding-bottom:22px}
+.agu-page .manual-breadcrumb{color:#56605a}
+.agu-page .agu-hero-layout{position:relative;min-height:447px}
+.agu-page .manual-hero-copy{width:54%;max-width:520px;padding-top:35px}
+.agu-page .manual-hero h1{margin:0 0 11px;color:#073c2b;font-size:43px;line-height:1.04;letter-spacing:-.045em}
+.agu-page .agu-org{display:block;margin:0 0 10px;color:#2d6e26;font-size:14px;font-weight:800}
+.agu-page .manual-title-rule{margin:0 0 13px;background:#4d8d34}
+.agu-page .manual-intro{max-width:440px;margin:0 0 18px;color:#3e4842;font-size:12px;line-height:1.7}
+.agu-page .agu-primary-action{min-height:54px;border-color:#24692e;background:#286f32;box-shadow:0 9px 22px rgba(33,101,43,.17)}
+.agu-page .agu-primary-action:hover{background:#337e3d}
+.agu-page .agu-primary-action>span{display:flex;flex-direction:column;align-items:flex-start;font-size:12px;line-height:1.25;opacity:1}
+.agu-page .agu-primary-action strong{font-size:12px}
+.agu-page .agu-primary-action small{margin-top:3px;color:rgba(255,255,255,.8);font-size:9px;font-weight:500}
+.agu-page .manual-meta{margin-top:27px}
+.agu-page .manual-meta>div{min-width:103px;border-left-color:#cdd2cc}
+.agu-page .manual-meta dt{color:#5d665f}
+.agu-page .manual-meta dt i{color:#327738}
+.agu-page .manual-meta dd{color:#1c2720}
+.agu-page .agu-hero-art{position:absolute;z-index:3;top:-28px;right:4%;display:flex;align-items:flex-start;justify-content:center;width:34%;height:445px;margin:0;pointer-events:none}
+.agu-page .agu-hero-art img{width:auto;height:100%;object-fit:contain;filter:drop-shadow(13px 16px 15px rgba(28,35,29,.22))}
+.agu-page .manual-content{padding-top:23px}
+.agu-page .manual-section-heading span{background:#377c3d}
+.agu-page .manual-topic{min-height:182px}
+.agu-page .manual-topic p{padding-right:19px;padding-bottom:9px}
+.agu-page .manual-topic:hover{border-color:#8eb99a}
+.agu-page .manual-topic-icon,.agu-page .manual-about>i{color:#287438}
+.agu-page .manual-topic-icon{background:#edf4ee}
+.agu-page .topic-arrow{color:#287438}
+.agu-page .agu-about{margin-top:17px;background:#f3f6f1}
+.agu-page .agu-about a{border-color:#7fa389;color:#1e6532}
+.agu-page .agu-about a:hover{background:#e8f1e8}
+
+@media(min-width:901px){
+  .agu-page .manual-content{width:min(930px,calc(100% - 40px))}
+}
+
+@media(max-width:900px){
+  .agu-page .agu-hero{min-height:500px}
+  .agu-page .manual-hero-inner{min-height:500px}
+  .agu-page .manual-hero-image{background-position:72% center;opacity:.72}
+  .agu-page .manual-hero-copy{width:56%}
+  .agu-page .manual-hero h1{font-size:36px}
+  .agu-page .agu-hero-art{right:1%;width:37%;height:398px}
+}
+
+@media(max-width:620px){
+  .agu-page .agu-hero{min-height:auto}
+  .agu-page .manual-hero-image{background-position:right top;background-size:auto 340px;opacity:.48}
+  .agu-page .manual-hero-inner{min-height:auto;padding:18px 20px 26px}
+  .agu-page .agu-hero-layout{display:flex;min-height:auto;flex-direction:column}
+  .agu-page .agu-hero-art{position:relative;order:-1;top:auto;right:auto;width:100%;height:270px;margin:8px 0 2px}
+  .agu-page .agu-hero-art img{height:252px}
+  .agu-page .manual-hero-copy{width:100%;padding-top:7px}
+  .agu-page .manual-hero h1{font-size:37px}
+  .agu-page .agu-org{font-size:12px}
+  .agu-page .manual-intro{font-size:12px}
+  .agu-page .manual-actions{align-items:stretch}
+  .agu-page .agu-primary-action{width:100%}
+  .agu-page .manual-meta>div,.agu-page .manual-meta>div:first-child{border-left-color:#cdd2cc}
+  .agu-page .manual-about{grid-template-columns:44px 1fr}
+  .agu-page .manual-about a{grid-column:1/3;justify-content:center}
+}
+
+/* ========================================================================
+   CENÁRIO COMPARTILHADO DAS PUBLICAÇÕES TÉCNICAS
+   ======================================================================== */
+.manual-tcesp-page{
+  --book-hero-sage:#7c887a;
+  --book-hero-accent:#bcd486;
+}
+.manual-tcesp-page .manual-hero,
+.manual-tcesp-page.pge-page .manual-hero,
+.manual-tcesp-page.agu-page .manual-hero{
+  min-height:520px;
+  background:var(--book-hero-sage);
+  color:#fff;
+}
+.manual-tcesp-page .manual-hero-image,
+.manual-tcesp-page.pge-page .manual-hero-image,
+.manual-tcesp-page.agu-page .manual-hero-image{
+  background:var(--book-hero-sage) url('assets/publications/hero-sage-background.webp') center center/auto 100% no-repeat;
+  opacity:1;
+}
+.manual-tcesp-page .manual-hero:after,
+.manual-tcesp-page.pge-page .manual-hero:after,
+.manual-tcesp-page.agu-page .manual-hero:after{display:none}
+.manual-tcesp-page .manual-hero-inner,
+.manual-tcesp-page.pge-page .manual-hero-inner,
+.manual-tcesp-page.agu-page .manual-hero-inner{
+  min-height:520px;
+  padding-top:24px;
+  padding-bottom:22px;
+}
+.manual-tcesp-page .manual-breadcrumb,
+.manual-tcesp-page.agu-page .manual-breadcrumb{color:rgba(255,255,255,.9)}
+.manual-tcesp-page .publication-hero-layout{
+  position:relative;
+  min-height:447px;
+}
+.manual-tcesp-page .manual-hero-copy,
+.manual-tcesp-page.pge-page .manual-hero-copy,
+.manual-tcesp-page.agu-page .manual-hero-copy{
+  position:relative;
+  z-index:4;
+  width:54%;
+  max-width:520px;
+}
+.manual-tcesp-page .manual-hero h1,
+.manual-tcesp-page.agu-page .manual-hero h1{color:#fff}
+.manual-tcesp-page .manual-kicker,
+.manual-tcesp-page .manual-org span,
+.manual-tcesp-page.pge-page .pge-org,
+.manual-tcesp-page.agu-page .agu-org{color:var(--book-hero-accent)}
+.manual-tcesp-page .manual-title-rule,
+.manual-tcesp-page.pge-page .manual-title-rule,
+.manual-tcesp-page.agu-page .manual-title-rule{background:var(--book-hero-accent)}
+.manual-tcesp-page .manual-intro,
+.manual-tcesp-page.pge-page .manual-intro,
+.manual-tcesp-page.agu-page .manual-intro{color:rgba(255,255,255,.94)}
+.manual-tcesp-page .manual-btn-primary,
+.manual-tcesp-page.pge-page .manual-btn-primary,
+.manual-tcesp-page.agu-page .manual-btn-primary{
+  border-color:#496630;
+  background:#496630;
+  box-shadow:none;
+}
+.manual-tcesp-page .manual-btn-primary:hover,
+.manual-tcesp-page.pge-page .manual-btn-primary:hover,
+.manual-tcesp-page.agu-page .manual-btn-primary:hover{background:#3f592a}
+.manual-tcesp-page .manual-meta>div,
+.manual-tcesp-page.agu-page .manual-meta>div{border-left-color:rgba(255,255,255,.3)}
+.manual-tcesp-page .manual-meta dt,
+.manual-tcesp-page.agu-page .manual-meta dt{color:rgba(255,255,255,.78)}
+.manual-tcesp-page .manual-meta dt i,
+.manual-tcesp-page.pge-page .manual-meta dt i,
+.manual-tcesp-page.agu-page .manual-meta dt i{color:var(--book-hero-accent)}
+.manual-tcesp-page .manual-meta dd,
+.manual-tcesp-page.agu-page .manual-meta dd{color:#fff}
+@media(max-width:900px){
+  .manual-tcesp-page .manual-hero,
+  .manual-tcesp-page.pge-page .manual-hero,
+  .manual-tcesp-page.agu-page .manual-hero,
+  .manual-tcesp-page .manual-hero-inner,
+  .manual-tcesp-page.pge-page .manual-hero-inner,
+  .manual-tcesp-page.agu-page .manual-hero-inner{min-height:500px}
+  .manual-tcesp-page .manual-hero-image,
+  .manual-tcesp-page.pge-page .manual-hero-image,
+  .manual-tcesp-page.agu-page .manual-hero-image{background-position:center center;opacity:1}
+  .manual-tcesp-page .manual-hero-copy,
+  .manual-tcesp-page.pge-page .manual-hero-copy,
+  .manual-tcesp-page.agu-page .manual-hero-copy{width:56%}
+}
+
+@media(max-width:620px){
+  .manual-tcesp-page .manual-hero,
+  .manual-tcesp-page.pge-page .manual-hero,
+  .manual-tcesp-page.agu-page .manual-hero,
+  .manual-tcesp-page .manual-hero-inner,
+  .manual-tcesp-page.pge-page .manual-hero-inner,
+  .manual-tcesp-page.agu-page .manual-hero-inner{min-height:auto}
+  .manual-tcesp-page .manual-hero-image,
+  .manual-tcesp-page.pge-page .manual-hero-image,
+  .manual-tcesp-page.agu-page .manual-hero-image{
+    background-position:center top;
+    background-size:auto 360px;
+    opacity:1;
+  }
+  .manual-tcesp-page .publication-hero-layout,
+  .manual-tcesp-page.agu-page .publication-hero-layout{
+    display:flex;
+    min-height:auto;
+    flex-direction:column;
+  }
+  .manual-tcesp-page .manual-hero-copy,
+  .manual-tcesp-page.pge-page .manual-hero-copy,
+  .manual-tcesp-page.agu-page .manual-hero-copy{width:100%;padding-top:7px}
+  .manual-tcesp-page .manual-meta>div,
+  .manual-tcesp-page .manual-meta>div:first-child,
+  .manual-tcesp-page.agu-page .manual-meta>div,
+  .manual-tcesp-page.agu-page .manual-meta>div:first-child{border-left-color:rgba(255,255,255,.3)}
+}
+
+/* Livros integrados ao cenário: uma única câmera, escala, luz e sombra. */
+.manual-tcesp-page:not(.pge-page):not(.agu-page) .manual-hero-image{
+  background-image:url('assets/publications/hero-tcesp-integrated.webp');
+  background-position:center center;
+  background-size:auto 100%;
+}
+.manual-tcesp-page.pge-page .manual-hero-image{
+  background-image:url('assets/publications/hero-pge-integrated.webp');
+}
+.manual-tcesp-page.agu-page .manual-hero-image{
+  background-image:url('assets/publications/hero-agu-integrated.webp');
+}
+@media(max-width:620px){
+  .manual-tcesp-page .manual-hero-image,
+  .manual-tcesp-page.pge-page .manual-hero-image,
+  .manual-tcesp-page.agu-page .manual-hero-image{background-position:73% top}
+  .manual-tcesp-page .manual-hero-copy,
+  .manual-tcesp-page.pge-page .manual-hero-copy,
+  .manual-tcesp-page.agu-page .manual-hero-copy{padding-top:300px}
+}
+
+/* Navegação rápida: palco, escala óptica e linha de base únicos. */
+.quick-grid{
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  align-items:stretch;
+}
+.quick-card{min-height:300px}
+.quick-art{
+  width:100%;
+  height:104px;
+  flex:0 0 104px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 10px;
+}
+.quick-art img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+.quick-art--icon img{width:86px;height:86px}
+#selo-verde .quick-art--icon img{width:78px;height:78px}
+#ods-quick .quick-art--icon img,
+#glossario .quick-art--icon img{width:96px;height:96px}
+.quick-art--book{align-items:end}
+.quick-art--book img{mix-blend-mode:normal}
+#publicacao .quick-art--book img{
+  width:104px;
+  height:104px;
+  mix-blend-mode:multiply;
+}
+#tce .quick-art--book img{
+  width:96px;
+  height:96px;
+  mix-blend-mode:multiply;
+}
+#pge .quick-art--book img{width:104px;height:104px}
+#agu .quick-art--book img{width:104px;height:104px}
+.quick-card h3{
+  min-height:60px;
+  height:60px;
+  align-items:center;
+}
+
+@media(max-width:900px){
+  .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .quick-grid{grid-template-columns:1fr}
+  .quick-card h3{height:auto;min-height:0}
 }

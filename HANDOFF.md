@@ -2,7 +2,7 @@
 
 Este documento descreve o que existe no protótipo, o modelo de dados implícito em cada
 tela e onde exatamente conectar a API. O front-end está pronto: os catálogos ainda são
-estáticos e servem como contrato visual; as publicações anexadas do TCESP e da PGE-SP são oficiais.
+estáticos e servem como contrato visual; as publicações anexadas do TCESP, da PGE-SP e da AGU são oficiais.
 
 ---
 
@@ -17,7 +17,7 @@ python3 -m http.server 4173
 
 | Item | Situação |
 | --- | --- |
-| Telas | 14 páginas concluídas |
+| Telas | 15 páginas concluídas |
 | Estilo | `styles.css` único, compartilhado por todas as páginas |
 | Comportamento | `main.js` global + um script por página de catálogo |
 | Dados | **Estáticos no HTML** — a substituir pela API |
@@ -39,6 +39,7 @@ python3 -m http.server 4173
 | `/biblioteca` | `biblioteca.html` | `biblioteca.js` | **Sim** |
 | `/manual-gestao-sustentavel-tcesp` | `manual-gestao-sustentavel-tcesp.html` | `manual-tcesp.js` | Não — publicação oficial local |
 | `/cartilha-contratacoes-sustentaveis-pge` | `cartilha-contratacoes-sustentaveis-pge.html` | `cartilha-pge.js` | Não — publicação oficial local |
+| `/guia-nacional-contratacoes-sustentaveis-agu` | `guia-nacional-contratacoes-sustentaveis-agu.html` | `guia-agu.js` | Não — publicação oficial local |
 | `/transparencia` | `transparencia.html` | `main.js` | **Sim** — downloads e indicadores |
 | `/faq` | `faq.html` | `faq.js` | Opcional — conteúdo pode seguir estático |
 | `/sobre` | `sobre.html` | `main.js` | Não |
@@ -127,7 +128,7 @@ Origem: `glossario.html`, `<article class="termo-card">`, agrupados por letra em
 
 ### 3.4 Documento da biblioteca
 
-Origem: `biblioteca.html`, `<article class="doc-card">`. São 15 documentos.
+Origem: `biblioteca.html`, `<article class="doc-card">`. São 16 documentos.
 
 | Campo | Tipo | Atributo | Domínio |
 | --- | --- | --- | --- |
@@ -295,14 +296,14 @@ O protótipo já implementa três estados por catálogo. Mantenha-os ao integrar
 | Domínio definitivo | Infraestrutura |
 
 > Ao definir o domínio, atualize `sitemap.xml`, `robots.txt` e as tags `canonical`,
-> `og:url` e `twitter:*` das 14 páginas. Hoje todas apontam para
+> `og:url` e `twitter:*` das 15 páginas. Hoje todas apontam para
 > `https://sustentabilidade-neon.vercel.app`.
 
 ---
 
 ## 9. Verificações já realizadas
 
-- As 14 páginas e a 404 respondem HTTP 200.
+- As 15 páginas e a 404 respondem HTTP 200.
 - Os seis `data-dialog` do HTML correspondem 1:1 às entradas de `main.js`: nenhum
   gatilho órfão e nenhuma entrada ociosa.
 - Nenhum link interno aponta para arquivo inexistente e não há `href="#"` no site.
