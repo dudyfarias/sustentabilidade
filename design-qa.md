@@ -5,7 +5,8 @@ Este documento registra o estado atual da implementação e as verificações fe
 
 Os catálogos exibidos são **demonstrativos por decisão de escopo**: esta entrega é a camada
 visual, destinada ao time que implementará o backend. As publicações anexadas do TCESP,
-da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HANDOFF.md`](./HANDOFF.md).
+da PGE-SP e da AGU são documentos oficiais; os quatro Cadernos ODS usam capas e leitores
+digitais da fonte oficial. O contrato de dados está em [`HANDOFF.md`](./HANDOFF.md).
 
 ---
 
@@ -17,10 +18,11 @@ da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HAND
 | Critérios | `criterios.html` | `criterios.js` | Catálogo com busca, 5 filtros, chips de categoria, 6 critérios e paginação |
 | Contratações | `contratacoes.html` | `contratacoes.js` | KPIs, filtros por objeto e situação, 6 contratações |
 | Glossário | `glossario.html` | `glossario.js` | 60 termos agrupados por letra, com sigla, categoria, remissões e links |
-| Biblioteca | `biblioteca.html` | `biblioteca.js` | Documento em destaque, 16 documentos em 5 tipos e legislação de referência |
+| Biblioteca | `biblioteca.html` | `biblioteca.js` | Documento em destaque, 20 documentos em 5 tipos e legislação de referência |
 | Transparência | `transparencia.html` | — | KPIs, 3 conjuntos de dados abertos, 3 relatórios e API pública |
 | Sobre | `sobre.html` | — | Objetivos, referências institucionais e canais de contato |
 | ODS | `ods.html` | `main.js` | 17 objetivos agrupados nos 5 eixos da Agenda 2030 |
+| Cadernos ODS | `cadernos-ods.html` | `main.js` | Coleção oficial com quatro cadernos, capas reais e leitores digitais externos |
 | Central de Ajuda | `faq.html` | `faq.js` | 30 perguntas em cards, com ícone semântico, resumo, links relacionados e chips de categoria |
 | Termos de Uso | `termos.html` | — | 12 seções sobre condições de uso da plataforma |
 | Política de Privacidade | `privacidade.html` | — | 11 seções conforme a LGPD |
@@ -53,7 +55,7 @@ da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HAND
 - **Vermelho institucional** `#ED1C24` reservado ao indicador do item ativo da navegação.
 - **Navegação enxuta de 3 itens**: Início, Critérios e Sobre.
   As demais áreas são alcançadas pelo rodapé e pela navegação rápida da página
-  inicial. TCESP, PGE-SP, AGU e A Lei de Licitações e os ODS possuem páginas próprias; apenas Selo Verde permanece "Em breve".
+  inicial. TCESP, PGE-SP, AGU, A Lei de Licitações e os ODS e os Cadernos ODS possuem páginas próprias.
 - **Rodapé de 5 colunas** com redes sociais e assinatura institucional.
 - **Ouvidoria** e **Fale conosco** apontam para os canais oficiais do Estado
   (`fala.sp.gov.br` e `compras.sp.gov.br/fale-conosco`), abertos em nova aba.
@@ -64,7 +66,7 @@ da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HAND
 ## Indexação e compartilhamento
 
 - `robots.txt` liberando indexação e apontando para o sitemap.
-- `sitemap.xml` com as 16 URLs canônicas, em formato limpo (sem `.html`).
+- `sitemap.xml` com as 17 URLs canônicas, em formato limpo (sem `.html`).
 - `canonical` em todas as páginas, coerente com `cleanUrls` da Vercel.
 - Open Graph e Twitter Card completos, com imagem própria de 1200×630.
 - Favicon em `.ico`, `.svg`, `apple-touch-icon` e ícones de 192 e 512 px.
@@ -78,7 +80,7 @@ da PGE-SP e da AGU são documentos oficiais. O contrato de dados está em [`HAND
 Cada item abaixo foi executado no navegador contra a implementação.
 
 **Navegação**
-- As 16 páginas e a 404 respondem HTTP 200.
+- As 17 páginas e a 404 respondem HTTP 200.
 - `robots.txt`, `sitemap.xml`, `favicon.ico`, `og-image.png` e `site.webmanifest` são servidos corretamente.
 - O `sitemap.xml` é XML válido e o `site.webmanifest` é JSON válido.
 - Nenhum link interno aponta para arquivo inexistente.
@@ -114,7 +116,7 @@ Cada item abaixo foi executado no navegador contra a implementação.
 - O documento em destaque some assim que há busca ou filtro, e volta ao limpar.
 - A busca alcança título, descrição, temas e formato: "XLSX" encontra a planilha.
 - "Ler resumo" abre diálogo com o texto do próprio card, sem mapa fixo no JavaScript.
-- Ordenação por título percorre os 16 documentos em ordem alfabética.
+- Ordenação por título percorre os 20 documentos em ordem alfabética.
 - Os cinco links de legislação apontam para a íntegra publicada no Planalto,
   todos verificados com resposta HTTP 200.
 
@@ -168,7 +170,7 @@ Descrito em detalhe em [`HANDOFF.md`](./HANDOFF.md).
 - Substituir os dados demonstrativos por integração com as bases oficiais.
 - Publicar os arquivos reais da biblioteca e dos conjuntos de dados abertos.
 - Implementar a API pública descrita na página de Transparência.
-- Liberar a área de Produtos com Selo Verde, hoje sinalizada como "Em breve".
+- Conectar os catálogos demonstrativos a um gerenciador de conteúdo quando a API estiver disponível.
 - Substituir os recortes editoriais por arquivos-fonte quando o time de design os fornecer.
 
 ---
@@ -213,6 +215,26 @@ _Última atualização: agosto de 2026._
 3. **P2 — comportamento de Mais assuntos:** menu permanecia aberto após selecionar uma categoria. Corrigido para fechar e preservar o estado visual selecionado.
 
 Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a área acima das perguntas. Os cards de resposta abaixo mantêm deliberadamente o padrão funcional já existente no portal.
+
+**final result: passed**
+
+---
+
+## QA visual e funcional — Cadernos ODS (28/08/2026)
+
+- **Fonte de conteúdo:** coleção Cadernos ODS do portal Compras SP e os quatro leitores digitais oficiais vinculados pela fonte.
+- **Viewport visual verificado:** 1280 × 720 CSS px, zoom de 100%.
+- **Página da coleção:** cabeçalho, breadcrumb, herói claro, tipografia, botões, cartões, chamada institucional e rodapé reutilizam o sistema visual da Plataforma Estadual de Sustentabilidade.
+- **Capas:** quatro arquivos oficiais foram incorporados ao projeto; todas as capas aparecem inteiras com `object-fit: contain`, proporção reservada e sem recorte, distorção ou fundo improvisado.
+- **Navegação rápida:** a página inicial continua com sete cartões alinhados e o antigo item Produtos com Selo Verde foi substituído por Cadernos ODS, com acesso interno funcional.
+- **Biblioteca:** o catálogo passou de 16 para 20 documentos; o filtro Publicações exibe exatamente os quatro Cadernos ODS e A Lei de Licitações e os ODS.
+- **Integração:** Cadernos ODS está presente na página Sobre, nos 18 rodapés e no sitemap com 17 URLs públicas.
+- **Leitores externos:** os quatro cartões abrem seus respectivos leitores oficiais em nova aba, com `rel="noopener noreferrer"` e rótulos acessíveis que anunciam a mudança de contexto.
+- **Responsividade estrutural:** a grade define quatro colunas em telas largas, duas em tablets e uma em celulares; o herói e a chamada final também possuem regras específicas para 900 px e 560 px.
+- **Console:** nenhum erro ou aviso encontrado nas páginas Cadernos ODS, Início, Biblioteca e Sobre durante a inspeção.
+- **Validação estática:** 18 arquivos HTML, 17 páginas públicas, 7 cartões de navegação rápida, 4 cartões de caderno, 20 documentos, 17 URLs no sitemap, 18 links de rodapé, nenhum ID duplicado e nenhuma referência interna ausente.
+
+Não foram encontrados problemas P0 ou P1 no fluxo principal da coleção. A mudança de viewport do navegador integrado não ficou disponível nesta sessão; por isso, o comportamento móvel foi validado estruturalmente no CSS, sem declarar uma inspeção visual móvel.
 
 **final result: passed**
 
@@ -264,7 +286,7 @@ Não restaram diferenças P0, P1 ou P2 no escopo solicitado. As diferenças em r
 - **Cabeçalho e rodapé:** ambos reutilizam o padrão institucional do portal, com Início, Critérios, Sobre, busca, acessibilidade, perfil e os grupos globais do rodapé.
 - **Conteúdo:** oito cards seguem os capítulos reais do guia, incluindo direitos humanos, integridade, ETP, logística reversa, engenharia, CICS e as 43 tabelas por objeto.
 - **Interações:** os oito cards abriram o diálogo correto, com link direto à página inicial correspondente no PDF; abertura e fechamento foram testados individualmente.
-- **Integração:** entradas internas confirmadas na Home, na Biblioteca e na seção Sobre. A Biblioteca exibe 16 documentos e inclui o guia nos filtros.
+- **Integração:** entradas internas confirmadas na Home, na Biblioteca e na seção Sobre. A Biblioteca exibe 20 documentos e inclui o guia nos filtros.
 - **Navegação rápida:** a Home agora contém sete cards alinhados; o novo card mostra o livro 3D de 2025, badge “Novo”, descrição e acesso interno funcional.
 - **Responsividade:** o desktop mantém o livro inteiro em 100%; em faixas menores, a cena integrada reposiciona o livro acima do conteúdo sem cortar capa, lombada ou base.
 - **Console:** nenhum erro ou aviso encontrado na página, na Biblioteca ou na seção Sobre.
@@ -521,11 +543,11 @@ Não restaram diferenças P0, P1 ou P2 no padrão visual e funcional dos três h
 
 - **P1 — escalas e linhas de base divergentes:** ícones e capas ocupavam áreas diferentes e os títulos começavam em alturas irregulares. Todos os cartões agora usam um palco de mídia de 104 px e um palco de título de 60 px.
 - **P1 — capa da AGU sem padrão:** a imagem plana ultrapassava o espaço visual do cartão e se sobrepunha ao título. Foi substituída pelo livro 3D completo, contido no mesmo palco dos demais livros.
-- **P2 — ativos rasterizados frágeis:** ODS e glossário usavam imagens com pouca definição e o selo verde apresentava artefatos. ODS e glossário agora usam SVG, e o selo foi substituído por um ativo limpo em alta resolução.
+- **P2 — ativos rasterizados frágeis:** ODS e glossário usavam imagens com pouca definição. Ambos foram substituídos por SVG e permanecem nítidos no palco padronizado.
 - **Escala óptica:** selos, ícones e livros recebem dimensões próprias dentro do mesmo palco, preservando peso visual equivalente sem distorção ou corte.
 - **Alinhamento medido:** os sete palcos começam em `y = 584 px` e medem `104 px`; os sete títulos começam em `y = 698 px` e medem `60 px`.
 - **Responsividade:** a grade mantém sete colunas em telas largas, duas colunas em tablets e uma coluna em celulares, sem overflow horizontal.
-- **Interações:** os sete destinos foram verificados; o cartão de Selo Verde abre e fecha o diálogo correto.
+- **Interações:** este registro foi sucedido pela inclusão do card Cadernos ODS; a validação atual da navegação rápida está documentada na seção de 28/08/2026.
 - **Console:** nenhum erro ou aviso encontrado.
 
 Não restaram diferenças P0, P1 ou P2 no tamanho, alinhamento, nitidez e comportamento dos acessos rápidos.

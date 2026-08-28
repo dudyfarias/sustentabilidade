@@ -19,10 +19,6 @@ const DIALOGS = {
     title: 'Sobre a plataforma',
     copy: 'A plataforma apoia gestores na aplicação de critérios sustentáveis em contratações públicas, reunindo indicadores, documentos e referências da Agenda 2030.'
   },
-  selo: {
-    title: 'Produtos com Selo Verde — Em breve',
-    copy: 'A consulta a produtos certificados que atendem a critérios de sustentabilidade será disponibilizada em breve, com filtros por categoria e certificação.'
-  },
   dados: {
     title: 'Download de dados abertos',
     copy: 'Os arquivos CSV, JSON e XLSX serão gerados dinamicamente quando a plataforma for integrada às bases oficiais. Enquanto isso, os conjuntos exibidos são demonstrativos.'
@@ -96,4 +92,3 @@ if (searchInput) {
 document.querySelectorAll('.faq-item').forEach((item) => item.addEventListener('click', () => {
   showDialog(item.textContent.trim(), item.dataset.answer);
 }));
-

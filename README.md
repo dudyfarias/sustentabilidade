@@ -18,7 +18,7 @@ Importe este repositório na Vercel. O projeto é estático e a configuração e
 
 ## Escopo
 
-Dezesseis páginas funcionais, todas compartilhando `styles.css` e `main.js`:
+Dezessete páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 
 | Página | Arquivo |
 | --- | --- |
@@ -26,6 +26,7 @@ Dezesseis páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 | Critérios | `criterios.html` |
 | Contratações | `contratacoes.html` |
 | ODS | `ods.html` |
+| Cadernos ODS | `cadernos-ods.html` |
 | Glossário | `glossario.html` |
 | Biblioteca | `biblioteca.html` |
 | Transparência | `transparencia.html` |
@@ -39,7 +40,7 @@ Dezesseis páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 | Guia Nacional de Contratações Sustentáveis da AGU | `guia-nacional-contratacoes-sustentaveis-agu.html` |
 | A Lei de Licitações e os ODS | `lei-licitacoes-ods.html` |
 
-- Navegação institucional com publicações técnicas do TCESP, da PGE-SP, da AGU e a obra A Lei de Licitações e os ODS; Produtos com Selo Verde permanece sinalizado como "Em breve"
+- Navegação institucional com publicações técnicas do TCESP, da PGE-SP, da AGU, a obra A Lei de Licitações e os ODS e os quatro Cadernos ODS oficiais
 - Busca, filtros combináveis, ordenação e estados vazios em todos os catálogos
 - Busca insensível a acentuação em todas as páginas
 - Cada um dos 17 ODS possui card e link individual para a página oficial da ONU Brasil

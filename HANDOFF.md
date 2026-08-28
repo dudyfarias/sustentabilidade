@@ -2,7 +2,7 @@
 
 Este documento descreve o que existe no protótipo, o modelo de dados implícito em cada
 tela e onde exatamente conectar a API. O front-end está pronto: os catálogos ainda são
-estáticos e servem como contrato visual; as publicações anexadas do TCESP, da PGE-SP e da AGU são oficiais. A obra A Lei de Licitações e os ODS é acessada no visualizador oficial indicado pelos autores.
+estáticos e servem como contrato visual; as publicações anexadas do TCESP, da PGE-SP e da AGU são oficiais. A obra A Lei de Licitações e os ODS e os quatro Cadernos ODS são acessados nos visualizadores oficiais indicados pelas fontes.
 
 ---
 
@@ -17,7 +17,7 @@ python3 -m http.server 4173
 
 | Item | Situação |
 | --- | --- |
-| Telas | 16 páginas concluídas |
+| Telas | 17 páginas concluídas |
 | Estilo | `styles.css` único, compartilhado por todas as páginas |
 | Comportamento | `main.js` global + um script por página de catálogo |
 | Dados | **Estáticos no HTML** — a substituir pela API |
@@ -35,6 +35,7 @@ python3 -m http.server 4173
 | `/criterios` | `criterios.html` | `criterios.js` | **Sim** |
 | `/contratacoes` | `contratacoes.html` | `contratacoes.js` | **Sim** |
 | `/ods` | `ods.html` | `main.js` | Parcial — contagem de critérios por ODS |
+| `/cadernos-ods` | `cadernos-ods.html` | `main.js` | Não — quatro leituras oficiais externas no FlipHTML5 |
 | `/glossario` | `glossario.html` | `glossario.js` | **Sim** |
 | `/biblioteca` | `biblioteca.html` | `biblioteca.js` | **Sim** |
 | `/manual-gestao-sustentavel-tcesp` | `manual-gestao-sustentavel-tcesp.html` | `manual-tcesp.js` | Não — publicação oficial local |
@@ -129,7 +130,7 @@ Origem: `glossario.html`, `<article class="termo-card">`, agrupados por letra em
 
 ### 3.4 Documento da biblioteca
 
-Origem: `biblioteca.html`, `<article class="doc-card">`. São 16 documentos.
+Origem: `biblioteca.html`, `<article class="doc-card">`. São 20 documentos.
 
 | Campo | Tipo | Atributo | Domínio |
 | --- | --- | --- | --- |
@@ -291,21 +292,20 @@ O protótipo já implementa três estados por catálogo. Mantenha-os ao integrar
 | --- | --- |
 | Revisão jurídica das minutas de Termos, Privacidade e Ouvidoria | Área jurídica |
 | Designação formal do Encarregado de dados (DPO) | Governança |
-| Conteúdo real de Produtos com Selo Verde | Áreas técnicas |
 | Arquivos PDF da Biblioteca e conjuntos de dados abertos | Comunicação e dados |
 | Auditoria de acessibilidade e avaliador oficial do eMAG | Governança digital |
 | Domínio definitivo | Infraestrutura |
 
 > Ao definir o domínio, atualize `sitemap.xml`, `robots.txt` e as tags `canonical`,
-> `og:url` e `twitter:*` das 16 páginas. Hoje todas apontam para
+> `og:url` e `twitter:*` das 17 páginas. Hoje todas apontam para
 > `https://sustentabilidade-neon.vercel.app`.
 
 ---
 
 ## 9. Verificações já realizadas
 
-- As 16 páginas e a 404 respondem HTTP 200.
-- Os seis `data-dialog` do HTML correspondem 1:1 às entradas de `main.js`: nenhum
+- As 17 páginas e a 404 respondem HTTP 200.
+- As cinco entradas `data-dialog` do HTML correspondem 1:1 às entradas de `main.js`: nenhum
   gatilho órfão e nenhuma entrada ociosa.
 - Nenhum link interno aponta para arquivo inexistente e não há `href="#"` no site.
 - Todo `data-dialog` do HTML tem entrada correspondente em `main.js`.
