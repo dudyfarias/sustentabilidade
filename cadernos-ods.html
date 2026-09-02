@@ -69,139 +69,148 @@
 </header>
 
 <main id="conteudo" tabindex="-1">
-  <section class="page-hero cadernos-hero">
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Navegação estrutural">
-        <a href="index.html">Início</a>
-        <span class="sep" aria-hidden="true">›</span>
-        <a href="biblioteca.html">Biblioteca</a>
-        <span class="sep" aria-hidden="true">›</span>
+  <section class="cadernos-hero" aria-labelledby="cadernos-page-title">
+    <div class="cadernos-hero-art" role="img" aria-label="Quatro Cadernos ODS sobre um pedestal, com folhas ao fundo"></div>
+    <div class="container cadernos-hero-inner">
+      <nav class="cadernos-breadcrumb" aria-label="Você está aqui">
+        <a href="index.html">Início</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        <a href="biblioteca.html">Referências Técnicas</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
         <span aria-current="page">Cadernos ODS</span>
       </nav>
 
-      <div class="cadernos-hero-grid">
+      <div class="cadernos-hero-layout">
         <div class="cadernos-hero-copy">
-          <p class="cadernos-eyebrow">Biblioteca técnica</p>
-          <h1>Cadernos <span>ODS</span></h1>
-          <p>Orientações para transformar os Objetivos de Desenvolvimento Sustentável em decisões práticas no planejamento e na gestão das contratações públicas.</p>
+          <h1 id="cadernos-page-title">Cadernos ODS</h1>
+          <p class="cadernos-subtitle">Coleção do Laboratório de<br>Inovação em Logística Pública</p>
+          <span class="cadernos-title-rule" aria-hidden="true"></span>
+          <p class="cadernos-intro">Série de referências técnicas que apresenta orientações práticas sobre o uso da Lei nº 14.133/2021 como indutora dos Objetivos de Desenvolvimento Sustentável (ODS) nas contratações públicas estaduais.</p>
 
           <div class="cadernos-hero-actions">
-            <a class="btn btn-primary" href="#cadernos">Explorar os cadernos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
-            <a class="btn btn-secondary" href="https://compras.sp.gov.br/laboratorio-de-logistica/cadernos-ods/" target="_blank" rel="noopener noreferrer" aria-label="Ver a coleção Cadernos ODS no site oficial (abre em nova aba)">Ver fonte oficial <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            <a class="cadernos-hero-btn cadernos-hero-btn-primary" href="#cadernos">
+              <i class="fa-regular fa-map" aria-hidden="true"></i>
+              <span><strong>Acessar coleção completa</strong><small>4 publicações digitais</small></span>
+            </a>
+            <a class="cadernos-hero-btn cadernos-hero-btn-secondary" href="https://compras.sp.gov.br/laboratorio-de-logistica/cadernos-ods/" target="_blank" rel="noopener noreferrer" aria-label="Acessar a página oficial dos Cadernos ODS no Portal de Compras SP (abre em nova aba)">
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              <span><strong>Acessar página oficial</strong><small>Portal de Compras SP</small></span>
+            </a>
           </div>
 
-          <dl class="cadernos-stats" aria-label="Informações da coleção">
-            <div><dt>4</dt><dd>cadernos</dd></div>
-            <div><dt>ODS 1–4</dt><dd>temas iniciais</dd></div>
-            <div><dt>Online</dt><dd>leitura oficial</dd></div>
+          <dl class="cadernos-hero-meta" aria-label="Informações da coleção">
+            <div><dt><i class="fa-solid fa-landmark" aria-hidden="true"></i> Organização</dt><dd>Laboratório de Inovação<br>em Logística Pública</dd></div>
+            <div><dt><i class="fa-regular fa-calendar" aria-hidden="true"></i> Referência</dt><dd>2026</dd></div>
+            <div><dt><i class="fa-regular fa-map" aria-hidden="true"></i> Cadernos publicados</dt><dd>4</dd></div>
+            <div><dt><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> Publicados em</dt><dd>Dezembro de 2025</dd></div>
           </dl>
-        </div>
-
-        <div class="cadernos-hero-covers" aria-label="Capas dos quatro Cadernos ODS">
-          <img class="cover-1" src="assets/cadernos-ods/caderno-ods-1.jpg" width="537" height="633" decoding="async" alt="Capa do Caderno ODS 1 — Erradicação da pobreza">
-          <img class="cover-2" src="assets/cadernos-ods/caderno-ods-2.jpg" width="536" height="636" decoding="async" alt="Capa do Caderno ODS 2 — Fome zero e agricultura sustentável">
-          <img class="cover-3" src="assets/cadernos-ods/caderno-ods-3.jpg" width="527" height="636" decoding="async" alt="Capa do Caderno ODS 3 — Saúde e bem-estar">
-          <img class="cover-4" src="assets/cadernos-ods/caderno-ods-4.jpg" width="537" height="640" decoding="async" alt="Capa do Caderno ODS 4 — Educação de qualidade">
         </div>
       </div>
     </div>
   </section>
 
   <section class="container cadernos-content" id="cadernos" aria-labelledby="cadernos-titulo">
-    <div class="cadernos-section-head">
-      <div>
-        <p class="section-label">Coleção disponível</p>
-        <h2 id="cadernos-titulo">Escolha um caderno para começar</h2>
-      </div>
-      <p>Os materiais abrem no leitor digital mantido pela fonte oficial.</p>
-    </div>
+    <header class="cadernos-section-head">
+      <h2 id="cadernos-titulo">Explore os Cadernos ODS</h2>
+      <span aria-hidden="true"></span>
+      <p>Selecione uma publicação para abrir o leitor digital oficial.</p>
+    </header>
 
     <div class="cadernos-grid">
-      <article class="caderno-card" id="caderno-ods-1" style="--ods-color:#E5243B">
-        <a class="caderno-cover" href="https://online.fliphtml5.com/kpxxz/rloi/" target="_blank" rel="noopener noreferrer" aria-label="Ler Caderno ODS 1 — Erradicação da pobreza no visualizador oficial (abre em nova aba)">
-          <img src="assets/cadernos-ods/caderno-ods-1.jpg" width="537" height="633" loading="lazy" decoding="async" alt="Capa do Caderno ODS 1">
-          <span class="caderno-open"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Abrir caderno</span>
+      <article class="caderno-card" id="caderno-ods-1" style="--ods-color:#C51F36;--ods-soft:#F9E8EB">
+        <a class="caderno-cover" href="https://online.fliphtml5.com/kpxxz/rloi/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Licitações e o ODS 1 no visualizador oficial (abre em nova aba)">
+          <img src="assets/cadernos-ods/caderno-ods-1-livro-3d.webp" width="1154" height="1363" loading="lazy" decoding="async" alt="Livro Licitações e o ODS 1">
         </a>
         <div class="caderno-body">
-          <div class="caderno-heading">
-            <span class="caderno-number">ODS 1</span>
-            <span class="caderno-version">Versão 1.0 · Referência 2026</span>
-          </div>
-          <h3>Erradicação da pobreza</h3>
-          <p>Uso da Lei nº 14.133/2021 como instrumento para apoiar ações relacionadas ao primeiro Objetivo de Desenvolvimento Sustentável.</p>
-          <div class="caderno-meta"><span><i class="fa-regular fa-calendar" aria-hidden="true"></i> Dezembro de 2025</span><span><i class="fa-regular fa-file-lines" aria-hidden="true"></i> 53 páginas</span><span><i class="fa-solid fa-display" aria-hidden="true"></i> Leitura digital</span></div>
-          <a class="caderno-link" href="https://online.fliphtml5.com/kpxxz/rloi/" target="_blank" rel="noopener noreferrer" aria-label="Ler Caderno ODS 1 — Erradicação da pobreza no visualizador oficial (abre em nova aba)">Ler no visualizador oficial <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <span class="caderno-number">ODS 1</span>
+          <h3>Licitações e o ODS 1</h3>
+          <p class="caderno-theme">Erradicação da Pobreza</p>
+          <p class="caderno-description">Orientações sobre como a Lei nº 14.133/2021 pode ser utilizada para promover ações que contribuam para a erradicação da pobreza.</p>
+          <dl class="caderno-meta">
+            <div><dt><i class="fa-regular fa-calendar" aria-hidden="true"></i> Referência</dt><dd>Dez/2025</dd></div>
+            <div><dt><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Formato</dt><dd>Leitura digital</dd></div>
+          </dl>
+          <a class="caderno-link" href="https://online.fliphtml5.com/kpxxz/rloi/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Licitações e o ODS 1 (abre em nova aba)">Acessar publicação <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
       </article>
 
-      <article class="caderno-card" id="caderno-ods-2" style="--ods-color:#DDA63A">
-        <a class="caderno-cover" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_1_SGGD/" target="_blank" rel="noopener noreferrer" aria-label="Ler Caderno ODS 2 — Fome zero e agricultura sustentável no visualizador oficial (abre em nova aba)">
-          <img src="assets/cadernos-ods/caderno-ods-2.jpg" width="536" height="636" loading="lazy" decoding="async" alt="Capa do Caderno ODS 2">
-          <span class="caderno-open"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Abrir caderno</span>
+      <article class="caderno-card" id="caderno-ods-2" style="--ods-color:#C88413;--ods-soft:#FFF3D9">
+        <a class="caderno-cover" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_1_SGGD/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Licitações e o ODS 2 no visualizador oficial (abre em nova aba)">
+          <img src="assets/cadernos-ods/caderno-ods-2-livro-3d.webp" width="1086" height="1448" loading="lazy" decoding="async" alt="Livro Licitações e o ODS 2">
         </a>
         <div class="caderno-body">
-          <div class="caderno-heading">
-            <span class="caderno-number">ODS 2</span>
-            <span class="caderno-version">Versão inaugural</span>
-          </div>
-          <h3>Fome zero e agricultura sustentável</h3>
-          <p>Referências para relacionar o planejamento das compras públicas à segurança alimentar e à promoção de sistemas alimentares sustentáveis.</p>
-          <div class="caderno-meta"><span><i class="fa-regular fa-calendar" aria-hidden="true"></i> Dezembro de 2025</span><span><i class="fa-regular fa-file-lines" aria-hidden="true"></i> 25 páginas</span><span><i class="fa-solid fa-display" aria-hidden="true"></i> Leitura digital</span></div>
-          <a class="caderno-link" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_1_SGGD/" target="_blank" rel="noopener noreferrer" aria-label="Ler Caderno ODS 2 — Fome zero e agricultura sustentável no visualizador oficial (abre em nova aba)">Ler no visualizador oficial <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <span class="caderno-number">ODS 2</span>
+          <h3>Licitações e o ODS 2</h3>
+          <p class="caderno-theme">Fome Zero e Agricultura Sustentável</p>
+          <p class="caderno-description">Diretrizes para incorporar práticas que incentivem a segurança alimentar, a agricultura sustentável e o uso responsável dos recursos naturais.</p>
+          <dl class="caderno-meta">
+            <div><dt><i class="fa-regular fa-calendar" aria-hidden="true"></i> Referência</dt><dd>Dez/2025</dd></div>
+            <div><dt><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Formato</dt><dd>Leitura digital</dd></div>
+          </dl>
+          <a class="caderno-link" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_1_SGGD/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Licitações e o ODS 2 (abre em nova aba)">Acessar publicação <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
       </article>
 
-      <article class="caderno-card" id="caderno-ods-3" style="--ods-color:#4C9F38">
-        <a class="caderno-cover" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_3_SGGD-aUMt/" target="_blank" rel="noopener noreferrer" aria-label="Ler Caderno ODS 3 — Saúde e bem-estar no visualizador oficial (abre em nova aba)">
-          <img src="assets/cadernos-ods/caderno-ods-3.jpg" width="527" height="636" loading="lazy" decoding="async" alt="Capa do Caderno ODS 3">
-          <span class="caderno-open"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Abrir caderno</span>
+      <article class="caderno-card" id="caderno-ods-3" style="--ods-color:#367D38;--ods-soft:#E7F0E6">
+        <a class="caderno-cover" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_3_SGGD-aUMt/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Licitações e o ODS 3 no visualizador oficial (abre em nova aba)">
+          <img src="assets/cadernos-ods/caderno-ods-3-livro-3d.webp" width="1023" height="1537" loading="lazy" decoding="async" alt="Livro Licitações e o ODS 3">
         </a>
         <div class="caderno-body">
-          <div class="caderno-heading">
-            <span class="caderno-number">ODS 3</span>
-            <span class="caderno-version">Versão inaugural</span>
-          </div>
-          <h3>Saúde e bem-estar</h3>
-          <p>Orientações para considerar saúde, proteção das pessoas e bem-estar na definição de requisitos e resultados das contratações.</p>
-          <div class="caderno-meta"><span><i class="fa-regular fa-calendar" aria-hidden="true"></i> Dezembro de 2025</span><span><i class="fa-regular fa-file-lines" aria-hidden="true"></i> 25 páginas</span><span><i class="fa-solid fa-display" aria-hidden="true"></i> Leitura digital</span></div>
-          <a class="caderno-link" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_3_SGGD-aUMt/" target="_blank" rel="noopener noreferrer" aria-label="Ler Caderno ODS 3 — Saúde e bem-estar no visualizador oficial (abre em nova aba)">Ler no visualizador oficial <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <span class="caderno-number">ODS 3</span>
+          <h3>Licitações e o ODS 3</h3>
+          <p class="caderno-theme">Saúde e Bem-estar</p>
+          <p class="caderno-description">Orientações para contratações públicas que contribuam para a promoção da saúde, qualidade de vida e bem-estar da população.</p>
+          <dl class="caderno-meta">
+            <div><dt><i class="fa-regular fa-calendar" aria-hidden="true"></i> Referência</dt><dd>Dez/2025</dd></div>
+            <div><dt><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Formato</dt><dd>Leitura digital</dd></div>
+          </dl>
+          <a class="caderno-link" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_3_SGGD-aUMt/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Licitações e o ODS 3 (abre em nova aba)">Acessar publicação <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
       </article>
 
-      <article class="caderno-card" id="caderno-ods-4" style="--ods-color:#C5192D">
-        <a class="caderno-cover" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_4_SGGD/" target="_blank" rel="noopener noreferrer" aria-label="Ler Caderno ODS 4 — Educação de qualidade no visualizador oficial (abre em nova aba)">
-          <img src="assets/cadernos-ods/caderno-ods-4.jpg" width="537" height="640" loading="lazy" decoding="async" alt="Capa do Caderno ODS 4">
-          <span class="caderno-open"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Abrir caderno</span>
+      <article class="caderno-card" id="caderno-ods-4" style="--ods-color:#B61F35;--ods-soft:#F9E8EB">
+        <a class="caderno-cover" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_4_SGGD/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Licitações e o ODS 4 no visualizador oficial (abre em nova aba)">
+          <img src="assets/cadernos-ods/caderno-ods-4-livro-3d.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="Livro Licitações e o ODS 4">
         </a>
         <div class="caderno-body">
-          <div class="caderno-heading">
-            <span class="caderno-number">ODS 4</span>
-            <span class="caderno-version">Versão inaugural</span>
-          </div>
-          <h3>Educação de qualidade</h3>
-          <p>Diretrizes para aproximar as contratações públicas de ambientes educacionais inclusivos, acessíveis, seguros e sustentáveis.</p>
-          <div class="caderno-meta"><span><i class="fa-regular fa-calendar" aria-hidden="true"></i> Dezembro de 2025</span><span><i class="fa-regular fa-file-lines" aria-hidden="true"></i> 25 páginas</span><span><i class="fa-solid fa-display" aria-hidden="true"></i> Leitura digital</span></div>
-          <a class="caderno-link" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_4_SGGD/" target="_blank" rel="noopener noreferrer" aria-label="Ler Caderno ODS 4 — Educação de qualidade no visualizador oficial (abre em nova aba)">Ler no visualizador oficial <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <span class="caderno-number">ODS 4</span>
+          <h3>Licitações e o ODS 4</h3>
+          <p class="caderno-theme">Educação de Qualidade</p>
+          <p class="caderno-description">Boas práticas e critérios para contratações que apoiem o acesso à educação de qualidade e a formação cidadã.</p>
+          <dl class="caderno-meta">
+            <div><dt><i class="fa-regular fa-calendar" aria-hidden="true"></i> Referência</dt><dd>Dez/2025</dd></div>
+            <div><dt><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Formato</dt><dd>Leitura digital</dd></div>
+          </dl>
+          <a class="caderno-link" href="https://online.fliphtml5.com/kpxxz/Caderno_ODS_4_SGGD/" target="_blank" rel="noopener noreferrer" aria-label="Acessar Licitações e o ODS 4 (abre em nova aba)">Acessar publicação <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
       </article>
     </div>
-  </section>
 
-  <section class="container cadernos-about" aria-labelledby="sobre-colecao-titulo">
-    <div class="cadernos-about-copy">
-      <span class="cadernos-about-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+    <div class="cadernos-info-grid">
+      <article class="cadernos-info-card cadernos-info-card-about">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        <div>
+          <h2>Sobre a coleção</h2>
+          <p>Os Cadernos ODS foram elaborados pelo Laboratório de Inovação em Logística Pública de São Paulo para apoiar gestores públicos na aplicação da Lei nº 14.133/2021 como instrumento de promoção dos Objetivos de Desenvolvimento Sustentável da Agenda 2030 da ONU nas contratações públicas estaduais.</p>
+        </div>
+      </article>
+
+      <article class="cadernos-info-card cadernos-info-card-use">
+        <i class="fa-regular fa-map" aria-hidden="true"></i>
+        <div>
+          <h2>Como utilizar os cadernos</h2>
+          <p>Cada publicação apresenta conceitos, exemplos práticos, critérios e referências que auxiliam nas diferentes fases das contratações públicas, desde o planejamento até a execução contratual.</p>
+          <a href="https://compras.sp.gov.br/laboratorio-de-logistica/cadernos-ods/" target="_blank" rel="noopener noreferrer" aria-label="Saiba mais sobre a coleção Cadernos ODS (abre em nova aba)">Saiba mais sobre a coleção <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+      </article>
+    </div>
+
+    <aside class="cadernos-more-references" aria-label="Mais referências técnicas">
+      <img src="assets/faq-hero-botanico.png" alt="" aria-hidden="true">
       <div>
-        <p class="section-label">Aplicação prática</p>
-        <h2 id="sobre-colecao-titulo">Da Agenda 2030 à contratação pública</h2>
-        <p>A coleção apoia equipes públicas na formulação da demanda, na definição do objeto, na modelagem contratual e na avaliação dos resultados esperados.</p>
+        <h2>Mais referências técnicas</h2>
+        <p>Conheça outros manuais, cartilhas e publicações que apoiam a gestão sustentável nas contratações públicas.</p>
       </div>
-    </div>
-    <ul class="cadernos-benefits">
-      <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><strong>Orientação técnica</strong> para conectar cada ODS ao ciclo da contratação.</span></li>
-      <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><strong>Exemplos práticos</strong> para apoiar a tomada de decisão.</span></li>
-      <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><strong>Critérios de referência</strong> para estruturar requisitos e resultados.</span></li>
-    </ul>
-    <a class="btn btn-secondary" href="https://compras.sp.gov.br/laboratorio-de-logistica/cadernos-ods/" target="_blank" rel="noopener noreferrer" aria-label="Conhecer a coleção Cadernos ODS no site oficial (abre em nova aba)">Conhecer a coleção oficial <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+      <a href="biblioteca.html">Ver todas as referências <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </aside>
   </section>
 </main>
 

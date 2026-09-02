@@ -222,19 +222,32 @@ Não restaram diferenças P0, P1 ou P2 dentro do escopo solicitado, que é a ár
 
 ## QA visual e funcional — Cadernos ODS (28/08/2026)
 
-- **Fonte de conteúdo:** coleção Cadernos ODS do portal Compras SP e os quatro leitores digitais oficiais vinculados pela fonte.
-- **Viewport visual verificado:** 1280 × 720 CSS px, zoom de 100%.
-- **Página da coleção:** cabeçalho, breadcrumb, herói claro, tipografia, botões, cartões, chamada institucional e rodapé reutilizam o sistema visual da Plataforma Estadual de Sustentabilidade.
-- **Capas:** quatro arquivos oficiais foram incorporados ao projeto; todas as capas aparecem inteiras com `object-fit: contain`, proporção reservada e sem recorte, distorção ou fundo improvisado.
-- **Navegação rápida:** a página inicial continua com sete cartões alinhados e o antigo item Produtos com Selo Verde foi substituído por Cadernos ODS, com acesso interno funcional.
-- **Biblioteca:** o catálogo passou de 16 para 20 documentos; o filtro Publicações exibe exatamente os quatro Cadernos ODS e A Lei de Licitações e os ODS.
-- **Integração:** Cadernos ODS está presente na página Sobre, nos 18 rodapés e no sitemap com 17 URLs públicas.
-- **Leitores externos:** os quatro cartões abrem seus respectivos leitores oficiais em nova aba, com `rel="noopener noreferrer"` e rótulos acessíveis que anunciam a mudança de contexto.
-- **Responsividade estrutural:** a grade define quatro colunas em telas largas, duas em tablets e uma em celulares; o herói e a chamada final também possuem regras específicas para 900 px e 560 px.
-- **Console:** nenhum erro ou aviso encontrado nas páginas Cadernos ODS, Início, Biblioteca e Sobre durante a inspeção.
-- **Validação estática:** 18 arquivos HTML, 17 páginas públicas, 7 cartões de navegação rápida, 4 cartões de caderno, 20 documentos, 17 URLs no sitemap, 18 links de rodapé, nenhum ID duplicado e nenhuma referência interna ausente.
+- **Referência visual:** `/tmp/codex-remote-attachments/019f8ae7-758a-71e1-9f98-fc02b7eb65e3/4386875B-F5F0-46EB-80C2-916CF46646DE/1-Foto-1.jpg`.
+- **Implementação final:** [`qa/cadernos-ods-implementation-1019x1280.png`](./qa/cadernos-ods-implementation-1019x1280.png).
+- **Comparação pareada:** [`qa/cadernos-ods-comparison-final.png`](./qa/cadernos-ods-comparison-final.png), com a referência e a implementação lado a lado em 1019 × 1280 px cada.
+- **Viewport desktop:** 1280 × 720 CSS px, DPR 1 e zoom de 100%. A captura principal foi composta a partir de três estados de viewport e normalizada por recorte central para a mesma densidade e dimensões da referência.
+- **Viewport móvel:** 390 × 844 CSS px, DPR 1, registrado em [`qa/cadernos-ods-mobile-390x844.png`](./qa/cadernos-ods-mobile-390x844.png).
+- **Estado capturado:** página no topo, sem diálogo, filtros ou estados temporários; cartões no estado padrão.
 
-Não foram encontrados problemas P0 ou P1 no fluxo principal da coleção. A mudança de viewport do navegador integrado não ficou disponível nesta sessão; por isso, o comportamento móvel foi validado estruturalmente no CSS, sem declarar uma inspeção visual móvel.
+### Comparação de página inteira
+
+- **Tipografia:** a página mantém a família institucional do portal e reproduz a hierarquia, os pesos e as quebras principais da referência.
+- **Espaçamento:** contêiner de 930 px, herói de 520 px, grade de quatro cartões, dois painéis informativos e chamada final seguem a mesma composição vertical da imagem fornecida.
+- **Cores:** fundo verde-sálvia, acentos verde-lima, superfícies brancas e cores individuais dos ODS foram aproximados diretamente da referência.
+- **Imagens:** herói e quatro livros 3D foram produzidos como imagens reais, inspecionados em resolução original e exportados em WebP otimizado. Todos os livros aparecem inteiros, nítidos, sem faixas ou textos inventados e sem recorte por CSS.
+- **Conteúdo:** a estrutura editorial da referência foi preservada. Os rótulos de formato e data usam os dados efetivamente disponíveis nos leitores oficiais, em vez de reproduzir informações apenas ilustrativas da montagem de referência.
+- **Interações:** o CTA principal rola para a coleção; o segundo abre a página oficial; cada capa e link abre o leitor digital correspondente em nova aba; a chamada final leva à Biblioteca.
+- **Responsividade:** não há rolagem horizontal em 1280 px ou 390 px; no celular os quatro livros do herói permanecem visíveis e os cartões formam uma única coluna.
+- **Console e carregamento:** nenhum erro ou aviso no console; as quatro imagens dos cartões carregaram com suas dimensões naturais esperadas.
+
+### Histórico de correções
+
+1. **P1 — composição anterior distante da referência:** o herói claro e as capas planas foram substituídos pelo cenário verde-sálvia com pedestal, folhagem e os quatro livros em 3D.
+2. **P2 — proporções de texto e cartões:** largura do texto, metadados, imagens, altura dos cartões e painéis foram recalibrados após comparação lado a lado.
+3. **P2 — livro cortado no celular:** posição e escala do herói foram ajustadas e verificadas visualmente em 390 × 844 px.
+4. **P2 — elementos gráficos inventados nas capas:** os quatro mockups dos cartões foram regenerados e os WebP finais foram inspecionados individualmente.
+
+Não restaram diferenças acionáveis P0, P1 ou P2 no escopo solicitado.
 
 **final result: passed**
 
