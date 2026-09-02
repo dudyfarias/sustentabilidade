@@ -566,3 +566,55 @@ Não restaram diferenças P0, P1 ou P2 no padrão visual e funcional dos três h
 Não restaram diferenças P0, P1 ou P2 no tamanho, alinhamento, nitidez e comportamento dos acessos rápidos.
 
 **final result: passed**
+
+---
+
+## QA visual — novas imagens dos acessos rápidos (02/09/2026)
+
+### Escopo e evidências
+
+- **Fonte visual:** `/Users/eduardofariascappia/Downloads/PHOTO-2026-09-02-17-49-14.jpg`, 676 × 468 px.
+- **Escopo:** imagens dos cards Cadernos ODS, ODS e Glossário de Sustentabilidade. O link da coleção foi encurtado para “Acessar coleção”, como na referência. Os outros quatro cards, destinos, cabeçalho e rodapé foram preservados.
+- **Prévia:** `http://127.0.0.1:4173/index.html#navegacao`.
+- **Desktop final:** [`qa/quick-access-desktop-1280.png`](./qa/quick-access-desktop-1280.png), 1280 × 720 CSS px e arquivo PNG de 1280 × 720 px. O navegador informa DPR 2; a API exporta a captura em pixels CSS.
+- **Desktop intermediário:** [`qa/quick-access-desktop-1024.png`](./qa/quick-access-desktop-1024.png), 1024 × 768 px. Também inspecionado o limite da grade em 901 × 768 CSS px.
+- **Mobile:** [`qa/quick-access-mobile-390.png`](./qa/quick-access-mobile-390.png) e [`glossário após rolagem`](./qa/quick-access-mobile-glossario-390.png), 390 × 844 CSS px, PNGs de 390 × 844 px.
+- **Comparação pareada final:** [`qa/quick-access-comparison-final.png`](./qa/quick-access-comparison-final.png).
+- **Detalhe das imagens:** [`qa/quick-access-art-comparison.png`](./qa/quick-access-art-comparison.png).
+- **Normalização:** recorte da referência em `(60,12)-(659,449)`, 599 × 437 px; recorte da implementação em `(154,38)-(565,344)`, 411 × 306 px, ampliado proporcionalmente para 599 × 446 px. Comparação dos mesmos três cards, sem moldura de navegador. Não foi alterada a proporção das capturas para forçar igualdade.
+- **Estado:** página carregada, sem diálogo aberto, imagens carregadas, nenhum card em hover na captura comparada. No mobile a rolagem foi feita até as imagens para validar o carregamento adiado.
+
+### Histórico da comparação e correções
+
+1. **P2 — mosaico com proporção horizontal diferente da referência.** A primeira comparação, [`quick-access-comparison-v1.png`](./qa/quick-access-comparison-v1.png), mostrava cinco colunas. Foi ajustado para quatro colunas e assinatura abaixo, mantendo todos os 17 ícones oficiais em ordem. A comparação final mostra a composição vertical corrigida.
+2. **P2 — sobreposição móvel da assinatura com o título ODS.** Visível em [`quick-access-mobile-before.png`](./qa/quick-access-mobile-before.png). A imagem ultrapassava o palco de 104 px quando o título passava a altura automática. Os três palcos de mídia recebem 124 px abaixo de 560 px. Na captura final móvel, a assinatura termina 10,25 px antes do título, sem colisão.
+3. As novas artes foram ampliadas e centralizadas opticamente, sem cortar livros ou peças. A coluna do palco usa `minmax(0,1fr)` para impedir que imagens maiores desloquem o centro. A versão da folha de estilo no `index.html` foi atualizada para impedir a reutilização dos estilos antigos em cache.
+
+### Superfícies de fidelidade
+
+- **Fontes e tipografia:** família Arial/Helvetica, pesos e tamanhos dos cards existentes preservados. Títulos, descrições e ações continuam em HTML. Textos das capas e das quatro peças do glossário pertencem às imagens. O link “Acessar coleção” permanece em uma linha no desktop comparado.
+- **Espaçamento e ritmo:** mesma grade, bordas e alinhamento dos sete cards. Os primeiros três medem 130,28 × 304,84 px em 1280 px de largura. Livros e glossário usam escala óptica própria no palco comum, sem encobrir títulos. Em mobile permanece uma coluna e não há sobreposição após a correção.
+- **Cores e tokens:** superfícies brancas e ações verdes preservadas. Os livros mantêm a sequência vermelho/laranja/verde/vermelho. As peças do glossário usam verde-sálvia muito claro, texto verde-escuro e sombras suaves. O mosaico usa os vetores coloridos originais da ONU Brasil, sem filtros sobre suas cores.
+- **Qualidade de imagem:** dois WebP de 1024 px, com livros inteiros e quatro peças completas; sem quadro branco ou sombra retangular adicionada. Os ícones ODS e o emblema são vetoriais oficiais, não redesenhados. A imagem e os ícones permanecem nítidos no tamanho nativo; a ampliação da captura de QA não é a resolução dos arquivos servidos.
+- **Conteúdo:** títulos, descrições e destinos mantidos. Os 17 ODS foram preservados, embora a referência mostre uma seleção menor e outra ordem. Não se reproduziram essas omissões nem os símbolos incorretos de algumas capas do mock. Esta é uma adaptação deliberada de conteúdo, não uma alegação de identidade pixel a pixel.
+
+### Validação funcional e estática
+
+- Clique em “Acessar coleção” abriu `cadernos-ods.html`, com título Cadernos ODS.
+- Clique em “Conhecer ODS” abriu `ods.html`, com título Objetivos de Desenvolvimento Sustentável.
+- Clique diretamente sobre a nova imagem do glossário abriu `glossario.html`, com título “O que significa esse termo?”.
+- Navegação por Tab entre os cards funcionou; foco visível de 3 px confirmado no card ODS.
+- Todas as 20 imagens dos três cards carregadas, sem imagens quebradas. Nenhum overflow horizontal em 390, 901, 1024 ou 1280 CSS px.
+- Nenhum erro ou aviso capturado no console durante os testes.
+- Revisão independente somente leitura: estrutura HTML balanceada, IDs únicos, 116 referências verificadas sem arquivo local ausente; 18 SVGs válidos sem scripts/eventos/recursos externos. Os quatro cards restantes são idênticos ao HEAD.
+- `git diff --check` sem erros. O portal é estático, sem etapa de build.
+
+### Limites e acabamento
+
+- P3: pequenas diferenças de perspectiva e microdetalhes nas duas ilustrações recriadas; o estilo, os assuntos, a paleta e o enquadramento foram reproduzidos. Os selos “Novo” adicionais da referência não foram incluídos, pois o pedido era de alteração das imagens.
+- Este registro documenta a validação local anterior ao envio ao GitHub. A produção na Vercel não foi testada nesta etapa.
+- Arquivos, fontes e prompts finais: [`assets/quick-access/README.md`](./assets/quick-access/README.md).
+
+Não restaram achados P0, P1 ou P2 no escopo desta alteração.
+
+**final result: passed**
