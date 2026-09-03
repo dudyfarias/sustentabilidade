@@ -1577,9 +1577,10 @@
 
 /* Navegação rápida: palco, escala óptica e linha de base únicos. */
 .quick-grid{
-  grid-template-columns:repeat(7,minmax(0,1fr));
+  grid-template-columns:repeat(6,minmax(0,1fr));
   align-items:stretch;
 }
+.quick-card[hidden]{display:none}
 .quick-card{min-height:300px}
 .quick-art{
   width:100%;
