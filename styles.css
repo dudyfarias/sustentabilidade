@@ -122,7 +122,14 @@
     .header-tools{
       display:flex;
       align-items:center;
+      justify-content:flex-end;
       gap:12px;
+    }
+
+    /* Conta desativada no protótipo público: mantém a estrutura pronta para reativação. */
+    .header-tools .profile,
+    .header-tools .icon-btn[aria-label^="Notificações"]{
+      display:none;
     }
     .top-search{
       width:250px;
