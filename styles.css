@@ -680,7 +680,7 @@
        ===================================================================== */
     .page-hero{position:relative;padding:22px 0 20px;overflow:hidden}
     .page-hero .container{position:relative;z-index:1}
-    .page-hero:before{content:"";position:absolute;z-index:0;inset:-30px -4% -14px 46%;background:url('assets/hero-sao-paulo-wide.png') 88% 42%/230% auto no-repeat;opacity:.26}
+    .page-hero:before{content:"";position:absolute;z-index:0;inset:0 0 0 46%;background:url('assets/hero-sao-paulo-wide.png') 88% 42%/230% auto no-repeat;opacity:.26}
     .breadcrumb{display:flex;align-items:center;gap:7px;margin-bottom:15px;font-size:10px;color:#6C7276}
     .breadcrumb a:hover{color:var(--green)}
     .breadcrumb .sep{color:#B7BEC0}
@@ -1850,3 +1850,14 @@
 .footer-brand > img.government-logo{width:200px;max-width:100%;height:auto;object-fit:contain}
 @media(max-width:1080px){.brand > img.government-logo{width:170px}}
 @media(max-width:600px){.brand > img.government-logo{width:155px}.brand > .secretaria{max-width:180px}}
+
+/* Suaviza as bordas dos fundos decorativos sem alterar texto ou ícones. */
+.hero::before,
+.page-hero::before,
+.ajuda-hero::before{
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 20%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 16%,#000 78%,transparent 100%);
+  mask-image:linear-gradient(to right,transparent 0%,#000 20%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 16%,#000 78%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect;
+  pointer-events:none;
+}
