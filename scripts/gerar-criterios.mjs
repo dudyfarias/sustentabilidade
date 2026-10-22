@@ -6,8 +6,24 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const data = JSON.parse(read('data/criterios.json'));
-const catalog = read('criterios.html');
+const catalogOnDisk = read('criterios.html');
+let catalog = catalogOnDisk;
 const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+// As fichas e os filtros usam a mesma fonte de dados, sem requisição adicional.
+const updateOptions = (id, options) => {
+  catalog = catalog.replace(new RegExp(`(<select id="${id}"[^>]*>)[\\s\\S]*?(</select>)`),
+    (_,open,close) => open + '<option value="">Todas</option>' + options.map(([value,label])=>`<option value="${escape(value)}">${escape(label)}</option>`).join('') + close);
+};
+updateOptions('f-subcategoria', [...new Set(data.map(c=>c.subcategory))].sort((a,b)=>a.localeCompare(b,'pt-BR')).map(value=>[value,value]));
+updateOptions('f-fase', [['planejamento','Planejamento'],['selecao','Seleção do fornecedor'],['execucao','Execução contratual'],['recebimento','Recebimento'],['operacao','Operação e manutenção']]);
+updateOptions('f-base-federal', [...new Map(data.flatMap(c=>c.sources).filter(s=>s.title.startsWith('Lei nº')||s.title.startsWith('Decreto nº')).map(s=>[s.url,s.title]))].map(([url,title])=>[url,title]));
+catalog = catalog.replace(/(<script id="criteria-data" type="application\/json">)[\s\S]*?(<\/script>)/,
+  (_,open,close) => open + JSON.stringify(data).replaceAll('<','\\u003c') + close);
+if (process.argv.includes('--check')) {
+  if (catalog!==catalogOnDisk) { console.error('Dados e opções do catálogo desatualizados.'); process.exit(1); }
+} else {
+  fs.writeFileSync(path.join(root,'criterios.html'),catalog);
+}
 const header = catalog.match(/<header[\s\S]*?<\/header>/)[0].replace('class="active" aria-current="page"', 'class="active"');
 const footer = catalog.match(/<footer[\s\S]*?<\/footer>/)[0];
 const list = items => `<ul>${items.map(item => `<li>${escape(item)}</li>`).join('')}</ul>`;

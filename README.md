@@ -75,3 +75,7 @@ substituídos pelas APIs reais, conforme o contrato descrito em [`HANDOFF.md`](.
 ### Campos da planilha nas fichas
 
 A interface mantém os 13 campos informados: Categoria; Subcategoria; Critério; Descrição Técnica (Base AGU); ODS; Base Legal Federal; Principais Pontos da Legislação Federal; Providência a Ser Tomada; Precauções e Observações; Documentação Comprobatória; Fase da Contratação; Cláusulas Necessárias; Pontos Específicos Lei 14.133. Os dados seguem sendo exemplos editoriais, não uma importação de linhas de planilha. As sínteses baseadas na AGU apontam capítulo e página do PDF; normas estaduais e referências técnicas aparecem separadas da base federal.
+
+### Filtros das colunas
+
+Todos os 13 campos também podem ser pesquisados no catálogo. Categoria, subcategoria, ODS e fase ficam no painel principal; os campos detalhados ficam em um bloco expansível. A busca geral consulta o conteúdo completo das fichas. Filtros combinam condições (E), sem diferenciar acentos e maiúsculas; a base federal seleciona a norma por URL. Os filtros anteriores de documento, nível e área foram preservados. O gerador embute os dados das fichas no HTML do catálogo e atualiza as opções, evitando divergência entre o conteúdo exibido e o pesquisado.

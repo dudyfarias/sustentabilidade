@@ -116,7 +116,12 @@
       "Art. 45, VI — acessibilidade para pessoas com deficiência ou com mobilidade reduzida nas licitações de obras e serviços de engenharia."
     ],
     "aguNote": "Seção 1 — Acessibilidade em obras e serviços de engenharia, pp. 76–77.",
-    "aguPage": 76
+    "aguPage": 76,
+    "phases": [
+      "planejamento",
+      "execucao",
+      "recebimento"
+    ]
   },
   {
     "code": "CRIT-SP-002",
@@ -237,7 +242,13 @@
       "Art. 45, III — utilização de produtos, equipamentos e serviços que favoreçam a redução do consumo de energia e de recursos naturais."
     ],
     "aguNote": "Seção 16 — Energia limpa (fotovoltaica), pp. 149–150.",
-    "aguPage": 149
+    "aguPage": 149,
+    "phases": [
+      "planejamento",
+      "execucao",
+      "recebimento",
+      "operacao"
+    ]
   },
   {
     "code": "CRIT-SP-003",
@@ -356,7 +367,12 @@
       "Art. 18, § 1º, XII — descrição de impactos ambientais e medidas mitigadoras, incluindo logística reversa quando aplicável."
     ],
     "aguNote": "Seção 8.1 — Planejamento, pp. 26–28; consultar também o capítulo específico da cadeia do produto.",
-    "aguPage": 26
+    "aguPage": 26,
+    "phases": [
+      "planejamento",
+      "selecao",
+      "execucao"
+    ]
   },
   {
     "code": "CRIT-SP-004",
@@ -487,7 +503,12 @@
       "Art. 18, § 1º, XII — avaliação de impactos ambientais e de medidas mitigadoras no ETP."
     ],
     "aguNote": "Apoio geral da seção 8.1 — Planejamento, pp. 26–28. As características e o percentual de conteúdo reciclado do exemplo dependem de definição própria; não são uma exigência geral atribuída ao Guia.",
-    "aguPage": 26
+    "aguPage": 26,
+    "phases": [
+      "planejamento",
+      "selecao",
+      "recebimento"
+    ]
   },
   {
     "code": "CRIT-SP-005",
@@ -612,7 +633,13 @@
       "Art. 34, § 1º — possibilidade de considerar custos indiretos objetivamente mensuráveis, conforme regulamentação."
     ],
     "aguNote": "Seção 4 — Aparelhos elétricos em geral, pp. 86–89; e seção 5 — Eletrodomésticos, pp. 90–94.",
-    "aguPage": 86
+    "aguPage": 86,
+    "phases": [
+      "planejamento",
+      "selecao",
+      "recebimento",
+      "operacao"
+    ]
   },
   {
     "code": "CRIT-SP-006",
@@ -741,6 +768,10 @@
       "Art. 45, I — disposição ambientalmente adequada de resíduos sólidos em obras e serviços de engenharia."
     ],
     "aguNote": "Seção 34 — Resíduos sólidos em geral, pp. 222–225. Para construção civil, consultar também a seção 23.",
-    "aguPage": 222
+    "aguPage": 222,
+    "phases": [
+      "planejamento",
+      "execucao"
+    ]
   }
 ]
