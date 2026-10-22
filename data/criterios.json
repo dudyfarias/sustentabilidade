@@ -107,7 +107,16 @@
       "Identificar os elementos do projeto e do memorial que serão executados e inspecionados.",
       "Definir registros de responsabilidade técnica e documentação a apresentar em cada etapa.",
       "Estabelecer tratamento e prazo de correção das desconformidades antes do recebimento dos itens afetados."
-    ]
+    ],
+    "federalPoints": [
+      "Acessibilidade deve ser considerada na concepção e nas intervenções das edificações abrangidas pela Lei Brasileira de Inclusão.",
+      "Em obras e serviços de engenharia, a contratação deve observar os requisitos de acessibilidade aplicáveis."
+    ],
+    "lawPoints": [
+      "Art. 45, VI — acessibilidade para pessoas com deficiência ou com mobilidade reduzida nas licitações de obras e serviços de engenharia."
+    ],
+    "aguNote": "Seção 1 — Acessibilidade em obras e serviços de engenharia, pp. 76–77.",
+    "aguPage": 76
   },
   {
     "code": "CRIT-SP-002",
@@ -218,7 +227,17 @@
       "Delimitar projeto, instalação, conexão, testes e treinamento incluídos no escopo.",
       "Definir responsabilidades, garantias, manutenção e atendimento a falhas.",
       "Estabelecer como serão medidos a geração e o desempenho e quais premissas embasam as estimativas."
-    ]
+    ],
+    "federalPoints": [
+      "O ETP deve comparar alternativas e registrar a adequação da solução, em vez de pressupor a instalação de painéis.",
+      "A conexão e a compensação de energia dependem do enquadramento e das regras da geração distribuída."
+    ],
+    "lawPoints": [
+      "Art. 18, § 1º — elementos do estudo técnico preliminar, incluindo alternativas e adequação da solução.",
+      "Art. 45, III — utilização de produtos, equipamentos e serviços que favoreçam a redução do consumo de energia e de recursos naturais."
+    ],
+    "aguNote": "Seção 16 — Energia limpa (fotovoltaica), pp. 149–150.",
+    "aguPage": 149
   },
   {
     "code": "CRIT-SP-003",
@@ -328,7 +347,16 @@
       "Identificar os produtos abrangidos e o sistema de logística reversa aplicável.",
       "Distribuir as responsabilidades por armazenamento, pontos de entrega, solicitação e retirada.",
       "Fixar a documentação de cada devolução, os prazos e a forma de conferência pela fiscalização."
-    ]
+    ],
+    "federalPoints": [
+      "A PNRS estabelece logística reversa para cadeias específicas, conforme seu enquadramento e regulamentação.",
+      "As obrigações devem corresponder ao sistema aplicável ao produto e às responsabilidades dos participantes."
+    ],
+    "lawPoints": [
+      "Art. 18, § 1º, XII — descrição de impactos ambientais e medidas mitigadoras, incluindo logística reversa quando aplicável."
+    ],
+    "aguNote": "Seção 8.1 — Planejamento, pp. 26–28; consultar também o capítulo específico da cadeia do produto.",
+    "aguPage": 26
   },
   {
     "code": "CRIT-SP-004",
@@ -406,6 +434,11 @@
         "title": "Lei nº 14.133/2021 — Licitações e Contratos Administrativos",
         "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
         "note": "Arts. 5º, 11 e 18: desenvolvimento sustentável e planejamento da contratação."
+      },
+      {
+        "title": "Lei nº 12.305/2010 — Política Nacional de Resíduos Sólidos",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm",
+        "note": "Art. 7º, XI, a: prioridade nas aquisições governamentais para produtos reciclados e recicláveis."
       }
     ],
     "references": [
@@ -444,7 +477,17 @@
       "Definir composição, desempenho e conteúdo reciclado exigido, quando justificado, sem deixar parâmetros indeterminados no edital.",
       "Indicar os documentos e meios equivalentes de comprovação admitidos.",
       "Definir amostragem ou conferência no recebimento e o procedimento para substituir materiais não conformes."
-    ]
+    ],
+    "federalPoints": [
+      "A PNRS prevê prioridade para produtos reciclados e recicláveis nas aquisições governamentais, sem fixar percentual universal de conteúdo reciclado.",
+      "Os requisitos devem ser definidos no planejamento, com formas de comprovação adequadas ao objeto."
+    ],
+    "lawPoints": [
+      "Arts. 5º e 11, IV — desenvolvimento nacional sustentável no regime de contratações.",
+      "Art. 18, § 1º, XII — avaliação de impactos ambientais e de medidas mitigadoras no ETP."
+    ],
+    "aguNote": "Apoio geral da seção 8.1 — Planejamento, pp. 26–28. As características e o percentual de conteúdo reciclado do exemplo dependem de definição própria; não são uma exigência geral atribuída ao Guia.",
+    "aguPage": 26
   },
   {
     "code": "CRIT-SP-005",
@@ -559,7 +602,17 @@
       "Informar categoria, capacidade e classe ou indicador de eficiência exigidos e justificados no planejamento.",
       "Definir como fabricante, modelo, etiqueta e consumo serão comprovados e conferidos.",
       "Prever instalação, documentação, manutenção e substituição de itens não conformes, conforme o escopo."
-    ]
+    ],
+    "federalPoints": [
+      "A eficiência deve ser analisada segundo a categoria e os parâmetros aplicáveis ao equipamento.",
+      "A avaliação de custos de uso precisa utilizar premissas objetivas e observar as regras do procedimento."
+    ],
+    "lawPoints": [
+      "Art. 18, § 1º, XII — requisitos de baixo consumo de energia e outros recursos no planejamento.",
+      "Art. 34, § 1º — possibilidade de considerar custos indiretos objetivamente mensuráveis, conforme regulamentação."
+    ],
+    "aguNote": "Seção 4 — Aparelhos elétricos em geral, pp. 86–89; e seção 5 — Eletrodomésticos, pp. 90–94.",
+    "aguPage": 86
   },
   {
     "code": "CRIT-SP-006",
@@ -635,6 +688,11 @@
         "title": "Decreto nº 10.936/2022 — Regulamentação da PNRS",
         "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10936.htm",
         "note": "Consultar as regras de gerenciamento e as condições aplicáveis à atividade."
+      },
+      {
+        "title": "Lei nº 14.133/2021 — Licitações e Contratos Administrativos",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+        "note": "Art. 18, § 1º, XII, e art. 45, I: impactos e destinação adequada de resíduos em obras."
       }
     ],
     "references": [
@@ -673,6 +731,16 @@
       "Identificar resíduos e responsabilidades de separação, acondicionamento, retirada e destinação.",
       "Definir plano e responsável técnico quando houver exigência legal, além dos operadores aptos à atividade.",
       "Estabelecer registros, periodicidade de apresentação de comprovantes e tratamento de divergências."
-    ]
+    ],
+    "federalPoints": [
+      "A PNRS estabelece prioridades para prevenção, redução e destinação dos resíduos.",
+      "A exigência de PGRS depende do enquadramento do responsável nas hipóteses legais; a execução deve ter acompanhamento."
+    ],
+    "lawPoints": [
+      "Art. 18, § 1º, XII — impactos ambientais e medidas mitigadoras previstos no ETP.",
+      "Art. 45, I — disposição ambientalmente adequada de resíduos sólidos em obras e serviços de engenharia."
+    ],
+    "aguNote": "Seção 34 — Resíduos sólidos em geral, pp. 222–225. Para construção civil, consultar também a seção 23.",
+    "aguPage": 222
   }
 ]

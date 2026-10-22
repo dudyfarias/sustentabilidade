@@ -71,3 +71,7 @@ Os seis exemplos têm páginas próprias, com fontes e orientações. O conteúd
 
 Esta entrega é a **camada visual**. Todos os dados exibidos são demonstrativos e devem ser
 substituídos pelas APIs reais, conforme o contrato descrito em [`HANDOFF.md`](./HANDOFF.md).
+
+### Campos da planilha nas fichas
+
+A interface mantém os 13 campos informados: Categoria; Subcategoria; Critério; Descrição Técnica (Base AGU); ODS; Base Legal Federal; Principais Pontos da Legislação Federal; Providência a Ser Tomada; Precauções e Observações; Documentação Comprobatória; Fase da Contratação; Cláusulas Necessárias; Pontos Específicos Lei 14.133. Os dados seguem sendo exemplos editoriais, não uma importação de linhas de planilha. As sínteses baseadas na AGU apontam capítulo e página do PDF; normas estaduais e referências técnicas aparecem separadas da base federal.

@@ -1933,6 +1933,29 @@
 @media(max-width:1100px){.criterion-layout{grid-template-columns:minmax(0,1fr) 290px;gap:20px}.criterion-heading{grid-template-columns:84px minmax(0,1fr);gap:18px}.criterion-illustration{width:84px;height:104px;font-size:40px}.criterion-side-panel{padding:16px}}
 @media(max-width:850px){.criterion-layout{grid-template-columns:1fr}.criterion-sidebar{display:grid;grid-template-columns:1fr 1fr;align-items:start}.criterion-actions{justify-content:flex-start}.criterion-heading h1{font-size:31px}.criterion-ods{max-width:310px}}
 @media(max-width:560px){.criterion-sidebar{grid-template-columns:1fr}.criterion-heading{grid-template-columns:1fr;gap:15px}.criterion-illustration{width:64px;height:64px;font-size:31px}.criterion-heading h1{font-size:29px}.criterion-section{padding:18px}.criterion-section h2{font-size:18px}.criterion-section p,.criterion-section li{font-size:13px}.criterion-facts div{grid-template-columns:120px minmax(0,1fr)}.criterion-actions{gap:8px}.criterion-actions .btn{font-size:11px}.criterion-steps>li{padding-left:37px}}
+/* Organização da ficha pelos campos da planilha, em caixas cinza-claro. */
+.criterion-section{padding:10px;border-color:#e2e8e4;background:#fff}
+.criterion-section>h2{padding:10px 12px;margin:0 0 10px;border-radius:6px;background:linear-gradient(90deg,#e9f2ed,#f1f5f3);font-size:16px;letter-spacing:0}
+.criterion-section>h2>i{height:30px;flex-basis:30px;font-size:18px;background:#f7faf8}
+.criterion-fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.criterion-field{min-width:0;padding:18px;border:1px solid #e5eae7;border-radius:7px;background:#f4f6f5;scroll-margin-top:110px}
+.criterion-field-wide{grid-column:1/-1}
+.criterion-field>h3{margin:0 0 12px;font-size:14px;line-height:1.5;color:#173e30}
+.criterion-field h4{margin:0 0 8px;font-size:13px;line-height:1.6;color:#264f39}
+.criterion-field p,.criterion-field li{font-size:13px;line-height:1.8}
+.criterion-field-note{padding-top:14px;margin-top:16px!important;border-top:1px solid #dce5df;font-size:11px!important;color:#647168!important}
+.criterion-field-note a,.criterion-guide-link{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.criterion-guide-link{display:inline-block;margin-top:14px;font-size:12px;line-height:1.7}
+.criterion-identification{display:grid;grid-template-columns:.8fr 1fr 1.2fr;gap:14px;margin:0 0 10px;padding:12px}
+.criterion-identification>div{min-width:0;padding-right:12px;border-right:1px solid #e3e9e5}
+.criterion-identification>div:last-child{border-right:0;padding-right:0}
+.criterion-identification dt{font-size:12px;font-weight:700;color:#214330;margin-bottom:6px}
+.criterion-identification dd{margin:0;font-size:12px;line-height:1.7;color:#5d6862;overflow-wrap:anywhere}
+.criterion-side-panel{background:#f3f5f4;border-color:#e5eae7}
+.criterion-toc{background:#fff}
+@media(max-width:1100px){.criterion-fields{grid-template-columns:1fr}.criterion-identification{grid-template-columns:1fr}.criterion-identification>div{border-right:0;border-bottom:1px solid #e3e9e5;padding-bottom:10px}.criterion-identification>div:last-child{border-bottom:0;padding-bottom:0}}
+@media(max-width:560px){.criterion-field{padding:15px}.criterion-section>h2{font-size:14px;padding:9px}.criterion-section{padding:8px}.criterion-section>h2>i{flex-basis:27px;height:27px;font-size:16px}}
+
 @media print{
   @page{margin:15mm}
   .criterion-page .site-header,.criterion-page footer,.criterion-actions,.criterion-back,.criterion-tags,.criterion-breadcrumb{display:none!important}
@@ -1954,6 +1977,11 @@
   .criterion-section li,.criterion-section p{font-size:10pt;line-height:1.6;color:#000}
   .criterion-note{padding:8pt;background:none;color:#000}
   .criterion-example{background:none;padding:8pt;color:#000}
+  .criterion-fields{display:block}
+  .criterion-field{background:none;padding:8pt;border-color:#ddd;margin-bottom:8pt}
+  .criterion-identification{grid-template-columns:1fr 1fr 1fr}
+  .criterion-identification>div{border-bottom:0}
+  .criterion-section>h2{padding:5pt;background:none;border-bottom:1pt solid #ccc}
   .criterion-source-list li{break-inside:avoid}
   .criterion-source-list a::after{content:" (" attr(href) ")";font-size:8pt;font-weight:400;overflow-wrap:anywhere;color:#444}
 }
