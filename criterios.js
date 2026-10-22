@@ -17,7 +17,7 @@ if (grid) {
   const filtersCard = document.querySelector('#filters-card');
   const sortSelect = document.querySelector('#sort-select');
 
-  const TOTAL_CADASTRADOS = 356;
+  const TOTAL_CADASTRADOS = cards.length;
   const state = { q: '', categoria: '', ods: '', documento: '', nivel: '', area: '' };
 
   const isFiltering = () =>
@@ -145,31 +145,6 @@ if (grid) {
   });
 
   /* Os detalhes são páginas estáticas acessadas pelos links dos cards. */
-
-  /* Paginação (demonstrativa) */
-  const pageButtons = [...document.querySelectorAll('.page-btn')];
-  const numberButtons = pageButtons.filter((b) => /^\d+$/.test(b.dataset.page));
-  const prevBtn = document.querySelector('.page-btn[data-page="prev"]');
-  const nextBtn = document.querySelector('.page-btn[data-page="next"]');
-  const LAST_PAGE = 18;
-  let current = 1;
-
-  function setPage(page) {
-    current = Math.min(Math.max(page, 1), LAST_PAGE);
-    numberButtons.forEach((b) => {
-      const active = Number(b.dataset.page) === current;
-      b.classList.toggle('active', active);
-      if (active) b.setAttribute('aria-current', 'page');
-      else b.removeAttribute('aria-current');
-    });
-    if (prevBtn) prevBtn.disabled = current === 1;
-    if (nextBtn) nextBtn.disabled = current === LAST_PAGE;
-    grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
-  numberButtons.forEach((btn) => btn.addEventListener('click', () => setPage(Number(btn.dataset.page))));
-  if (prevBtn) prevBtn.addEventListener('click', () => setPage(current - 1));
-  if (nextBtn) nextBtn.addEventListener('click', () => setPage(current + 1));
 
   apply();
 }
