@@ -1969,8 +1969,6 @@
   .criterion-ods{max-width:150pt}
   .criterion-facts div{padding:4pt 0}
   .criterion-facts dt,.criterion-facts dd{font-size:9pt}
-  .criterion-heading{grid-template-columns:1fr}
-  
   .criterion-heading h1{font-size:23pt;color:#000}
   .criterion-section{border:0;border-radius:0;padding:0;margin:0 0 18pt}
   .criterion-section h2{font-size:16pt;break-after:avoid}
