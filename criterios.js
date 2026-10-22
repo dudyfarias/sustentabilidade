@@ -28,7 +28,7 @@ if (grid) {
 
     if (state.categoria && data.category !== state.categoria) return false;
     if (state.ods && !data.ods.split(' ').includes(state.ods)) return false;
-    if (state.documento && data.documento !== state.documento) return false;
+    if (state.documento && !(data.documentos || data.documento).split('|').includes(state.documento)) return false;
     if (state.nivel && data.nivel !== state.nivel) return false;
     if (state.area && data.area !== state.area) return false;
 
@@ -144,20 +144,7 @@ if (grid) {
     });
   });
 
-  /* Detalhe do critério */
-  document.querySelectorAll('[data-detalhe]').forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const card = link.closest('.criterio-card');
-      const code = card.querySelector('.criterio-code').textContent;
-      const title = card.querySelector('h3').textContent;
-      const desc = card.querySelector('p').textContent;
-      const tags = [...card.querySelectorAll('.tag')].map((t) => t.textContent).join(' · ');
-      if (typeof showDialog === 'function') {
-        showDialog(`${code} — ${title}`, `${desc}\n\nRelacionado a: ${tags}`);
-      }
-    });
-  });
+  /* Os detalhes são páginas estáticas acessadas pelos links dos cards. */
 
   /* Paginação (demonstrativa) */
   const pageButtons = [...document.querySelectorAll('.page-btn')];

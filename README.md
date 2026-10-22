@@ -18,7 +18,7 @@ Importe este repositório na Vercel. O projeto é estático e a configuração e
 
 ## Escopo
 
-Dezessete páginas funcionais, todas compartilhando `styles.css` e `main.js`:
+Vinte e três páginas de conteúdo, todas compartilhando `styles.css` e `main.js`:
 
 | Página | Arquivo |
 | --- | --- |
@@ -39,6 +39,17 @@ Dezessete páginas funcionais, todas compartilhando `styles.css` e `main.js`:
 | Cartilha de Contratações Sustentáveis da PGE-SP | `cartilha-contratacoes-sustentaveis-pge.html` |
 | Guia Nacional de Contratações Sustentáveis da AGU | `guia-nacional-contratacoes-sustentaveis-agu.html` |
 | A Lei de Licitações e os ODS | `lei-licitacoes-ods.html` |
+
+| CRIT-SP-001 — Acessibilidade em edificações públicas | `criterio-acessibilidade-edificacoes.html` |
+| CRIT-SP-002 — Sistema fotovoltaico | `criterio-sistema-fotovoltaico.html` |
+| CRIT-SP-003 — Logística reversa de produtos | `criterio-logistica-reversa.html` |
+| CRIT-SP-004 — Materiais com menor impacto ambiental | `criterio-materiais-menor-impacto.html` |
+| CRIT-SP-005 — Eficiência energética em equipamentos | `criterio-eficiencia-energetica.html` |
+| CRIT-SP-006 — Gestão adequada de resíduos | `criterio-gestao-residuos.html` |
+
+### Fichas de critérios
+
+Os seis exemplos têm páginas próprias, com fontes e orientações. O conteúdo editável fica em `data/criterios.json`; após alterá-lo, execute `node scripts/gerar-criterios.mjs`. Use `node scripts/gerar-criterios.mjs --check` para conferir se os HTMLs correspondem aos dados. O catálogo preserva seus filtros e links diretos funcionam sem JavaScript. `criterio-detalhe.js` atende somente aos botões de compartilhar e imprimir.
 
 - Navegação institucional com publicações técnicas do TCESP, da PGE-SP, da AGU, a obra A Lei de Licitações e os ODS e os quatro Cadernos ODS oficiais
 - Busca, filtros combináveis, ordenação e estados vazios em todos os catálogos

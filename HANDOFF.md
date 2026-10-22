@@ -318,3 +318,12 @@ Detalhamento em [`design-qa.md`](./design-qa.md).
 ---
 
 _Última atualização: agosto de 2026._
+
+
+## Fichas de critérios — 22/10/2026
+
+Os seis critérios de exemplo passaram a ter rotas estáticas `criterio-*.html`, geradas a partir de `data/criterios.json` com `scripts/gerar-criterios.mjs`. Os links do catálogo e dos destaques da home abrem essas fichas; o antigo interceptador de detalhes em `criterios.js` foi removido.
+
+Cada ficha inclui descrição, aplicação, passos, comprovação, redação ilustrativa, acompanhamento, base normativa, referências complementares, ODS, termos do glossário e critérios relacionados. Copiar link usa a URL canônica e oferece campo selecionável caso a área de transferência esteja indisponível. A impressão usa uma folha de estilo dedicada.
+
+O nível `condicionado` foi adicionado ao filtro para requisitos cujo enquadramento depende da categoria, do gerador ou da regulamentação. As relações com ODS são editoriais e demonstrativas; não representam certificação ou homologação. Não há cadastro oficial nem integração com bases estaduais nesta versão.
